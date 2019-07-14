@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div >
     <Row>
       <Col span="11" class="card" style="">
        <span style="float:right;margin-right:20px;"> 
@@ -32,9 +32,7 @@
                <span class="r">17.1<Icon type="md-arrow-dropup" color="red"/></span>
            </div>
          </div>
-         <div class="i">
-             <img src="http://ptt5and7y.bkt.clouddn.com/4.png" alt="">
-         </div>
+             <div id="main4" style="width: 100%;;height:100px;margin-top: -50px"></div>
          </Col>
           <Col span="11" offset="2" >
           <div >
@@ -52,7 +50,7 @@
            </div>
          </div>
          <div class="i">
-             <img src="http://ptt5and7y.bkt.clouddn.com/4.png" alt="">
+             <div id="main5" style="width: 100%;;height:100px;margin-top: -50px"></div>
          </div>
 
           </Col>
@@ -84,10 +82,10 @@
             <Tabs type="card" >
         <TabPane label="全部渠道" >
              <Col span="16">
-            <div  >
+            <div >
              <span class="p">销售额</span >
-             <div class="pp" > 
-                 <img src="http://ptt5and7y.bkt.clouddn.com/5.png" alt="">
+             <div class="pp" >
+                 <div id="main6" style="width:100%;height:400px;"></div>
                  <div class="p1"  v-for="(xse,index) in xses" :key="index">
                  <div class="p2">销售额</div>
                 <div class="p3"> {{xse.num1}}</div>
@@ -96,12 +94,10 @@
             </div>
           </Col>
           <Col span="8">
-          <div >
-              <div>
-                  <ul v-for="(list,index) in listsarr" :key="index" >
+          <div style="">
+              <div style="margin-top: 20px;padding: 110px 0px 0 0;">
+              <ul v-for="(list,index) in listsarr" :key="index" >
                     <li  >
-                        <span class="n1"></span>
-                        <span class="n2">{{list.title}}</span>
                         <span class="n3">|</span>
                         <span class="n4">{{list.num1}}</span>
                         <span class="n5">{{list.num2}}</span>
@@ -115,8 +111,8 @@
              <Col span="16">
             <div  >
              <span class="p">销售额</span >
-             <div class="pp" > 
-                 <img src="http://ptt5and7y.bkt.clouddn.com/5.png" alt="">
+             <div class="pp" >
+                 <div id="main7" style="width:100%;height:400px;"></div>
                  <div class="p1"  v-for="(xse,index) in xses" :key="index">
                  <div class="p2">销售额</div>
                 <div class="p3"> {{xse.num2}}</div>
@@ -126,11 +122,9 @@
           </Col>
           <Col span="8">
           <div >
-              <div>
+              <div style="margin-top: 20px;padding: 110px 0px 0 0;">
                   <ul v-for="(list2,index) in listsarr2" :key="index" >
                     <li  >
-                        <span class="n1"></span>
-                        <span class="n2">{{list2.title}}</span>
                         <span class="n3">|</span>
                         <span class="n4">{{list2.num1}}</span>
                         <span class="n5">{{list2.num2}}</span>
@@ -144,8 +138,8 @@
              <Col span="16">
             <div  >
              <span class="p">销售额</span >
-             <div class="pp" > 
-                 <img src="http://ptt5and7y.bkt.clouddn.com/5.png" alt="">
+             <div class="pp" >
+                 <div id="main8" style="width:100%;height:400px;"></div>
                  <div class="p1" v-for="(xse,index) in xses" :key="index">
                  <div class="p2">销售额</div>
                 <div class="p3" > {{xse.num3}}</div>
@@ -155,11 +149,9 @@
           </Col>
           <Col span="8">
           <div >
-              <div>
+              <div style="margin-top: 20px;padding: 130px 0px 0 0;">
                   <ul v-for="(list,index) in listsarr3" :key="index" >
                     <li  >
-                        <span class="n1"></span>
-                        <span class="n2">{{list.title}}</span>
                         <span class="n3">|</span>
                         <span class="n4">{{list.num1}}</span>
                         <span class="n5">{{list.num2}}</span>
@@ -170,7 +162,6 @@
           </Col>
         </TabPane>
             </Tabs>
-           
          </div>
          
       </Col>
@@ -384,13 +375,26 @@ export default {
               
            ],
             listsarr3:[
-            
-               {
-                   title:"服饰箱包",
-                   num1:"26.81%",
-                   num2:"¥ 255"
-               },
-             
+                {
+                    title:"家用电器",
+                    num1:"21.24%",
+                    num2:"¥ 244"
+                },
+                {
+                    title:"食用酒水",
+                    num1:"27.94%",
+                    num2:"¥ 321"
+                },
+                {
+                    title:"个护健康",
+                    num1:"27.07%",
+                    num2:"¥ 311"
+                },
+                {
+                    title:"服饰箱包",
+                    num1:"3.57%",
+                    num2:"¥ 41"
+                },
                {
                    title:"其他",
                    num1:"6.83%",
@@ -432,7 +436,8 @@ export default {
                 
         }
     },
-          methods:{
+    methods:{
+
             // 获取历史记录信息
             handleListApproveHistory(){
                 
@@ -453,11 +458,266 @@ export default {
                 var _end = index * this.pageSize;
                 this.historyData = this.ajaxHistoryData.slice(_start,_end);
             },
+        drawChart3(){
+            let myChart = this.$echarts.init(document.getElementById("main4"));
+            let myChart2 = this.$echarts.init(document.getElementById("main5"));
+            let myChart3 = this.$echarts.init(document.getElementById("main6"));
+            let myChart4 = this.$echarts.init(document.getElementById("main7"));
+            let myChart5 = this.$echarts.init(document.getElementById("main8"));
+            let option = {
+                grid: {
+                    left: '0%',
+                    right: '0%',
+                    bottom: '-15%',
+                    containLabel: true
+                },
+                xAxis: {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                    show:false//隐藏x坐标轴
+                },
+                yAxis: {
+                    type: 'value',
+                    show:false//隐藏y坐标轴
+                },
+                tooltip:{
+                    trigger: 'item',
+                    backgroundColor:'#ffffff',
+                    textStyle:{
+                        color:'black'
+                    }
+                },
+                series: [{
+                    data: [1,6,4,8,3,7,2],
+                    type: 'line',
+                    areaStyle: {},
+                    smooth: true ,//圆滑曲线true
+                    //    showSymbol: false,
+                    //  symbol:'none',隐藏圆点
+                    itemStyle: {
+                        normal: {
+                            color: "rgb(208, 233, 255)",
+                            lineStyle: {
+                                color: "rgb(16, 137, 255)"
+                            }
+                        }
+                    },
+                }]
+            };
+            let option2 = {
+                grid: {
+                    left: '%',
+                    right: '10%',
+                    bottom: '-15%',
+                    containLabel: true
+                },
+                xAxis: {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                    show:false//隐藏x坐标轴
+                },
+                yAxis: {
+                    type: 'value',
+                    show:false//隐藏y坐标轴
+                },
+                tooltip:{
+                    trigger: 'item',
+                    backgroundColor:'#ffffff',
+                    textStyle:{
+                        color:'black'
+                    }
+                },
+                series: [{
+                    data: [1,6,4,8,3,7,2],
+                    type: 'line',
+                    areaStyle: {},
+                    smooth: true ,//圆滑曲线true
+                    //    showSymbol: false,
+                    //  symbol:'none',隐藏圆点
+                    itemStyle: {
+                        normal: {
+                            color: "rgb(208, 233, 255)",
+                            lineStyle: {
+                                color: "rgb(16, 137, 255)"
+                            }
+                        }
+                    },
+                }]
+            };
+            let option3 = {
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b}: {c}%",
+                    backgroundColor:'#ffffff',
+                    textStyle:{
+                        color:'black'
+                    }
+                },
+                color:['rgb(58, 161, 255)', 'rgb(54, 203, 203)','rgb(78, 203, 115)','rgb(251, 212, 55)','rgb(242, 99, 123)','rgb(151, 95, 229)'],
+                legend: {
+                    orient: 'vertical',
+                    x: 'right',
+                    y:'center',
+                    data:['家用电器','食用酒水','个护健康','服饰箱包','母婴产品','其他'],
+                    icon: "circle",
+                    itemWidth: 5,  // 设置宽度
+                    itemHeight: 5, // 设置高度
+                    itemGap: 20 // 设置间距
+
+                },
+                series: [
+                    {
+                        name:'',
+                        type:'pie',
+                        radius: ['50%', '65%'],
+                        avoidLabelOverlap: false,
+                        label: {
+                            normal: {
+                                show: false,
+                                position: 'center'
+                            },
+
+                        },
+                        labelLine: {
+                            normal: {
+                                show: false
+                            }
+                        },
+                        data:[
+                            {value:28.79, name:'家用电器'},
+                            {value:21.04, name:'食用酒水'},
+                            {value:19.73, name:'个护健康'},
+                            {value:14.73, name:'服饰箱包'},
+                            {value:7.80, name:'母婴产品'},
+                            {value:7.80, name:'其他'}
+                        ]
+                    }
+                ]
+            };
+            let option4 = {
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b}: {c}%",
+                    backgroundColor:'#ffffff',
+                    textStyle:{
+                        color:'black'
+                    }
+                },
+                color:['rgb(58, 161, 255)', 'rgb(54, 203, 203)','rgb(78, 203, 115)','rgb(251, 212, 55)','rgb(242, 99, 123)','rgb(151, 95, 229)'],
+                legend: {
+                    orient: 'vertical',
+                    x: 'right',
+                    y:'center',
+                    data:['家用电器','食用酒水','个护健康','服饰箱包','母婴产品','其他'],
+                    icon: "circle",
+                    itemWidth: 5,  // 设置宽度
+                    itemHeight: 5, // 设置高度
+                    itemGap: 20 // 设置间距
+
+                },
+                series: [
+                    {
+                        name:'',
+                        type:'pie',
+                        radius: ['50%', '65%'],
+                        avoidLabelOverlap: false,
+                        label: {
+                            normal: {
+                                show: false,
+                                position: 'center'
+                            },
+
+                        },
+                        labelLine: {
+                            normal: {
+                                show: false
+                            }
+                        },
+                        data:[
+                            {value:21.24, name:'家用电器'},
+                            {value:27.94, name:'食用酒水'},
+                            {value:27.07, name:'个护健康'},
+                            {value:3.57, name:'服饰箱包'},
+                            {value:10.53, name:'母婴产品'},
+                            {value:9.66, name:'其他'}
+                        ]
+                    }
+                ]
+            };
+            let option5 = {
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b}: {c}%",
+                    backgroundColor:'#ffffff',
+                    textStyle:{
+                        color:'black'
+                    }
+                },
+                color:['rgb(58, 161, 255)', 'rgb(54, 203, 203)','rgb(78, 203, 115)','rgb(251, 212, 55)','rgb(242, 99, 123)','rgb(151, 95, 229)'],
+                legend: {
+                    orient: 'vertical',
+                    x: 'right',
+                    y:'center',
+                    data:['家用电器','食用酒水','个护健康','服饰箱包','其他'],
+                    icon: "circle",
+                    itemWidth: 5,  // 设置宽度
+                    itemHeight: 5, // 设置高度
+                    itemGap: 20 // 设置间距
+
+                },
+                series: [
+                    {
+                        name:'',
+                        type:'pie',
+                        radius: ['50%', '65%'],
+                        avoidLabelOverlap: false,
+                        label: {
+                            normal: {
+                                show: false,
+                                position: 'center'
+                            },
+
+                        },
+                        labelLine: {
+                            normal: {
+                                show: false
+                            }
+                        },
+                        data:[
+                            {value:21.24, name:'家用电器'},
+                            {value:27.94, name:'食用酒水'},
+                            {value:27.07, name:'个护健康'},
+                            {value:3.57, name:'服饰箱包'},
+                            {value:9.66, name:'其他'}
+                        ]
+                    }
+                ]
+            };
+            myChart.setOption(option);
+            myChart2.setOption(option2);
+            myChart3.setOption(option3);
+            myChart4.setOption(option4);
+            myChart5.setOption(option5);
+            setTimeout(() => {
+                /*窗口自適應，關鍵代碼*/
+                window.onresize = function() {
+                    myChart.resize();
+                    myChart2.resize();
+                    myChart3.resize();
+                    myChart4.resize();
+                };
+            }, 200);
+        } ,
+    },
+    mounted(){
+        this.drawChart3();
+    },
+    created(){
+        this.handleListApproveHistory();
         },
-        created(){
-             this.handleListApproveHistory();
-        }
-    
+
 }
 </script>
 
@@ -465,27 +725,13 @@ export default {
 .card2 ul li{
     list-style: none;
     height:22px;
-    margin-top: 20px;
-    
-  
+    margin-bottom:10px ;
 }
 
 ul li span{
     display: inline-block
 }
 
-.n1{
-    width:10px;
-    height:10px;
-    border-radius: 50%;
-    margin-right:5px;
-    background:#ccc
-}
-
- .n2{
-    font-size:14px;
-    color:black
-}
 
 .n3{
    margin: 0 10px 0 10px;
@@ -497,11 +743,8 @@ ul li span{
 }
 
 .card2{
-   
      margin-top:20px;
     padding:10px;
-   
-     
 }
 .card2 .p{
     font-size: 14px;
@@ -509,15 +752,6 @@ ul li span{
      margin-left: 10px
 }
 
-.card2 .pp{
-
-}
-
-.card2 .pp img{
-   
-    margin-left:40px;
-    
-}
 
 .card2 .p1{
    position: absolute;

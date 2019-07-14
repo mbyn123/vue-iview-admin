@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6396724d-9a2c-4860-8f26-fc2ca4249ee0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/iview3.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/views/GRY/GRPZ_item.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/views/GRY/GRPZ_item2.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/views/GRY/GRPZ_list.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/views/LBY/table-cx/table_cx.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/views/LBY/table-cx/table_cx_list.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/views/LBY/tables-bz/table_bz.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/views/LBY/tables-bz/table_list.vue" afterDir="false" />
-    </list>
+    <list default="true" id="6396724d-9a2c-4860-8f26-fc2ca4249ee0" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -26,59 +13,97 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demo/src/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="103">
+              <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/demo/src/views/LBY/table-cx/table_cx_list.vue">
+        <entry file="file://$PROJECT_DIR$/demo/src/views/Dashboard/FXY/Ftwo.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="64" column="101" lean-forward="true" selection-start-line="63" selection-start-column="32" selection-end-line="64" selection-end-column="101" />
+            <state relative-caret-position="234">
+              <caret line="231" column="76" lean-forward="true" selection-start-line="231" selection-start-column="11" selection-end-line="231" selection-end-column="76" />
               <folding>
-                <element signature="n#style#0;n#Button#0;n#div#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#Button#0;n#div#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#Button#1;n#div#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" />
-                <element signature="n#style#0;n#div#0;n#Col#1;n#Row#0;n#div#2;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="e#3592#6639#0" />
-                <element signature="e#3261#9258#0" />
-                <element signature="e#6768#9176#0" />
-                <element signature="e#33187#33483#0" />
-                <element signature="e#33518#33778#0" />
-                <element signature="e#33807#34142#0" />
-                <element signature="e#34171#34420#0" />
-                <element signature="e#34458#34558#0" />
+                <element signature="n#div#0;n#Col#0;n#Row#0;n#template#0;n#!!top" />
+                <element signature="n#style#0;n#Col#0;n#Row#0;n#div#0;n#TabPane#0;n#Tabs#0;n#Col#0;n#Col#0;n#Row#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#Col#0;n#Row#0;n#div#0;n#TabPane#0;n#Tabs#0;n#Col#0;n#Col#0;n#Row#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#ul#0;n#div#0;n#Col#1;n#Row#0;n#div#0;n#TabPane#0;n#Tabs#0;n#Col#0;n#Col#0;n#Row#0;n#template#0;n#!!top" />
+                <element signature="n#TabPane#1;n#Tabs#0;n#Col#0;n#Col#0;n#Row#0;n#template#0;n#!!top" />
+                <element signature="n#Row#0;n#div#0;n#TabPane#1;n#Tabs#0;n#Col#0;n#Col#0;n#Row#0;n#template#0;n#!!top" />
+                <element signature="e#5273#8080#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo/src/views/LBY/tables-bz/table_list.vue">
+        <entry file="file://$PROJECT_DIR$/demo/src/views/Dashboard/FXY/Ffour.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="53" column="71" selection-start-line="53" selection-start-column="71" selection-end-line="53" selection-end-column="71" />
+            <state relative-caret-position="490">
+              <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#Input#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#2;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#Progress#0;n#div#0;n#Col#1;n#Row#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#2;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#Col#1;n#Row#0;n#div#0;n#li#0;n#ul#0;n#div#2;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#2;n#div#0;n#Col#1;n#Row#0;n#div#0;n#li#0;n#ul#0;n#div#2;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#1;n#div#2;n#div#0;n#Col#1;n#Row#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#2;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#Col#0;n#Row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="e#1443#2783#0" />
+                <element signature="e#2914#2998#0" />
+                <element signature="e#2937#6010#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo/src/views/LBY/tables-bz/table_bz.vue">
+        <entry file="file://$PROJECT_DIR$/demo/src/views/Dashboard/FXY/Fone.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="44" column="19" selection-start-line="44" selection-start-column="19" selection-end-line="44" selection-end-column="19" />
+            <state relative-caret-position="342">
+              <caret line="45" column="83" selection-start-line="45" selection-start-column="83" selection-end-line="45" selection-end-column="83" />
               <folding>
-                <element signature="n#div#0;n#div#0;n#template#0;n#!!top" />
+                <element signature="n#Col#0;n#Row#0;n#template#0;n#!!top" />
+                <element signature="n#style#0;n#div#1;n#Card#0;n#Col#1;n#Row#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#div#1;n#div#0;n#Card#0;n#Col#2;n#Row#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#Card#0;n#Col#2;n#Row#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#Card#0;n#Col#2;n#Row#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#Card#0;n#Col#2;n#Row#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="e#4920#7727#0" />
+                <element signature="e#7260#7713#0" />
+                <element signature="e#6212#7331#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demo/src/views/Dashboard/FXY/Fthree.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="710" column="20" lean-forward="true" selection-start-line="702" selection-start-column="12" selection-end-line="710" selection-end-column="20" />
+              <folding>
+                <element signature="n#style#0;n#span#1;n#Col#0;n#Row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#div#0;n#Col#0;n#div#0;n#Col#0;n#Row#0;n#div#0;n#template#0;n#!!top" />
+                <element signature="n#style#0;n#div#1;n#Col#0;n#div#0;n#Col#0;n#Row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#div#0;n#Col#1;n#div#0;n#Col#0;n#Row#0;n#div#0;n#template#0;n#!!top" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#Col#1;n#div#0;n#Col#0;n#Row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#Col#1;n#Row#0;n#div#0;n#template#0;n#!!top" />
+                <element signature="n#span#0;n#div#0;n#Col#1;n#Row#0;n#div#0;n#template#0;n#!!top" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#Col#0;n#TabPane#0;n#Tabs#0;n#div#0;n#Col#1;n#Row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#Col#1;n#TabPane#0;n#Tabs#0;n#div#0;n#Col#1;n#Row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#Col#0;n#TabPane#1;n#Tabs#0;n#div#0;n#Col#1;n#Row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#Col#1;n#TabPane#1;n#Tabs#0;n#div#0;n#Col#1;n#Row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#Col#0;n#TabPane#2;n#Tabs#0;n#div#0;n#Col#1;n#Row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#Col#1;n#TabPane#2;n#Tabs#0;n#div#0;n#Col#1;n#Row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="e#5954#9993#0" />
+                <element signature="e#10022#13631#0" />
+                <element signature="e#14591#15960#0" />
+                <element signature="e#16056#17425#0" />
+                <element signature="e#17547#19408#0" />
+                <element signature="e#19519#21380#0" />
+                <element signature="e#21463#23261#0" />
               </folding>
             </state>
           </provider>
@@ -99,6 +124,8 @@
       <find>color</find>
       <find>buttonSize&quot;</find>
       <find>80</find>
+      <find>main</find>
+      <find>main4</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -116,7 +143,6 @@
         <option value="$PROJECT_DIR$/demo/src/views/GRY/GRPZ_item.vue" />
         <option value="$PROJECT_DIR$/demo/src/views/GRY/GRPZ_item2.vue" />
         <option value="$PROJECT_DIR$/demo/src/views/GRY/GRZX_wz.vue" />
-        <option value="$PROJECT_DIR$/demo/src/main.js" />
         <option value="$PROJECT_DIR$/demo/src/views/GRY/GRZX_yy.vue" />
         <option value="$PROJECT_DIR$/demo/src/views/GRY/GRZX_xm.vue" />
         <option value="$PROJECT_DIR$/demo/src/views/GRY/GRPZ.vue" />
@@ -126,19 +152,23 @@
         <option value="$PROJECT_DIR$/demo/src/router.js" />
         <option value="$PROJECT_DIR$/demo/src/App.vue" />
         <option value="$PROJECT_DIR$/demo/src/views/LBY/tables-bz/table_list.vue" />
-        <option value="$PROJECT_DIR$/demo/src/views/Dashboard/FXY/Ffour.vue" />
-        <option value="$PROJECT_DIR$/demo/src/views/Dashboard/FXY/Fthree.vue" />
         <option value="$PROJECT_DIR$/demo/src/views/Dashboard/JKY/Jtwo.vue" />
         <option value="$PROJECT_DIR$/demo/src/views/LBY/tables-bz/table_bz.vue" />
         <option value="$PROJECT_DIR$/demo/src/views/LBY/table-cx/table_cx_list.vue" />
+        <option value="$PROJECT_DIR$/demo/src/main.js" />
+        <option value="$PROJECT_DIR$/demo/src/views/Dashboard/FXY/Fenxiye.vue" />
+        <option value="$PROJECT_DIR$/demo/src/views/Dashboard/FXY/Fthree.vue" />
+        <option value="$PROJECT_DIR$/demo/src/views/Dashboard/FXY/Ffour.vue" />
+        <option value="$PROJECT_DIR$/demo/src/views/Dashboard/FXY/Fone.vue" />
+        <option value="$PROJECT_DIR$/demo/src/views/Dashboard/FXY/Ftwo.vue" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-38" />
-    <option name="y" value="130" />
-    <option name="width" value="1860" />
-    <option name="height" value="810" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -148,107 +178,59 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="iview3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iview3" type="462c0819:PsiDirectoryNode" />
+              <item name="iview" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iview" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="iview3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iview3" type="462c0819:PsiDirectoryNode" />
+              <item name="iview" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iview" type="462c0819:PsiDirectoryNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="iview3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iview3" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iview3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iview3" type="462c0819:PsiDirectoryNode" />
+              <item name="iview" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iview" type="462c0819:PsiDirectoryNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="iview3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iview3" type="462c0819:PsiDirectoryNode" />
+              <item name="iview" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iview" type="462c0819:PsiDirectoryNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="iview3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iview3" type="462c0819:PsiDirectoryNode" />
+              <item name="iview" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iview" type="462c0819:PsiDirectoryNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="Dashboard" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="iview3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iview3" type="462c0819:PsiDirectoryNode" />
+              <item name="iview" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iview" type="462c0819:PsiDirectoryNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="Dashboard" type="462c0819:PsiDirectoryNode" />
               <item name="FXY" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="iview3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iview3" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="Dashboard" type="462c0819:PsiDirectoryNode" />
-              <item name="JKY" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iview3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iview3" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="LBY" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iview3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iview3" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="LBY" type="462c0819:PsiDirectoryNode" />
-              <item name="table-cx" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iview3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iview3" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="LBY" type="462c0819:PsiDirectoryNode" />
-              <item name="tables-bz" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iview3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iview3" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="YCY" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../echarts" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -284,18 +266,19 @@
       <workItem from="1562646094731" duration="6270000" />
       <workItem from="1562656259148" duration="19173000" />
       <workItem from="1562733145288" duration="36846000" />
-      <workItem from="1562901501060" duration="31781000" />
+      <workItem from="1562901501060" duration="31896000" />
+      <workItem from="1563083199590" duration="21790000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94070000" />
+    <option name="totallyTimeSpent" value="115975000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.01981506" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22589168" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -307,7 +290,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.45609066" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -353,21 +336,30 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/demo/src/views/Dashboard/FXY/Fthree.vue</url>
-          <line>67</line>
-          <properties lambdaOrdinal="-1" />
+          <line>65</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/demo/src/views/LBY/tables-bz/table_bz.vue</url>
           <line>40</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/demo/src/views/LBY/tables-bz/table_bz.vue</url>
           <line>12</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/demo/src/views/Dashboard/FXY/Fthree.vue</url>
+          <line>438</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/demo/src/views/Dashboard/FXY/Fthree.vue</url>
+          <line>36</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -376,13 +368,7 @@
     <entry file="file://$PROJECT_DIR$/demo/src/views/GGY/CGY.vue">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ivew/ivew-test/node_modules/esrecurse/.babelrc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../ivew/ivew-test/node_modules/esrecurse/.babelrc" />
     <entry file="file://$PROJECT_DIR$/demo/package-lock.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -531,16 +517,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/src/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/demo/src/views/LBY/table-kp/table_kp_list.vue">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -577,19 +553,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/src/views/Dashboard/GZT/Gsix.vue">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/src/views/Dashboard/FXY/Ftwo.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1620" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/src/views/Dashboard/FXY/Fone.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1404" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/src/views/Dashboard/FXY/Fenxiye.vue">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/src/views/XQY/GJXQ_item.vue">
@@ -647,6 +610,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/demo/src/views/Dashboard/JKY/Jtwo.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/src/views/LBY/table-cx/table_cx_list.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="64" column="101" selection-start-line="63" selection-start-column="32" selection-end-line="64" selection-end-column="101" />
+          <folding>
+            <element signature="n#style#0;n#Button#0;n#div#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#Button#0;n#div#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#Button#1;n#div#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#style#0;n#div#0;n#Col#1;n#Row#0;n#div#2;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/demo/src/views/LBY/tables-bz/table_list.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
@@ -667,44 +651,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/src/views/Dashboard/JKY/Jtwo.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/src/views/Dashboard/FXY/Ffour.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="59" column="36" lean-forward="true" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/src/views/Dashboard/FXY/Fthree.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="66" column="12" lean-forward="true" selection-start-line="66" selection-start-column="12" selection-end-line="66" selection-end-column="12" />
-          <folding>
-            <element signature="n#span#1;n#Col#0;n#Row#0;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#div#0;n#div#0;n#Col#0;n#div#0;n#Col#0;n#Row#0;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#Col#1;n#Row#0;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#span#0;n#div#0;n#Col#1;n#Row#0;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#Dropdown#0;n#span#0;n#div#0;n#Col#1;n#Row#0;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#TabPane#0;n#Tabs#0;n#div#0;n#Col#1;n#Row#0;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#TabPane#1;n#Tabs#0;n#div#0;n#Col#1;n#Row#0;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#TabPane#2;n#Tabs#0;n#div#0;n#Col#1;n#Row#0;n#div#0;n#template#0;n#!!top" />
-            <element signature="e#6187#10204#0" />
-            <element signature="e#10270#10500#0" />
-            <element signature="e#10522#11363#0" />
-            <element signature="e#11386#12214#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/demo/src/views/LBY/tables-bz/table_bz.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
+        <state relative-caret-position="617">
           <caret line="44" column="19" selection-start-line="44" selection-start-column="19" selection-end-line="44" selection-end-column="19" />
           <folding>
             <element signature="n#div#0;n#div#0;n#template#0;n#!!top" />
@@ -712,24 +661,95 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/src/views/LBY/table-cx/table_cx_list.vue">
+    <entry file="file://$PROJECT_DIR$/demo/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="64" column="101" lean-forward="true" selection-start-line="63" selection-start-column="32" selection-end-line="64" selection-end-column="101" />
+        <state relative-caret-position="103">
+          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
           <folding>
-            <element signature="n#style#0;n#Button#0;n#div#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#Button#0;n#div#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#Button#1;n#div#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#style#0;n#div#0;n#Col#1;n#Row#0;n#div#2;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#3592#6639#0" />
-            <element signature="e#3261#9258#0" />
-            <element signature="e#6768#9176#0" />
-            <element signature="e#33187#33483#0" />
-            <element signature="e#33518#33778#0" />
-            <element signature="e#33807#34142#0" />
-            <element signature="e#34171#34420#0" />
-            <element signature="e#34458#34558#0" />
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/src/views/Dashboard/FXY/Fenxiye.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="17" lean-forward="true" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/src/views/Dashboard/FXY/Fthree.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="710" column="20" lean-forward="true" selection-start-line="702" selection-start-column="12" selection-end-line="710" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#span#1;n#Col#0;n#Row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#div#0;n#Col#0;n#div#0;n#Col#0;n#Row#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#style#0;n#div#1;n#Col#0;n#div#0;n#Col#0;n#Row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#div#0;n#Col#1;n#div#0;n#Col#0;n#Row#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#Col#1;n#div#0;n#Col#0;n#Row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#Col#1;n#Row#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#span#0;n#div#0;n#Col#1;n#Row#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#Col#0;n#TabPane#0;n#Tabs#0;n#div#0;n#Col#1;n#Row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#Col#1;n#TabPane#0;n#Tabs#0;n#div#0;n#Col#1;n#Row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#Col#0;n#TabPane#1;n#Tabs#0;n#div#0;n#Col#1;n#Row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#Col#1;n#TabPane#1;n#Tabs#0;n#div#0;n#Col#1;n#Row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#Col#0;n#TabPane#2;n#Tabs#0;n#div#0;n#Col#1;n#Row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#Col#1;n#TabPane#2;n#Tabs#0;n#div#0;n#Col#1;n#Row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#5954#9993#0" />
+            <element signature="e#10022#13631#0" />
+            <element signature="e#14591#15960#0" />
+            <element signature="e#16056#17425#0" />
+            <element signature="e#17547#19408#0" />
+            <element signature="e#19519#21380#0" />
+            <element signature="e#21463#23261#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/src/views/Dashboard/FXY/Ffour.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#Col#0;n#Row#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#1443#2783#0" />
+            <element signature="e#2914#2998#0" />
+            <element signature="e#2937#6010#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/src/views/Dashboard/FXY/Fone.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="45" column="83" selection-start-line="45" selection-start-column="83" selection-end-line="45" selection-end-column="83" />
+          <folding>
+            <element signature="n#Col#0;n#Row#0;n#template#0;n#!!top" />
+            <element signature="n#style#0;n#div#1;n#Card#0;n#Col#1;n#Row#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#div#1;n#div#0;n#Card#0;n#Col#2;n#Row#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#Card#0;n#Col#2;n#Row#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#Card#0;n#Col#2;n#Row#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#Card#0;n#Col#2;n#Row#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#4920#7727#0" />
+            <element signature="e#7260#7713#0" />
+            <element signature="e#6212#7331#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/src/views/Dashboard/FXY/Ftwo.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="231" column="76" lean-forward="true" selection-start-line="231" selection-start-column="11" selection-end-line="231" selection-end-column="76" />
+          <folding>
+            <element signature="n#div#0;n#Col#0;n#Row#0;n#template#0;n#!!top" />
+            <element signature="n#style#0;n#Col#0;n#Row#0;n#div#0;n#TabPane#0;n#Tabs#0;n#Col#0;n#Col#0;n#Row#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#Col#0;n#Row#0;n#div#0;n#TabPane#0;n#Tabs#0;n#Col#0;n#Col#0;n#Row#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#ul#0;n#div#0;n#Col#1;n#Row#0;n#div#0;n#TabPane#0;n#Tabs#0;n#Col#0;n#Col#0;n#Row#0;n#template#0;n#!!top" />
+            <element signature="n#TabPane#1;n#Tabs#0;n#Col#0;n#Col#0;n#Row#0;n#template#0;n#!!top" />
+            <element signature="n#Row#0;n#div#0;n#TabPane#1;n#Tabs#0;n#Col#0;n#Col#0;n#Row#0;n#template#0;n#!!top" />
+            <element signature="e#5273#8080#0" />
           </folding>
         </state>
       </provider>

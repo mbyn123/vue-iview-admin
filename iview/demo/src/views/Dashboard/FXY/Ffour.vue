@@ -27,11 +27,8 @@
             </div>
             <span class="last" @click="xia"><Icon type="ios-arrow-forward" color="#ccc"/></span>
           </div>
-          <div style="padding-left:50px;">
-            <img src="http://ptt5and7y.bkt.clouddn.com/8.png" alt>
-          </div>
-          <div style="padding-left:50px;">
-            <img src="http://ptt5and7y.bkt.clouddn.com/9.png" alt>
+          <div style="width: 1300px;">
+          <div id="main14" style="width:100% ;height:400px"></div>
           </div>
         </div>
       </Col>
@@ -103,8 +100,117 @@ export default {
        xia(){
        
            this.style="transform: translate3d(-300px, 0px, 0px);"
-       }
-    }
+       },
+      drawChart14() {
+        let myChart14 = this.$echarts.init(document.getElementById("main14"));
+        let option14 = {
+          tooltip: {
+            trigger: 'axis',
+            backgroundColor: '#ffffff',
+            textStyle: {
+              color: 'black'
+            }
+          },
+          xAxis: {
+            type: 'category',
+            data: ['16:12', '', '17:12', '', '18:12', '', '19:12', '', '20:12', '', '21:12', '', '22:12', '', '23:12', '', '00:12', '',]
+
+          },
+          grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '10%',
+            containLabel: true
+          },
+          dataZoom: [
+            {
+              type: 'slider',
+              show: true,
+              xAxisIndex: [0],
+              start: 1,
+              end: 100,
+              startValue: '15:12',
+              endValue: '00:42',
+            },
+
+            {
+              type: 'inside',
+              xAxisIndex: [0],
+              start: 1,
+              end: 100,
+              startValue: '15:12',
+              endValue: '00:42',
+
+            },
+
+          ],
+          yAxis: {
+            type: 'value',
+            splitLine: {
+              lineStyle: {
+                type: "deshed"//设置刻度线虚线
+              }
+            },
+            axisLine: {
+              show: false,//隐藏y坐标轴线
+              lineStyle: {
+                color: "#ccc"//设置y轴坐标线颜色
+              }
+            },
+            axisLabel: {
+              textStyle: {
+                color: "black",//设置y轴坐标字体颜色
+                // fontSize:'14px'
+              }
+            }
+          },
+          legend: {
+            x: 'center',
+            data: ["客流量", "支付笔数"],
+            icon: "rect",//  这个字段控制形状  类型包括 circle，rect ，roundRect，triangle，diamond，pin，arrow，none
+            itemWidth: 10,  // 设置宽度
+            itemHeight: 2.5, // 设置高度
+            itemGap: 10 // 设置间距
+
+          },
+
+          series: [
+            {
+              name: "客流量",
+              data: [85, 11, 32, 23, 97, 30, 79, 48, 49, 34, 35, 36, 27, 15, 100, 107, 20, 86, 55],
+              type: 'line',
+              itemStyle: {
+                normal: {
+                  color: "rgb(208, 233, 255)",
+                  lineStyle: {
+                    color: "rgb(16, 137, 255)"
+                  }
+                }
+              },
+            },
+            {
+              name: "支付笔数",
+              data: [63, 46, 33, 52, 84, 109, 81, 29, 84, 103, 89, 100, 68, 82, 97, 17, 32, 34, 98],
+              type: 'line',
+              itemStyle: {
+                normal: {
+                  color: "#2fc25b",
+                  lineStyle: {
+                    color: "#2fc25b"
+                  }
+                }
+              },
+
+            }
+          ]
+        };
+        myChart14.setOption(option14,window.onresize = myChart14.resize)
+
+      }
+    },
+  mounted() {
+    this.drawChart14();
+  }
 };
 </script>
 
