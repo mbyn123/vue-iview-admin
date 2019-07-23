@@ -4,7 +4,7 @@
             <div class="inside">
                 <Row>
                     <Col span="6" v-for="(value,index) in mssg" :key="index">
-                        <div class="card">
+                        <div class="card" style="padding: 10px 12px ;margin-top: 10px">
                             <div class="content">
                                 <div style="padding:20px;background: white">
                              <div class="titl">

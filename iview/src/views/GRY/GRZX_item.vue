@@ -77,16 +77,18 @@
 
     .tdS .inS .innerS {
         padding: 0 16px;
+
     }
 
     .tdS .inS .innerS a {
-        display: block;
         padding: 10px;
         display: flex;
         align-items: center;
+
     }
     .tdS .inS .innerS a:hover .mz {
         color: #2d8cf0;
+
     }
 
     .tdS .inS .innerS .imgs {
@@ -105,5 +107,8 @@
         color: black;
         font-size: 14px;
         display: inline-block;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
 </style>

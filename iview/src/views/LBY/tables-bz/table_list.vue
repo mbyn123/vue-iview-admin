@@ -26,7 +26,7 @@
                             <div class="item">
                                 <div style="border-bottom:1px solid #ccc;padding:18px 5px 16px 5px">
                                 <Row>
-                                    <Col span="15">
+                                    <Col span="13" >
                                         <div>
                                             <span ><img :src=value.img alt=""></span>
                                             <div class="imgs">
@@ -35,7 +35,7 @@
                                             </div>
                                         </div>
                                     </Col>
-                                    <Col span="9">
+                                    <Col span="11">
                                         <div class="content" >
                                             <div>
                                                 <div>Owner</div>
@@ -46,10 +46,10 @@
                                                 <div>{{value.time}}</div>
                                             </div>
                                             <Progress :percent=value.number :status=value.state :stroke-width="8" style="margin-top: 10px;width:220px"/>
-                                            <div style="margin-top: 10px">
+                                            <div style="padding-top: 10px;">
                                                 <span style="color:#2d8cf0;cursor: pointer;">编辑</span>
                                                 <span style="display: inline-block;width:1px;height:10px;color:#e8e8e8;margin: 0 5px">|</span>
-                                                <Dropdown>
+                                                <Dropdown style="display: inline-block">
                                                     <a href="javascript:void(0)">
                                                         <span>更多</span>
                                                         <Icon type="ios-arrow-down"></Icon>

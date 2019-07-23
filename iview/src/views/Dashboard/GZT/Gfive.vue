@@ -9,37 +9,15 @@
           <div class="index">
             <Row>
               <Col span="24">
-                <div class="imgs">
-                  <img src="http://ptt5and7y.bkt.clouddn.com/%E4%B8%8B%E8%BD%BD%20%2811%29.png" alt />
-                </div>
+                <div id="mainld" style="width:100%;height:300px;"></div>
+
               </Col>
-              <div class="source">
-                <Col span="8">
-                 <div class="personal">
-                   <p>
-                     <span class="p1"></span><span class="ren">个人</span>
-                   </p>
-                   <h6>34</h6>
-                 </div>
-                </Col>
-                <Col span="8">
-                 <div class="personal team">
-                   <p>
-                     <span class="p2"></span><span class="ren">团队</span>
-                   </p>
-                   <h6>22</h6>
-                 </div>
-                </Col>
-                <Col span="8">
-                 <div class="personal">
-                   <p>
-                     <span class="p3"></span><span class="ren">部门</span>
-                   </p>
-                   <h6>32</h6>
-                 </div>
-                </Col>
-              </div>
             </Row>
+            <div class="ld" >
+              <div>34</div>
+              <div>22</div>
+              <div>23</div>
+            </div>
           </div>
         </div>
       </div>
@@ -48,89 +26,158 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods:{
+    drawChartld(){
+      let myChartld = this.$echarts.init(document.getElementById("mainld"));
+      let optionld = {
+        tooltip: {},
+        color:['rgb(101, 181, 255)','rgb(250, 204, 20)','rgb(47, 194, 91)'],
+        legend: {
+          data: ['个人', '团队','部门'],
+          x: 'center',
+          y:'bottom',
+          icon: "circle",
+          itemWidth: 5,  // 设置宽度
+          itemHeight: 5, // 设置高度
+          itemGap: 65 // 设置间距
+        },
+        grid:{
+          position:'center'
+        },
+        radar: {
+        //  shape: 'circle',
+          splitNumber: 6,
+          name: {
+            textStyle: {
+              color: 'black',
+            }
+          },
+          indicator: [
+            { name: '引用', max: 10},
+            { name: '热度', max: 10},
+            { name: '贡献', max: 10},
+            { name: '产量', max: 10},
+            { name: '口碑', max: 10},
+
+          ],
+          axisLine: {
+            show: true,
+            lineStyle: {
+              color: '#ccc',
+              type:"dashed"
+            },
+
+          },
+          splitLine : {
+            show : true,
+            lineStyle : {
+              width : 1,
+              color : '#ccc', // 设置网格的颜色
+              type:"dashed",
+              shape: 'circle',
+            },
+          },
+          splitArea : {
+            show : false,
+            areaStyle : {
+              color: 'rgba(255,0,0,0)', // 图表背景的颜色
+            },
+          },
+
+        },
+
+
+        series: [{
+          name: '预算 vs 开销（Budget vs spending）',
+          type: 'radar',
+
+          // areaStyle: {normal: {}},
+          data : [
+            {
+              value: [10, 7, 5, 4, 8],
+              name: '个人',
+              lineStyle: {
+                normal: {
+                  color:'rgb(101, 181, 255)'
+                }
+              },
+              itemStyle: {
+                normal: {
+                  borderColor: 'rgb(101, 181, 255)',
+
+                }
+              },
+            },
+            {
+              value : [3,1,3,6,9],
+              name : '团队',
+              lineStyle: {
+                normal: {
+                  color:'rgb(250, 204, 20)'
+                }
+              },
+              itemStyle: {
+                normal: {
+                  borderColor: 'rgb(250, 204, 20)',
+                }
+              },
+            },
+            {
+              value : [4,7,5,6,1],
+              name :'部门',
+              lineStyle: {
+                normal: {
+                  color:'rgb(47, 194, 91)'
+                }
+              },
+              itemStyle: {
+                normal: {
+                  borderColor: 'rgb(47, 194, 91)',
+                }
+              },
+            },
+
+
+
+          ]
+        }]
+      };
+      myChartld.setOption(optionld);
+      window.addEventListener("resize", () => { myChartld.resize();});
+    }
+  },
+  mounted() {
+    this.drawChartld();
+  }
+};
 </script>
 
 <style>
+
+  .ld{
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 20px;
+  }
+  .ld div{
+
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+  }
 .zs {
   padding: 12px;
 }
 .zs .in {
-  background: white;
+  background: #fff;
 }
 .zs .in .top {
   padding: 20px;
   border-bottom: 1px solid #ccc;
   font-size: 16px;
-  color: black;
+  color: #333;
 }
 
-.zs .in .index .imgs {
- 
-  padding-left: 40px;
-}
 
-.zs .in .index  .personal{
- 
-  text-align: center;
-  padding:10px
-}
-
-.zs .in .index  .personal .p1{
-  display: inline-block;
-  width:7px;
-  height:7px;
-  background: #2d8cf0;
-  border-radius: 50%;
-  margin-right:6px 
-}
-
-.zs .in .index  .personal .p2{
-  display: inline-block;
-  width:7px;
-  height:7px;
-  background: #ff9900;
-  border-radius: 50%;
-  margin-right:6px 
-}
-
-.zs .in .index  .personal .p3{
-  display: inline-block;
-  width:7px;
-  height:7px;
-  background: #19be6b;
-  border-radius: 50%;
-  margin-right:6px 
-}
-
-.zs .in .index  .personal .ren{
-      color: rgba(0,0,0,.45);
-    line-height: 22px;
-    cursor: pointer;
-    font-size: 14px
-}
-.zs .in .index h6{
-  font-size:24px;
-  color: black
-}
-
-.zs .in .index .team::after{
-  position: absolute;
-    top: 8px;
-    right: 0;
-    width: 1px;
-    height: 40px;
-    background-color: #e8e8e8;
-    content: "";
-}
-
-.zs .in .index .team::before{
-  position: absolute;
-    top: 8px;
-    left: 0px;
-    width: 1px;
-    height: 40px;
-    background-color: #e8e8e8;
-    content: "";
-}
 </style>

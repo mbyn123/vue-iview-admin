@@ -3,7 +3,7 @@
         <div class="project">
            <div class="inside">
              <Row>
-                 <Col span="6" v-for="(value,index) in messages" :key="index">
+                 <Col span="6" v-for="(value,index) in messages" :key="index" >
                  <div class="card">
                      <div class="content">
                          <Row>
@@ -114,10 +114,18 @@
 .project{
     background: rgb(245,247,249);
     margin-top: -25px;
+
 }
 .project .inside{
    padding: 0 15px;
+
 }
+
+.project .inside .card{
+    margin-top: 10px;
+    padding:10px 12px
+}
+
 
 .project .inside .card .content .imgs img{
     width:100%

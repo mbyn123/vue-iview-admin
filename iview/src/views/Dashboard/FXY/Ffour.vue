@@ -89,13 +89,19 @@ export default {
                 },
                 {
                     title:"Stores9",
-                    num1:"700%",
+                    num1:"70%",
                     num2:70
                 },
                
             ]
         }
     },
+  mounted() {
+      setTimeout(()=>{
+        this.drawChart14();
+      })
+
+  },
     methods:{
        shang(){
           this.style="transform: translate3d(0px, 0px, 0px);"
@@ -215,9 +221,7 @@ export default {
       },
 
     },
-  mounted() {
-    this.drawChart14();
-  }
+
 };
 </script>
 

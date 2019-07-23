@@ -1,10 +1,10 @@
 <template>
     <div>
         <div class="project">
-            <div class="inside">
+            <div class="inside" style="padding-top: 15px">
                 <Row>
-                    <Col span="8" v-for="(value,index) in mssg" :key="index">
-                        <div class="card">
+                    <Col span="12" v-for="(value,index) in mssg" :key="index" >
+                        <div class="card" >
                             <div class="content">
                                 <div style="background: white;padding: 20px">
                                     <div class="titl">
@@ -38,7 +38,7 @@
                                         <Icon type="md-share" size="22" color="grey"/>
                                         </Tooltip>
                                     </span>
-                                    <span class="ii ">
+                                    <span class="ii">
                                          <Tooltip content="下载" placement="bottom" theme="light">
                                         <Icon type="ios-more" size="22" color="grey"/>
                                              <div slot="content" theme="light">
@@ -245,13 +245,13 @@
         padding:0 3px;
     }
 
+    .project .inside .card{
+        padding: 10px;
+    }
+
     .project .inside .card .content{
         cursor: pointer;
         border:1px solid #e8e8e8;
-
-
-
-
     }
     .project .inside .card .content:hover{
         box-shadow: 1px 4px 5px 0px rgba(212,205,212,1);
@@ -303,18 +303,5 @@
         text-align: center;
         margin: 13px 0;
     }
-    .top,.bottom{
-        text-align: center;
-    }
-    .center{
-        width: 300px;
-        margin: 10px auto;
-        overflow: hidden;
-    }
-    .center-left{
-        float: left;
-    }
-    .center-right{
-        float: right;
-    }
+
 </style>

@@ -48,9 +48,7 @@
               <div class="top">
                   <span>资源剩余</span>
               </div>
-              <div class="imgs">
-                  <img src="http://ptt5and7y.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190630021342.png" alt="">
-              </div>
+              <div id="liquidFill" style="width:100% ;height:210px"></div>
           </div>
         </div>
       </Col>
@@ -59,27 +57,72 @@
 </template>
 
 <script>
+    import "echarts-liquidfill/src/liquidFill.js";
 export default {
     data(){
-        return{
-            parameter:[
+        return {
+            parameter: [
                 {
-                  title:"28%",
-                  num1:28,
-                  color:"#2d8cf0"
+                    title: "28%",
+                    num1: 28,
+                    color: "#2d8cf0"
                 },
-                 {
-                  title:"22%",
-                  num1:22,
-                  color:"#2db7f5"
+                {
+                    title: "22%",
+                    num1: 22,
+                    color: "#2db7f5"
                 },
-                 {
-                  title:"32%",
-                  num1:32,
-                  color:"#19be6b"
+                {
+                    title: "32%",
+                    num1: 32,
+                    color: "#19be6b"
                 },
-            ]
+            ],
+
         }
+    },
+    methods:{
+        drawChart12(){
+            let myChart12  = this.$echarts.init(document.getElementById("liquidFill"));
+            let option12 = {
+                series: [{
+                    type: 'liquidFill',
+                    data: [0.34],
+                    radius: '80%',
+                    outline: {
+                    //    show: true , //是否显示轮廓 布尔值
+                        borderDistance: 0, //外部轮廓与图表的距离 数字
+                        itemStyle:{
+                            borderColor:'rgb(65, 164, 255)', //边框的颜色
+                            borderWidth: 2,  //边框的宽度
+                         //   shadowBlur: 5 , //外部轮廓的阴影范围 一旦设置了内外都有阴影
+                          //  shadowColor: '#000' //外部轮廓的阴影颜色
+                        }
+                    },
+                    backgroundStyle: {
+                        color:'#fff',//图表的背景颜色
+                    },
+                    color: ['rgb(65, 164, 255)'],
+                    waveLength:'90%',
+                    amplitude: 9,//振幅
+                    label: {
+                        normal: {
+                            textStyle: {
+                                color: '#333',
+                                fontSize: 20
+                            }
+                        }
+                    }
+                }]
+            };
+
+            myChart12.setOption(option12);
+
+
+        }
+    },
+    mounted() {
+        this.drawChart12();
     }
 };
 </script>
@@ -105,7 +148,6 @@ export default {
 
 
 .cardone .huan .one {
- 
   text-align: center;
   padding:50px 0 40px 0;
 }

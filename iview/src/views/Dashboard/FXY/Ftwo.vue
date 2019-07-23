@@ -1,42 +1,17 @@
 <template>
   <Row style="margin-top:20px; ">
-      <div style="background: white">
+      <div style="background: white;">
 
-          <div class="clearfix" style="padding: 10px 0">
-              <div class="data" >
-                 <div class="nav">
-                <a href="#">
-                  <span>本日</span>
-                </a>
-                <a href="#">
-                  <span>本周</span>
-                </a>
-                <a href="#">
-                  <span>本月</span>
-                </a>
-                <a href="#">
-                  <span>全年</span>
-                </a>
-              </div>
-              <div class="time">
-                <DatePicker
-                  type="daterange"
-                  placement="bottom-end"
-                  placeholder="2019-01-01 ~ 2019-12-01"
-                  style="width: 200px"
-                ></DatePicker>
-              </div>
-            </div>
-          </div>
-
-         <Tabs value="name1" >
+            <Tabs value="name1" >
           <TabPane label="销售额" name="name1">
             <div class="main">
               <Row >
                    <Col span="16" style="padding:5px 20px 30px 20px;">
-                         <div style="max-width:90%;">
+
+
+
                        <div id="main" style="width: 100%;height:254px;"></div>
-                         </div>
+
                    </Col>
                     <Col span="8" >
                       <div class="Turnover" style="padding:10px 20px 20px 70px">
@@ -63,9 +38,9 @@
              <TabPane label="访问量" name="name2">
                  <Row >
                      <Col span="16" style="padding:5px 20px 30px 20px;">
-                         <div style="max-width:1000px;">
+
                              <div id="mainn" style="width: 100%;height:254px;"></div>
-                         </div>
+
                      </Col>
                      <Col span="8" >
                          <div class="Turnover" style="padding:10px 20px 20px 70px">
@@ -90,6 +65,7 @@
              </TabPane>
 
          </Tabs>
+
 
       </div> 
 
@@ -138,6 +114,13 @@ export default {
                 },
             ]
         }
+    },
+    mounted() {
+
+        setTimeout(()=>{
+            this.drawChart();
+            this.drawChart897();
+        })
     },
     methods:{
        fun(i){
@@ -330,10 +313,7 @@ export default {
             window.addEventListener("resize", () => { myChart123.resize();});
         },
     },
-    mounted() {
-        this.drawChart();
-        this.drawChart897();
-    }
+
 };
 </script>
 
@@ -362,7 +342,7 @@ export default {
   clear: both;
 }
 .data{
-   float:right;
+
   margin:0px 20px  -50px 0;
 }
 

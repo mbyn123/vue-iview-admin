@@ -31,7 +31,7 @@
                                       <Button icon="ios-add" type="dashed" size="small" @click="handleAdd"></Button>
                                       </div>
                                   </div>
-                                  <div class="tiem">
+                                  <div>
                                       <GRZX_item/>
                                   </div>
                               </div>

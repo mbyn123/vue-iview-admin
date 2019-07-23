@@ -67,6 +67,7 @@ export default {
 }
 .td .in {
   background: white;
+  padding-bottom: 20px;
 }
 .td .in .top {
   padding: 20px;
@@ -77,10 +78,10 @@ export default {
 
 .td .in .inner {
   padding: 0 16px;
+
 }
 
 .td .in .inner a {
-  display: block;
   padding: 10px;
   display: flex;
   align-items: center;

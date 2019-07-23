@@ -29,8 +29,6 @@
       <Col span="6">
         <div class="scard1">
             <div class="in">
-
-            
           <div class="top">
             <span>活动情况预测</span>
           </div>
@@ -39,24 +37,21 @@
               <div class="p1">目标评估</div>
               <div class="p2">有望达到预期</div>
             </div>
-            <div class="money">
-              <div class="n">1380 亿元</div>
-              <div class="n">720 亿元</div>
-              <Row>
-                <Col span="24">
-                  <img src="http://ptt5and7y.bkt.clouddn.com/%E4%B8%8B%E8%BD%BD%20%287%29.png" alt>
-                  <div class="time">
+            <div class="money" >
+              <div class="n" >1380 亿元</div>
+              <div class="n" >720 亿元</div>
+              <div id="mainhd" style="width:100%;height:200px;margin-top: -100px"></div>
+              <div class="time" >
                     <div>00:00</div>
                     <div>12:00</div>
                     <div>23:00</div>
                   </div>
-               
-                </Col>
-              </Row>
             </div>
           </div>
-            </div> 
+            </div>
+
         </div>
+
       </Col>
       <Row>
         <Col span="6">
@@ -67,15 +62,7 @@
             </div>
             <Row>
               <Col span="24">
-                <div class="imgs">
-                    <div class="in">  
-                  <img src="http://ptt5and7y.bkt.clouddn.com/%E4%B8%8B%E8%BD%BD%20%282%29.png" alt>
-                  <div class="p">
-                    <div class="p1">跳出率</div>
-                    <div class="p2">87.00%</div>
-                  </div>
-                    </div>
-                </div>
+              <div id="dash-board" style="width:100%;height:240px"></div>
               </Col>
             </Row>
             </div>
@@ -83,6 +70,7 @@
         </Col>
       </Row>
     </Row>
+
   </div>
 </template>
 
@@ -110,6 +98,149 @@ export default {
         }
       ]
     };
+  },
+  methods:{
+    drawCharthd(){
+      let myCharthd = this.$echarts.init(document.getElementById("mainhd"));
+      let myCharthdBoard = this.$echarts.init(document.getElementById("dash-board"));
+      let optionhd = {
+        grid: {
+          left: '0%',
+          right: '0%',
+          bottom: '30%',
+          containLabel: true
+        },
+        xAxis: {
+          type: 'category',
+          boundaryGap: false,
+          show:false//隐藏x坐标轴
+        },
+        yAxis: {
+          type: 'value',
+          data:['11',"12"],
+          show:false//隐藏y坐标轴
+
+        },
+        tooltip:{
+          trigger: 'item',
+          backgroundColor:'#ffffff',
+          textStyle:{
+            color:'black'
+          }
+        },
+        series: [{
+          data: [10, 8, 12, 14,16,18,16, 22, 20, 24,26, 30, 35, 32, 33, 35, 33,36,34, 36, 38, 39, 40, 38],
+          type: 'line',
+          areaStyle: {},
+          smooth: true ,//圆滑曲线true
+          //  showSymbol: false,
+          // symbol:'none',隐藏圆点
+          itemStyle: {
+            normal: {
+              color: "rgb(208, 233, 255)",
+              lineStyle: {
+                color: "rgb(16, 137, 255)"
+              }
+            }
+          },
+        }]
+      };
+      let optionhdBoard={
+          series: [
+
+            {
+              name: '业务指标',
+              type: 'gauge',
+              min: 0,                     // 最小值
+              max: 100,                   // 最大值
+              precision: 10,               // 小数精度，默认为0，无小数点
+            //  splitNumber: 10,             // 分割段数，默认为5
+              detail: {formatter:'{value}%'},
+              axisLine: {            // 坐标轴线(即最外层的圆环)
+                lineStyle: {       // 属性lineStyle控制线条样式
+                  color: [[1, '#2d8cf0']],
+                  width:10
+                }
+              },
+              title:{
+                offsetCenter:[0,40],
+                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                  color: '#ccc',
+                }
+              },
+              detail:{
+                show: true,
+                backgroundColor: 'rgba(0,0,0,0)',
+                borderWidth: 0,
+                borderColor: '#ccc',
+                width: 100,
+                height: 40,
+                offsetCenter: [0, 70],       // x, y，单位px
+                formatter: '{value}%',
+                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                  color: '#333',
+                  fontSize: 20
+                }
+              },
+              axisTick: { // 控制仪表盘的刻度线样式
+                length: 0,
+                lineStyle: {
+                  color: '',
+                  shadowColor: '', //默认透明
+                  shadowBlur: 10
+                }
+              },
+              splitLine: { // 控制分隔线样式(即表盘上长的刻度线)
+                length: 10, // 属性length控制线长
+                lineStyle: {
+                  width: 3,
+                  color: 'transparent',
+                  shadowColor: '#fff', //默认透明
+                  shadowBlur: 10//阴影模糊大小
+                },
+
+              },
+              axisLabel: { // 控制坐标轴刻度的数字样式
+                show: true,
+                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                  color: '#333',
+                },
+                formatter: function(v) {
+                  switch (v + '') {
+                    case '20':
+                      return '差';
+                    case '40':
+                      return '中';
+                    case '60':
+                      return '良';
+                    case '80':
+                      return '优';
+                    default:
+                      return '';
+                  }
+                }
+              },
+              pointer: {//控制指针样式
+                shadowColor: '#fff', //默认透明
+                shadowBlur: 15,
+                width:1,//控制指针宽度
+                borderWidth:100
+              },
+              data: [{value: 87.01, name: '跳出率'}]
+            },
+
+          ]
+        };
+
+      myCharthd.setOption(optionhd);
+      myCharthdBoard.setOption(optionhdBoard);
+      window.addEventListener("resize", () => { myCharthd.resize();});
+      window.addEventListener("resize", () => { myCharthdBoard.resize();});
+    },
+
+},
+  mounted() {
+    this.drawCharthd();
   }
 };
 </script>
@@ -184,7 +315,7 @@ background: #fff;
 .scard1 .tb .time {
   display: flex;
   justify-content: space-between;
-  margin-top: 50px;
+   margin-top: -50px;
 }
 
 .scard1 .tb .pp {
@@ -203,7 +334,7 @@ background: #fff;
 
 .scard1 .tb .money {
   padding: 0 20px 20px 20px;
-  position: relative;
+
 }
 
 .scard1 .tb .money .n {
@@ -213,13 +344,7 @@ background: #fff;
   line-height: 40px;
 }
 
-.scard1 .tb .money img {
-  object-fit: cover;
-  width: 100%;
-  height: 100px;
-  position: absolute;
-  top: -60px;
-}
+
 
 .scard2 {
   margin-top: 20px;
@@ -243,23 +368,19 @@ background: #fff;
 
 .scard2 .imgs {
 
-  text-align: center;
-  margin-top: 15px;
+
   margin-bottom: 4px;
   height: 200px;
 }
 
 
 .scard2 .imgs .in{
-   
-      width:335px;
-     height:182px;
+    border:1px solid red;
      margin: 0 auto;
 }
 
 .scard2 .imgs .p {
   width: 100%;
-  margin-top: -60px;
   text-align: center;
 }
 

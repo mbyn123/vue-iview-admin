@@ -1,6 +1,5 @@
 <template>
      <Row  gutter="16">
-
             <Col span="6">
               <div style="background: white;padding:20px;">
                 <div style="font-size:14px;color:rgba(0,0,0,.45);  position: relative;">
@@ -45,9 +44,9 @@
                 </div>
                  <Row>
                      <Col span="24">
-                         <div style="max-width:80%">
-                         <div id="main3" style="width:100%;height:100px;margin-top: -55px;"></div>
-                         </div>
+
+                         <div id="main3" style="width:100%;height:45px;"></div>
+
                      </Col>
                  </Row>
                 <div style="border-top:1px solid #ccc;padding-top:10px;">
@@ -73,8 +72,8 @@
                 </div>
                    <Row>
                        <Col span="24">
-                           <div style="max-width: 80%">
-                           <div id="main2" style="width:100%;height:100px;margin: -55px 0 0 0"></div>
+                           <div style="max-width: 100%;">
+                           <div id="main2" style="width:100%;height:45px;"></div>
                            </div>
                        </Col>
                    </Row>
@@ -116,6 +115,11 @@
 
 <script>
 export default {
+    mounted() {
+        setTimeout(()=>{
+            this.drawChart();
+        })
+    },
   methods:{
     drawChart() {
       // 基于准备好的dom，初始化echarts实例
@@ -135,9 +139,10 @@ export default {
           }
         },
         grid: {
-          left: '-10%',
-          right: '4%',
-          bottom: '-10%',
+            x: -35,
+            y: 0,
+            x2:0,
+            y2:-10 ,
           containLabel: true
         },
         xAxis : [
@@ -174,9 +179,10 @@ export default {
       };
         let optionPV = {
             grid: {
-                left: '-10%',
-                right: '4%',
-                bottom: '-10%',
+                x: -20,
+                y: 0,
+                x2:2,
+                y2:-10 ,
                 containLabel: true
             },
             xAxis: {
@@ -215,23 +221,18 @@ export default {
             }]
         };
       // 使用刚指定的配置项和数据显示图表。
-        myChart116.setOption(option116);
-        myChartPV.setOption(optionPV);
         myChartPV.setOption(optionPV);
         window.addEventListener("resize", () => { myChartPV.resize();});
 
         myChart116.setOption(option116);
         window.addEventListener("resize", () => { myChart116.resize();});
     },
-
-
   },
-  mounted() {
-    this.drawChart();
-  }
+
 }
 </script>
 
 <style>
+    *{margin:0;padding: 0;}
 
 </style>

@@ -3,7 +3,7 @@
         <div class="project">
             <div class="inside">
                 <Row>
-                    <Col span="8" v-for="(value,index) in messages" :key="index">
+                    <Col span="12" v-for="(value,index) in messages" :key="index">
                         <div class="card">
                             <div class="content">
                                 <Row>
@@ -225,7 +225,11 @@
         margin-top: -25px;
     }
     .project .inside{
-        padding:3px
+        padding:20px 0px;
+    }
+
+    .project .inside .card{
+        padding: 10px;
     }
 
     .project .inside .card .content .imgs img{

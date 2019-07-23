@@ -22,7 +22,9 @@
                                 </div>
                                 <div class="links">
                                     <span><Icon type="ios-star-outline" size="17" class="i"/>{{value.num1}}</span>
+                                    <em style="margin: 0 20px">|</em>
                                     <span><Icon type="md-thumbs-up" size="17" class="i"/> {{value.num2}} </span>
+                                    <em style="margin: 0 20px">|</em>
                                     <span><Icon type="ios-paper-outline" size="17" class="i"/> {{value.num2}} </span>
                                 </div>
                             </div>
@@ -409,9 +411,11 @@
     .comment .inside .content .links{
         font-size: 14px;
         color: rgba(0,0,0,.45);
+        padding: 10px 0;
     }
     .comment .inside .content .links i{
-        padding-top: 14px;
+        display: inline-block;
+        vertical-align: top;
 
     }
 </style>
