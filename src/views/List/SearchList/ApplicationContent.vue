@@ -47,14 +47,16 @@
                       </Tooltip>
                     </span>
                     <span class="in">
-                      <Tooltip content="下载" placement="bottom" theme="light">
-                        <Icon type="ios-more" size="22" color="grey" />
-                        <div slot="content" theme="light">
-                          <p>1st menu item</p>
-                          <p>2nd menu item</p>
-                          <p>3d menu item</p>
-                        </div>
-                      </Tooltip>
+                      <Dropdown>
+                        <a href="javascript:void(0)">
+                          <Icon type="ios-more" size="22" color="grey" />
+                        </a>
+                        <DropdownMenu slot="list">
+                          <DropdownItem>1st menu item</DropdownItem>
+                          <DropdownItem>2st menu item</DropdownItem>
+                          <DropdownItem>3st menu item</DropdownItem>
+                        </DropdownMenu>
+                      </Dropdown>
                     </span>
                   </div>
                 </div>
@@ -130,9 +132,12 @@ export default {
 <style scoped>
 .project {
   background: rgb(245, 247, 249);
+ 
+  padding: 0;
 }
 .project .inside {
-  padding: 0 15px;
+  padding: 0 15px 70px 15px;
+ 
 }
 
 .project .inside .card .content {
@@ -144,6 +149,7 @@ export default {
 }
 .inside .card .content .iner .i {
   display: inline-block;
+  font-size:16px;
 }
 
 .inside .card .content .iner .picture {
@@ -175,7 +181,8 @@ export default {
 }
 .inside .card .content .palette {
   border-top: 1px solid #ccc;
-  background: #fafafa;
+  background: #FAFAFA;
+
 }
 .em {
   border-right: 1px solid #e8e8e8;
@@ -184,6 +191,7 @@ export default {
   width: 25%;
   display: inline-block;
   text-align: center;
+  padding: 10px 0
 }
 
 .top,

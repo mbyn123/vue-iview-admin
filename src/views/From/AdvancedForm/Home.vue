@@ -155,7 +155,7 @@
                     </div>
                   </Col>
                   <Col span="8" offset="1">
-                    <div style="padding:0 0 0 50px;">
+                    <div style="padding-left:50px;">
                       <FormItem label="生效日期" prop="t3">
                         <br />
                         <TimePicker

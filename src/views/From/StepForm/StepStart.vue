@@ -51,7 +51,7 @@
                 </Form>
               </div>
             </div>
-            <StepEnd v-if="fill2" :next="next" />
+            <StepEnd v-if="fill2" :next="next" :last="last" />
           </Col>
         </Row>
         <Row>
@@ -100,6 +100,16 @@ export default {
     };
   },
   methods: {
+    last() {
+      if (this.current == 2) {
+        this.current = 0;
+      } else {
+        this.current = this.current - 1;
+      }
+      this.show = true;
+      this.fill2 = false;
+    },
+
     next() {
       if (this.current == 2) {
         this.current = 0;

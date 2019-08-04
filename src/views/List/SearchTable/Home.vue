@@ -33,7 +33,7 @@
                   </FormItem>
                 </div>
               </Col>
-              <Col span="8" v->
+              <Col span="8" >
                 <div class="item2">
                   <FormItem label="调用次数：" v-show="states">
                     <Input type="number"></Input>
@@ -72,10 +72,10 @@
                   </FormItem>
                 </div>
               </Col>
-              <Col span="21" v-show="states">
+              <Col span="20" v-show="states">
                 <div class="tm"></div>
               </Col>
-              <Col span="3">
+              <Col span="4">
                 <div class="but">
                   <Button type="primary">查询</Button>
                   <Button>重置</Button>
@@ -139,6 +139,7 @@ export default {
 .cxtable .in .inquire .tm {
   border: 1px solid rgba(255, 255, 255, 0.5);
 }
+
 
 .cxtable .in .inquire .but button {
   margin: 0 5px;

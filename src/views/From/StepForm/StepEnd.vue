@@ -51,7 +51,7 @@
               <div style="display:inline-block;padding:0px" @click="next">
                 <Button type="primary" style="margin-right:5px" @click="fill2=false">提交</Button>
               </div>
-              <Button @click="prev">上一步</Button>
+              <Button @click="last">上一步</Button>
             </div>
           </div>
         </Form>
@@ -63,7 +63,8 @@
 <script>
 export default {
   props: {
-    next: Function
+    next: Function,
+    last:Function
   },
   data() {
     return {
@@ -88,7 +89,7 @@ export default {
     };
   },
   methods: {
-    prev() {}
+   
   }
 };
 </script>

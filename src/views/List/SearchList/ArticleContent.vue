@@ -151,11 +151,14 @@ export default {
 
 
 <style>
+
+
 .comments .but {
   width: 100%;
   background: #fff;
   text-align: center;
   padding-bottom: 30px;
+ 
 }
 
 .comments .but .in {
@@ -165,7 +168,8 @@ export default {
 
 .comments {
   background: rgb(245, 247, 249);
-  padding: 0 20px;
+  padding: 20px ;
+  
 }
 
 .comments .insides {

@@ -357,7 +357,7 @@ let testData = {
 export default {
   data() {
     return {
-       turnover: [
+      turnover: [
         {
           num1: "¥ 15,781"
         },
@@ -503,7 +503,9 @@ export default {
       let SearchNumberChart = this.$echarts.init(
         document.getElementById("SearchNumber")
       );
-      let AllChannelsChart = this.$echarts.init(document.getElementById("AllChannels"));
+      let AllChannelsChart = this.$echarts.init(
+        document.getElementById("AllChannels")
+      );
       let OnlineChart = this.$echarts.init(document.getElementById("Online"));
       let shopChart = this.$echarts.init(document.getElementById("shop"));
 
@@ -839,8 +841,8 @@ export default {
       setTimeout(() => {
         /*窗口自適應，關鍵代碼*/
         window.onresize = function() {
-          myChart.resize();
-          myChart2.resize();
+          SearchUsersChart.resize();
+          SearchNumberChart.resize();
           AllChannelsChart.resize();
           OnlineChart.resize();
           shopChart.resize();

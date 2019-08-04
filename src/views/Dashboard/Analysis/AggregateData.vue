@@ -292,8 +292,8 @@ export default {
             //symbol: "circle",//实心圆
             areaStyle: {},
             smooth: true, //圆滑曲线true
-            //    showSymbol: false,
-            // symbol:'none',//隐藏圆点
+         //  symbol:'circle',
+        //   showSymbol:false,
             itemStyle: {
               normal: {
                 color: "rgb(105, 12, 232)",
@@ -308,12 +308,12 @@ export default {
       // 使用刚指定的配置项和数据显示图表。
      VisitsmyChart.setOption(optionVisits);
       window.addEventListener("resize", () => {
-        myChartPV.resize();
+        VisitsmyChart.resize();
       });
 
       FrequencyPaymentChart.setOption(optionFrequencyPayment);
       window.addEventListener("resize", () => {
-        myChart116.resize();
+        FrequencyPaymentChart.resize();
       });
     }
   }

@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
+import LandingPage from './components/LandingPage'
+
 import Analysis from './views/Dashboard/Analysis/Home'
 import Monitor from './views/Dashboard/Monitor/Home'
 import Workplace from './views/Dashboard/Workplace/Home'
@@ -35,6 +37,10 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
+    {
+      path:'/LandingPage',
+      component:LandingPage
+    },
     {
       path:'/Analysis',
       component:Analysis,
