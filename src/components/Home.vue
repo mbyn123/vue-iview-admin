@@ -132,7 +132,7 @@
       </Sider>
       <Layout>
         <Header />
-          <Content :style="{margin: '20px', background: 'rgb(245,247,249)', minHeight: '260px'}">
+        <Content :style="{margin: '20px', background: 'rgb(245,247,249)', minHeight: '260px'}">
                <router-view />
           </Content>
         <Footer />

@@ -159,7 +159,7 @@ data () {
 }
 </script>
 
-<style>
+<style scoped>
 .mainfrom{
     padding:40px;
     margin:43px 2px;

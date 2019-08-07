@@ -127,7 +127,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .fbfrom {
   padding-top: 43px;
 }

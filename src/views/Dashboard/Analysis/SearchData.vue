@@ -228,7 +228,7 @@ let testData = {
     {
       name: "1",
       age: "76%",
-      address: "	搜索关键词-0",
+      address: "搜索关键词-0",
       date: "830"
     },
     {
@@ -541,7 +541,7 @@ export default {
             areaStyle: {},
             smooth: true, //圆滑曲线true
             //    showSymbol: false,
-            //  symbol:'none',隐藏圆点
+            //  symbol:'none', //隐藏圆点
             itemStyle: {
               normal: {
                 color: "rgb(208, 233, 255)",
@@ -874,7 +874,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .saleroom .ivu-tabs-nav-wrap {
   text-align: right;
 }

@@ -45,7 +45,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .dh {
   padding: 40px 12px 12px 12px;
 }

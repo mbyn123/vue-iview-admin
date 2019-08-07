@@ -1,7 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import LandingPage from './components/LandingPage'
+import LandingPage from './components/Logoin/LandingPage'
+import Register from './components/Logoin/Register'
+import Home from "./components/Home"
+
 
 import Analysis from './views/Dashboard/Analysis/Home'
 import Monitor from './views/Dashboard/Monitor/Home'
@@ -37,105 +40,120 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
-    {
-      path:'/LandingPage',
-      component:LandingPage
-    },
-    {
-      path:'/Analysis',
-      component:Analysis,
-    },
-    {
-      path:"/Monitor",
-      component:Monitor,
-    },
-    {
-      path:"/Workplace",
-      component:Workplace,
-    },
-    {
-      path:"/BasicForm",
-      component:BasicForm,
-
-    },
-    {
-      path:"/StepForm",
-      component:StepForm,
-
-    },
-    {
-      path:"/AdvancedForm",
-      component:AdvancedForm
-    },
-    {
-      path:"/SearchList",
-      component:SearchList
-    },
-    {
-      path:"/SearchTable",
-      component:SearchTable
-    },
-    {
-      path:"/BasicList",
-      component:BasicList
-    },
-    {
-      path:"/CardList",
-      component:CardList
-    },
 
     {
-      path:"/BasicProfile",
-      component:BasicProfile
+      path: '/LandingPage',
+      component: LandingPage
     },
     {
-      path:"/AdvancedProfile",
-      component:AdvancedProfile
+      path: '/Register',
+      component: Register
     },
     {
-      path:"/Fail",
-      component: Fail
-    },
-    {
-      path:"/Success",
-      component:Success
-    },
-    {
-      path:"/Exception_403",
-      component:Exception_403
-    },
-    {
-      path:"/Exception_404",
-      component:Exception_404
-    },
-    {
-      path:"/Exception_500",
-      component:Exception_500
-    },
-    {
-      path:"/AccountCenter",
-      component:AccountCenter
-    },
-    {
-      path:"/AccountSettings",
-      component:AccountSettings
-    },
-    {
-      path:"/ProcessEditor",
-      component:ProcessEditor
-    },
-    {
-      path:"/BrainMapEditor",
-      component:BrainMapEditor
-    },
-    {
-      path:"/TopologyEditor",
-      component:TopologyEditor
+      path: '/Home',
+      component: Home,
+      children: [
+        {
+          path: '/Analysis',
+          component: Analysis,
+        },
+        {
+          path: "/Monitor",
+          component: Monitor,
+        },
+        {
+          path: "/Workplace",
+          component: Workplace,
+        },
+        {
+          path: "/BasicForm",
+          component: BasicForm,
+
+        },
+        {
+          path: "/StepForm",
+          component: StepForm,
+
+        },
+        {
+          path: "/AdvancedForm",
+          component: AdvancedForm
+        },
+        {
+          path: "/SearchList",
+          component: SearchList
+        },
+        {
+          path: "/SearchTable",
+          component: SearchTable
+        },
+        {
+          path: "/BasicList",
+          component: BasicList
+        },
+        {
+          path: "/CardList",
+          component: CardList
+        },
+
+        {
+          path: "/BasicProfile",
+          component: BasicProfile
+        },
+        {
+          path: "/AdvancedProfile",
+          component: AdvancedProfile
+        },
+        {
+          path: "/Fail",
+          component: Fail
+        },
+        {
+          path: "/Success",
+          component: Success
+        },
+        {
+          path: "/Exception_403",
+          component: Exception_403
+        },
+        {
+          path: "/Exception_404",
+          component: Exception_404
+        },
+        {
+          path: "/Exception_500",
+          component: Exception_500
+        },
+        {
+          path: "/AccountCenter",
+          component: AccountCenter
+        },
+        {
+          path: "/AccountSettings",
+          component: AccountSettings
+        },
+        {
+          path: "/ProcessEditor",
+          component: ProcessEditor
+        },
+        {
+          path: "/BrainMapEditor",
+          component: BrainMapEditor
+        },
+        {
+          path: "/TopologyEditor",
+          component: TopologyEditor
+        },
+        {
+          path: "",//默认显示
+          redirect: '/Analysis'
+        },
+      ]
     },
 
     {
-      path:"",//默认显示
-      redirect:'/Analysis'
+      path: "",//默认显示
+      redirect: '/LandingPage'
     },
   ]
 })

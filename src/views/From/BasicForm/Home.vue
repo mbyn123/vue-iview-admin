@@ -30,7 +30,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .top {
   background: #fff;
   padding: 20px 20px 30px 20px;

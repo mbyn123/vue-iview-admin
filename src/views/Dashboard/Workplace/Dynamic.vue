@@ -93,7 +93,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .dt{
     padding: 12px 12px 12px 3px;
 }

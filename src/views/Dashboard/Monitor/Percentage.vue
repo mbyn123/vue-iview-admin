@@ -34,9 +34,7 @@
             <div class="top">
               <span>热门搜索</span>
             </div>
-            <div class="imgs">
-              <img src="http://ptt5and7y.bkt.clouddn.com/%E4%B8%8B%E8%BD%BD8.png" alt />
-            </div>
+            <div id="main7" style="width:100%;height:210px;"></div>
           </div>
         </div>
       </Col>
@@ -46,7 +44,7 @@
             <div class="top">
               <span>资源剩余</span>
             </div>
-            <div id="liquidFill" style="width:100% ;height:210px"></div>
+            <div id="liquidFill" style="width:100% ;height:210px;"></div>
           </div>
         </div>
       </Col>
@@ -81,11 +79,14 @@ export default {
   mounted() {
     setTimeout(() => {
       this.liquidFillChart();
+      this.cloudchart()
     });
   },
   methods: {
     liquidFillChart() {
-      let liquidFillChart = this.$echarts.init(document.getElementById("liquidFill"));
+      let liquidFillChart = this.$echarts.init(
+        document.getElementById("liquidFill")
+      );
       let optionliquidFill = {
         series: [
           {
@@ -121,12 +122,203 @@ export default {
       };
 
       liquidFillChart.setOption(optionliquidFill);
-    }
+    },
+    cloudchart() {
+      let myChart7 = this.$echarts.init(document.getElementById("main7"));
+
+      let option7 = {
+        // title: {
+        //   text: "词云图"
+        // },
+        tooltip: {},
+        series: [
+          {
+            type: "wordCloud",
+            gridSize:10,
+            sizeRange: [10,16],
+            rotationRange: [0, 0],
+            shape: "circle",
+            textStyle: {
+              normal: {
+                fontSize: 20,
+                color: function() {
+                  return (
+                    "rgb(" +
+                    [
+                      Math.round(Math.random() * 160),
+                      Math.round(Math.random() * 160),
+                      Math.round(Math.random() * 160)
+                    ].join(",") +
+                    ")"
+                  );
+                }
+              },
+              emphasis: {
+                shadowBlur: 10,
+                shadowColor: "#333"
+              }
+            },
+            data: [
+              {
+                name: "上海",
+                value: 200
+                // textStyle: {
+                //   normal: {
+                //     color: "black"
+                //   },
+                //   emphasis: {
+                //     color: "red"
+                //   }
+                // }
+              },
+              {
+                name: "定西市",
+                value: 618
+              },
+              {
+                name: "克拉玛依市",
+                value: 243
+              },
+              {
+                name: "淮安市",
+                value: 305
+              },
+              {
+                name: "三亚市",
+                value: 246
+              },
+              {
+                name: "惠州市",
+                value: 224
+              },
+              {
+                name: "临夏回族自治州",
+                value: 289
+              },
+              {
+                name: "广州市",
+                value: 248
+              },
+              {
+                name: "苏州市",
+                value: 111
+              },
+              {
+                name: "德阳市",
+                value: 196
+              },
+              {
+                name: "赣州市",
+                value: 184
+              },
+              {
+                name: "海口市",
+                value: 158
+              },
+              {
+                name: "海东市",
+                value: 255
+              },
+              {
+                name: "百色市",
+                value: 550
+              },
+              {
+                name: "株洲市",
+                value: 46
+              },
+              {
+                name: "秦皇岛市",
+                value: 366
+              },
+              {
+                name: "延安市",
+                value: 361
+              },
+              {
+                name: "保山市",
+                value: 282
+              },
+              {
+                name: "北京市",
+                value: 273
+              },
+              {
+                name: "雅安市",
+                value: 265
+              },
+              {
+                name: "日照市",
+                value: 36
+              },
+              {
+                name: "攀枝花市",
+                value: 282
+              },
+              {
+                name: "资阳市",
+                value: 273
+              },
+
+              {
+                name: "株洲市",
+                value: 360
+              },
+              {
+                name: "泉州市",
+                value: 282
+              },
+              {
+                name: "武汉市",
+                value: 273
+              },
+              {
+                name: "长治县",
+                value: 265
+              },
+              {
+                name: "资阳市",
+                value: 273
+              },
+              {
+                name: "海南藏族自治州",
+                value: 260
+              },
+              {
+                name: "株洲市",
+                value: 360
+              },
+              {
+                name: "泉州市",
+                value: 282
+              },
+              {
+                name: "武汉市",
+                value: 273
+              },
+              {
+                name: "长治县",
+                value: 265
+              },
+              {
+                name: "海南市",
+                value: "100"
+              }
+            ]
+          }
+        ]
+      };
+      myChart7.setOption(option7);
+       window.addEventListener("resize", () => {
+        myChart7.resize();
+      });
+    },
+    
   }
 };
 </script>
 
-<style>
+<style scoped>
 .category {
   padding: 20px 12px 0 12px;
 }

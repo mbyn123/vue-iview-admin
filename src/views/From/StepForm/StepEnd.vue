@@ -94,7 +94,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .affirm .warn {
   width: 500px;
   height: 40px;

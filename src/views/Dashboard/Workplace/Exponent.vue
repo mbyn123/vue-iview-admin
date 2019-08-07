@@ -150,7 +150,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .ld {
   display: flex;
   justify-content: space-evenly;

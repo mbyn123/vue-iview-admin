@@ -425,7 +425,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .Poptip .in {
   height: 320px;
 }

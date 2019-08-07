@@ -24,7 +24,7 @@
         </div>
         <div class="bzlist">
           <div>
-            <div v-for="(value,index) in historyData" :key="value.id">
+            <div v-for="value in historyData" :key="value.id">
               <div class="item">
                 <div style="border-bottom:1px solid #ccc;padding:18px 5px 16px 5px">
                   <Row>
@@ -73,7 +73,7 @@
                                 <div @click="redactitems(value)">编辑</div>
                               </DropdownItem>
                               <DropdownItem>
-                                <div  @click="clearmodal=true">删除</div>
+                                <div @click="clearmodal=true">删除</div>
                               </DropdownItem>
                             </DropdownMenu>
                           </Dropdown>
@@ -147,7 +147,7 @@
                 />
                 <h1>操作成功</h1>
                 <p>一系列的信息描述，很短同样也可以带标点。</p>
-                <Button type="primary" @click="hintmodal=false">知道了</Button>
+                <Button type="primary" @click="handleSpinShow()">知道了</Button>
               </div>
             </Modal>
             <Modal v-model="redactmodal" title="任务编辑" width="640">
@@ -168,14 +168,11 @@
                     ></Input>
                   </FormItem>
                   <FormItem label="开始时间 :" label-for="time" prop="time">
-                    <DatePicker
-                      type="datetime"
-                      element-id="time"
-                      format="yyyy MM dd"
-                      placeholder="Select date and time"
+                    <el-date-picker
                       v-model="redactValidate.time"
-                      style="width: 350px"
-                    ></DatePicker>
+                      type="datetime"
+                      placeholder="选择日期时间"
+                    ></el-date-picker>
                   </FormItem>
                   <FormItem label="任务负责人 :" prop="person">
                     <Select v-model="redactpersonmodel" placeholder="请选择" style="width:350px">
@@ -203,22 +200,19 @@
                 <Button type="primary" @click="redacthandleSubmit('redactValidate')">保存</Button>
               </div>
             </Modal>
-            <Modal v-model="clearmodal" footer-hide :mask-closable="false" width="360">
-              <div style>
-                <div style="display:flex;padding:20px">
-                  <div style="margin-right:10px">
-                    <Icon type="ios-help-circle-outline" color="#ff9900" size="20" />
-                  </div>
-                  <div>
-                    <p
-                      style="color: rgba(0,0,0,.85);font-weight: 500;font-size: 16px;">删除任务</p>
-                    <p style="color: rgba(0,0,0,.55); font-size: 14px;">确定删除该任务吗？</p>
-                  </div>
+            <Modal v-model="clearmodal" footer-hide width="360">
+              <div style="display:flex">
+                <div style="margin-right:5px">
+                  <Icon type="ios-help-circle-outline" size="20" color="#ff9900" />
                 </div>
-                <div style="text-align:right">
-                  <Button style="margin-right:10px" @click="clearmodal=false">取消</Button>
-                  <Button type="primary" @click="clearitem(index)">确认</Button>
+                <div>
+                  <p style="font-size:16px;color:rgba(0,0,0,.85);font-weight:bold">删除任务</p>
+                  <p style="font-size:14px">确定删除该任务吗？</p>
                 </div>
+              </div>
+              <div style="text-align:right;padding-top:20px">
+                <Button style="margin-right:5px" @click="clearmodal=false">取消</Button>
+                <Button type="primary" @click="deleteitem()">确定</Button>
               </div>
             </Modal>
           </div>
@@ -241,6 +235,7 @@
 
 
 <script>
+import { setTimeout } from "timers";
 let testData = {
   histories: [
     {
@@ -248,7 +243,7 @@ let testData = {
       name: "Ant Design Pro",
       describe: "城镇中有那么多的酒馆，她却偏偏走进了我的酒馆",
       person: "周星星",
-      time: "2019-07-12 11:24",
+      time: "Tue Jul 16 2019 11:24:00 GMT+0800 (中国标准时间)",
       state: "normal",
       number: 91
     },
@@ -257,7 +252,7 @@ let testData = {
       name: "Bootstrap",
       describe: "那时候我只会想自己想要什么，从不想自己拥有什么",
       person: "吴加好",
-      time: "2019-07-12 09:24",
+      time: "Tue Jul 16 2019 11:24:00 GMT+0800 (中国标准时间)",
       state: "wrong",
       number: 66
     },
@@ -266,7 +261,7 @@ let testData = {
       name: "Angular",
       describe: "希望是一个好东西，也许是最好的，好东西是不会消亡的",
       person: "曲丽丽",
-      time: "2019-07-12 15:24",
+      time: "Tue Jul 16 2019 11:24:00 GMT+0800 (中国标准时间)",
       state: "wrong",
       number: 99
     },
@@ -275,7 +270,7 @@ let testData = {
       name: "Ant Design",
       describe: "生命就像一盒巧克力，结果往往出人意料",
       person: "林东东",
-      time: "2019-07-12 13:24",
+      time: "Tue Jul 16 2019 11:24:00 GMT+0800 (中国标准时间)",
       state: "normal",
       number: 84
     },
@@ -284,7 +279,7 @@ let testData = {
       name: "Alipay",
       describe: "那是一种内在的东西， 他们到达不了，也无法触及的",
       person: "付小小",
-      time: "2019-07-12 17:24",
+      time: "Tue Jul 16 2019 11:24:00 GMT+0800 (中国标准时间)",
       state: "normal",
       number: 61
     },
@@ -296,94 +291,13 @@ let testData = {
       time: "2019-07-12 15:24",
       state: "wrong",
       number: 99
-    },
-    {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/z.png",
-      name: "Ant Design",
-      describe: "生命就像一盒巧克力，结果往往出人意料",
-      person: "林东东",
-      time: "2019-07-12 13:24",
-      state: "normal",
-      number: 84
-    },
-    {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/p.png",
-      name: "Angular",
-      describe: "希望是一个好东西，也许是最好的，好东西是不会消亡的",
-      person: "曲丽丽",
-      time: "2019-07-12 15:24",
-      state: "wrong",
-      number: 99
-    },
-    {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/z.png",
-      name: "Ant Design",
-      describe: "生命就像一盒巧克力，结果往往出人意料",
-      person: "林东东",
-      time: "2019-07-12 13:24",
-      state: "normal",
-      number: 84
-    },
-    {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/p.png",
-      name: "Angular",
-      describe: "希望是一个好东西，也许是最好的，好东西是不会消亡的",
-      person: "曲丽丽",
-      time: "2019-07-12 15:24",
-      state: "wrong",
-      number: 99
-    },
-    {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/z.png",
-      name: "Ant Design",
-      describe: "生命就像一盒巧克力，结果往往出人意料",
-      person: "林东东",
-      time: "2019-07-12 13:24",
-      state: "normal",
-      number: 84
-    },
-    {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/p.png",
-      name: "Angular",
-      describe: "希望是一个好东西，也许是最好的，好东西是不会消亡的",
-      person: "曲丽丽",
-      time: "2019-07-12 15:24",
-      state: "wrong",
-      number: 99
-    },
-    {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/z.png",
-      name: "Ant Design",
-      describe: "生命就像一盒巧克力，结果往往出人意料",
-      person: "林东东",
-      time: "2019-07-12 13:24",
-      state: "normal",
-      number: 84
-    },
-    {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/p.png",
-      name: "Angular",
-      describe: "希望是一个好东西，也许是最好的，好东西是不会消亡的",
-      person: "曲丽丽",
-      time: "2019-07-12 15:24",
-      state: "wrong",
-      number: 99
-    },
-    {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/z.png",
-      name: "Ant Design",
-      describe: "生命就像一盒巧克力，结果往往出人意料",
-      person: "林东东",
-      time: "2019-07-12 13:24",
-      state: "normal",
-      number: 84
     },
     {
       img: "http://pt1mv9q6v.bkt.clouddn.com/n.png",
       name: "Ant Design Pro",
       describe: "城镇中有那么多的酒馆，她却偏偏走进了我的酒馆",
       person: "周星星",
-      time: "2019-07-12 11:24",
+      time: "2019-07-14 11:24",
       state: "normal",
       number: 91
     },
@@ -392,16 +306,34 @@ let testData = {
       name: "Bootstrap",
       describe: "那时候我只会想自己想要什么，从不想自己拥有什么",
       person: "吴加好",
-      time: "2019-07-12 09:24",
+      time: "2019-07-19 09:24",
       state: "wrong",
       number: 66
+    },
+    {
+      img: "http://pt1mv9q6v.bkt.clouddn.com/p.png",
+      name: "Angular",
+      describe: "希望是一个好东西，也许是最好的，好东西是不会消亡的",
+      person: "曲丽丽",
+      time: "2019-07-17 15:24",
+      state: "wrong",
+      number: 99
+    },
+    {
+      img: "http://pt1mv9q6v.bkt.clouddn.com/z.png",
+      name: "Ant Design",
+      describe: "生命就像一盒巧克力，结果往往出人意料",
+      person: "林东东",
+      time: "2019-07-16 13:24",
+      state: "normal",
+      number: 84
     },
     {
       img: "http://pt1mv9q6v.bkt.clouddn.com/zfb.png",
       name: "Alipay",
       describe: "那是一种内在的东西， 他们到达不了，也无法触及的",
       person: "付小小",
-      time: "2019-07-12 17:24",
+      time: "2019-07-14 17:24",
       state: "normal",
       number: 61
     },
@@ -415,20 +347,20 @@ let testData = {
       number: 99
     },
     {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/z.png",
-      name: "Ant Design",
-      describe: "生命就像一盒巧克力，结果往往出人意料",
-      person: "林东东",
-      time: "2019-07-12 13:24",
-      state: "normal",
-      number: 84
+      img: "http://pt1mv9q6v.bkt.clouddn.com/p.png",
+      name: "Angular",
+      describe: "希望是一个好东西，也许是最好的，好东西是不会消亡的",
+      person: "曲丽丽",
+      time: "2019-07-12 15:24",
+      state: "wrong",
+      number: 99
     },
     {
       img: "http://pt1mv9q6v.bkt.clouddn.com/n.png",
       name: "Ant Design Pro",
       describe: "城镇中有那么多的酒馆，她却偏偏走进了我的酒馆",
       person: "周星星",
-      time: "2019-07-12 11:24",
+      time: "2019-07-14 11:24",
       state: "normal",
       number: 91
     },
@@ -437,18 +369,18 @@ let testData = {
       name: "Bootstrap",
       describe: "那时候我只会想自己想要什么，从不想自己拥有什么",
       person: "吴加好",
-      time: "2019-07-12 09:24",
+      time: "2019-07-19 09:24",
       state: "wrong",
       number: 66
     },
     {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/zfb.png",
-      name: "Alipay",
-      describe: "那是一种内在的东西， 他们到达不了，也无法触及的",
-      person: "付小小",
-      time: "2019-07-12 17:24",
-      state: "normal",
-      number: 61
+      img: "http://pt1mv9q6v.bkt.clouddn.com/p.png",
+      name: "Angular",
+      describe: "希望是一个好东西，也许是最好的，好东西是不会消亡的",
+      person: "曲丽丽",
+      time: "2019-07-17 15:24",
+      state: "wrong",
+      number: 99
     },
     {
       img: "http://pt1mv9q6v.bkt.clouddn.com/p.png",
@@ -460,20 +392,11 @@ let testData = {
       number: 99
     },
     {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/z.png",
-      name: "Ant Design",
-      describe: "生命就像一盒巧克力，结果往往出人意料",
-      person: "林东东",
-      time: "2019-07-12 13:24",
-      state: "normal",
-      number: 84
-    },
-    {
       img: "http://pt1mv9q6v.bkt.clouddn.com/n.png",
       name: "Ant Design Pro",
       describe: "城镇中有那么多的酒馆，她却偏偏走进了我的酒馆",
       person: "周星星",
-      time: "2019-07-12 11:24",
+      time: "2019-07-14 11:24",
       state: "normal",
       number: 91
     },
@@ -482,18 +405,18 @@ let testData = {
       name: "Bootstrap",
       describe: "那时候我只会想自己想要什么，从不想自己拥有什么",
       person: "吴加好",
-      time: "2019-07-12 09:24",
+      time: "2019-07-19 09:24",
       state: "wrong",
       number: 66
     },
     {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/zfb.png",
-      name: "Alipay",
-      describe: "那是一种内在的东西， 他们到达不了，也无法触及的",
-      person: "付小小",
-      time: "2019-07-12 17:24",
-      state: "normal",
-      number: 61
+      img: "http://pt1mv9q6v.bkt.clouddn.com/p.png",
+      name: "Angular",
+      describe: "希望是一个好东西，也许是最好的，好东西是不会消亡的",
+      person: "曲丽丽",
+      time: "2019-07-17 15:24",
+      state: "wrong",
+      number: 99
     },
     {
       img: "http://pt1mv9q6v.bkt.clouddn.com/p.png",
@@ -505,20 +428,11 @@ let testData = {
       number: 99
     },
     {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/z.png",
-      name: "Ant Design",
-      describe: "生命就像一盒巧克力，结果往往出人意料",
-      person: "林东东",
-      time: "2019-07-12 13:24",
-      state: "normal",
-      number: 84
-    },
-    {
       img: "http://pt1mv9q6v.bkt.clouddn.com/n.png",
       name: "Ant Design Pro",
       describe: "城镇中有那么多的酒馆，她却偏偏走进了我的酒馆",
       person: "周星星",
-      time: "2019-07-12 11:24",
+      time: "2019-07-14 11:24",
       state: "normal",
       number: 91
     },
@@ -527,18 +441,18 @@ let testData = {
       name: "Bootstrap",
       describe: "那时候我只会想自己想要什么，从不想自己拥有什么",
       person: "吴加好",
-      time: "2019-07-12 09:24",
+      time: "2019-07-19 09:24",
       state: "wrong",
       number: 66
     },
     {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/zfb.png",
-      name: "Alipay",
-      describe: "那是一种内在的东西， 他们到达不了，也无法触及的",
-      person: "付小小",
-      time: "2019-07-12 17:24",
-      state: "normal",
-      number: 61
+      img: "http://pt1mv9q6v.bkt.clouddn.com/p.png",
+      name: "Angular",
+      describe: "希望是一个好东西，也许是最好的，好东西是不会消亡的",
+      person: "曲丽丽",
+      time: "2019-07-17 15:24",
+      state: "wrong",
+      number: 99
     },
     {
       img: "http://pt1mv9q6v.bkt.clouddn.com/p.png",
@@ -550,20 +464,11 @@ let testData = {
       number: 99
     },
     {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/z.png",
-      name: "Ant Design",
-      describe: "生命就像一盒巧克力，结果往往出人意料",
-      person: "林东东",
-      time: "2019-07-12 13:24",
-      state: "normal",
-      number: 84
-    },
-    {
       img: "http://pt1mv9q6v.bkt.clouddn.com/n.png",
       name: "Ant Design Pro",
       describe: "城镇中有那么多的酒馆，她却偏偏走进了我的酒馆",
       person: "周星星",
-      time: "2019-07-12 11:24",
+      time: "2019-07-14 11:24",
       state: "normal",
       number: 91
     },
@@ -572,24 +477,25 @@ let testData = {
       name: "Bootstrap",
       describe: "那时候我只会想自己想要什么，从不想自己拥有什么",
       person: "吴加好",
-      time: "2019-07-12 09:24",
+      time: "2019-07-19 09:24",
       state: "wrong",
       number: 66
     },
     {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/zfb.png",
-      name: "Alipay",
-      describe: "那是一种内在的东西， 他们到达不了，也无法触及的",
-      person: "付小小",
-      time: "2019-07-12 17:24",
-      state: "normal",
-      number: 61
+      img: "http://pt1mv9q6v.bkt.clouddn.com/p.png",
+      name: "Angular",
+      describe: "希望是一个好东西，也许是最好的，好东西是不会消亡的",
+      person: "曲丽丽",
+      time: "2019-07-17 15:24",
+      state: "wrong",
+      number: 99
     }
   ]
 };
 export default {
   data() {
     return {
+      index: 0,
       listmodal: false,
       hintmodal: false,
       redactmodal: false,
@@ -599,7 +505,7 @@ export default {
       // 初始化信息总条数
       dataCount: 0,
       // 每页显示多少条
-      pageSize: 5,
+      pageSize: 10,
       page: 1,
       historyData: [],
       personList: [
@@ -697,14 +603,14 @@ export default {
             trigger: "blur"
           }
         ],
-        // time: [
-        //   {
-        //     required: true,
-        //     type: "date",
-        //     message: "请选择开始日期",
-        //     trigger: "change"
-        //   }
-        // ],
+        time: [
+          {
+            required: true,
+            type: "date",
+            message: "请选择开始日期",
+            trigger: "change"
+          }
+        ],
         person: [
           {
             required: true,
@@ -716,33 +622,50 @@ export default {
     };
   },
   methods: {
-    clearitem(index) {
-      this.clearmodal = false;
-       testData.histories.splice(index, 1);
-     this.handleListApproveHistory();
+    time() {
+      for (let v = 0; v < testData.histories.length; v++) {
+        testData.histories[v].time = this.dateFormat(
+          testData.histories[v].time
+        );
+      }
     },
-
+    handleSpinShow() {
+      this.hintmodal = false;
+    },
+    deleteitem() {
+      this.historyData.splice(this.index, 1);
+      this.$Spin.show();
+      setTimeout(() => {
+        this.$Spin.hide();
+      }, 2000);
+      this.clearmodal = false;
+    },
     redacthandleSubmit(name) {
+      const tempdata = Object.assign({}, this.redactValidate);
+      tempdata.person = this.redactpersonmodel;
+      tempdata.time = this.dateFormat(tempdata.time);
       this.$refs[name].validate(valid => {
         if (valid) {
-        
+          this.historyData.splice(this.index, 1, tempdata);
           this.redactmodal = false;
-          this.hintmodal = true;
+          this.$Spin.show();
+          setTimeout(() => {
+            this.$Spin.hide();
+            this.hintmodal = true;
+          }, 2000);
         } else {
           this.$Message.error();
         }
       });
     },
-    redactitems(i) {
+    redactitems(value) {
       this.redactmodal = true;
-  //    this.redactValidate = i
-      this.redactValidate.time = i.time;
-      this.redactValidate.name = i.name;
-      this.redactValidate.describe = i.describe;
-      this.redactValidate.person = i.person;
+      this.redactValidate = Object.assign({}, value);
 
-      this.redactpersonmodel = i.person;
+      this.index = this.historyData.indexOf(value);
+      this.redactpersonmodel = value.person;
     },
+    //转换时间
     dateFormat: function(time) {
       var date = new Date(time);
       var year = date.getFullYear();
@@ -762,20 +685,12 @@ export default {
         date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
       // 拼接
       return (
-        year +
-        "-" +
-        month +
-        "-" +
-        day +
-        " " +
-        hours +
-        ":" +
-        minutes +
-        ":" +
-        seconds
+        year + "-" + month + "-" + day + " " + hours + ":" + minutes
+        // ":" +
+        // seconds
       );
     },
-
+    //当前时间
     CurentTime() {
       var date = new Date();
       var month = date.getMonth() + 1;
@@ -823,10 +738,12 @@ export default {
         state: "wrong",
         number: 0
       };
+
       add.name = this.formValidate.name;
       add.describe = this.formValidate.describe;
       add.person = this.formValidate.person;
       add.time = this.dateFormat(this.formValidate.time);
+
       testData.histories.unshift(add);
       //  console.log(testData.histories);
     },
@@ -835,6 +752,7 @@ export default {
         if (valid) {
           this.addlist();
           this.handleListApproveHistory();
+
           this.formValidate.name = "";
           this.formValidate.time = "";
           this.formValidate.describe = "";
@@ -871,6 +789,7 @@ export default {
   },
   created() {
     this.handleListApproveHistory();
+    this.time();
   }
 };
 </script>

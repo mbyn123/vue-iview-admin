@@ -15,20 +15,25 @@
               <template slot-scope="{ row, index }" slot="name">
                 <Input
                   type="text"
-                  v-model="editName"
+                  v-model.trim="editName"
                   v-if="editIndex === index"
                   placeholder="成员姓名"
                 />
                 <span v-else>{{ row.name }}</span>
               </template>
               <template slot-scope="{ row, index }" slot="age">
-                <Input type="text" v-model="editAge" v-if="editIndex === index" placeholder="工号" />
+                <Input
+                  type="text"
+                  v-model.trim="editAge"
+                  v-if="editIndex === index"
+                  placeholder="工号"
+                />
                 <span v-else>{{ row.age }}</span>
               </template>
               <template slot-scope="{ row, index }" slot="address">
                 <Input
                   type="text"
-                  v-model="editAddress"
+                  v-model.trim="editAddress"
                   v-if="editIndex === index"
                   placeholder="所属部门"
                 />
@@ -37,12 +42,19 @@
               <template slot-scope="{ row, index }" slot="action">
                 <div v-if="editIndex === index">
                   <a href="javascript:;" @click="handleSave(index)">保存</a>
-                  <a href="javascript:;" @click="editIndex = -1" style="margin-left:5px">取消</a>
+                  <a href="javascript:;" style="margin-left:5px">取消</a>
                 </div>
                 <div v-else>
                   <a href="javascript:;" @click="handleEdit(row, index)">编辑</a>
-
-                  <a href="javascript:;" style="margin-left:5px" @click="affirm(index)">删除</a>
+                  <Poptip
+                    confirm
+                    title="是否要删除此行？"
+                    @on-ok="ok(index)"
+                  
+                    placement="right"
+                  >
+                    <a href="javascript:;" style="margin-left:5px">删除</a>
+                  </Poptip>
                 </div>
               </template>
             </Table>
@@ -110,7 +122,8 @@ export default {
       editIndex: -1, // 当前聚焦的输入框的行数
       editName: "", // 第一列输入框，当然聚焦的输入框的输入内容，与 data 分离避免重构的闪烁
       editAge: "", // 第二列输入框
-      editAddress: "" // 第三列输入框
+      editAddress: "", // 第三列输入框
+    
     };
   },
   methods: {
@@ -124,18 +137,33 @@ export default {
       this.data[index].name = this.editName;
       this.data[index].age = this.editAge;
       this.data[index].address = this.editAddress;
-      this.editIndex = -1;
+       if (this.editName ==  null || this.editName == '' ) {
+        this.$Message.error("请填写完整成员信息");
+      } else if (this.editAge ==  null || this.editAge ==  '') {
+        this.$Message.error("请填写完整成员信息");
+      } else if (this.editAddress ==  null || this.editAddress ==  '') {
+        this.$Message.error("请填写完整成员信息");
+      } else {
+        this.editIndex = -1;
+      }
     },
-    affirm(index) {
+    ok(index) {
       this.data.splice(index, 1);
     },
 
-    cancel() {
-      this.editIndex = -1;
-    },
-
     additem() {
-      this.data.push({});
+      let obj={
+        name: null,
+        age: null,
+        address: null
+      }
+     
+      this.editName =obj.name;
+      this.editAge = obj.age;
+      this.editAddress = obj.address;
+       this.data.push(obj);
+      this.editIndex = this.data.length - 1;
+   
     }
   }
 };

@@ -111,11 +111,13 @@ export default {
     xia() {
       this.style = "transform: translate3d(-300px, 0px, 0px);";
     },
-   footfalldrawChart() {
+    footfalldrawChart() {
       window.addEventListener("resize", () => {
-       footfallChart.resize();
+        footfallChart.resize();
       });
-      let footfallChart = this.$echarts.init(document.getElementById("footfall"));
+      let footfallChart = this.$echarts.init(
+        document.getElementById("footfall")
+      );
 
       let optionfootfall = {
         tooltip: {
@@ -228,6 +230,9 @@ export default {
               55
             ],
             type: "line",
+            showSymbol: false,
+           
+            symbol: "none", //隐藏圆点,
             itemStyle: {
               normal: {
                 color: "rgb(208, 233, 255)",
@@ -278,7 +283,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .stores {
   position: relative;
   padding: 20px 50px 0 50px;

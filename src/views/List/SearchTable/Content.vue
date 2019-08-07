@@ -24,6 +24,7 @@
               <Button type="primary" @click="ok('formValidate')">确认</Button>
             </div>
           </Modal>
+
           <Button style="margin-right: 10px" v-show="state3">批量操作</Button>
           <Dropdown>
             <Button v-show="state3">
@@ -105,7 +106,7 @@
         </div>
       </div>
     </div>
-    <Modal v-model="modal2" title="规则配置" @on-ok="ok" @on-cancel="cancel" width="640">
+    <Modal v-model="modal2" title="规则配置" width="640">
       <div>
         <Steps :current="current">
           <Step title="基本信息"></Step>
@@ -116,7 +117,7 @@
           <Form
             :label-width="90"
             :model="tablesValidate"
-            :rules="tableValidate"
+            :rules="tablerulesValidate"
             ref="tablesValidate"
           >
             <FormItem label="规则名称：" label-for="name" prop="name">
@@ -1211,10 +1212,7 @@ export default {
       formValidate: {
         describe: ""
       },
-      tablesValidate: {
-        describe: "",
-        name: ""
-      },
+      tablesValidate: {},
       ruleValidate: {
         describe: [
           {
@@ -1245,7 +1243,7 @@ export default {
           }
         ]
       },
-      tableValidate: {
+      tablerulesValidate: {
         describe: [
           {
             required: true,
@@ -1316,19 +1314,20 @@ export default {
       Datedispatchmodel: ["月"]
     };
   },
-
+  created() {},
   methods: {
     allocation(row) {
-      // this.tablesValidate = i;
-      this.tablesValidate.describe = row.describe;
-      this.tablesValidate.name = row.name;
+      this.tablesValidate = Object.assign({}, row);
+       console.log(row);
+      this.current = 0;
+      this.state();
       this.modal2 = true;
     },
-     fff(){
-        this.current = 0;
-          this.state()
-       this.modal2=false
-     },
+    fff() {
+      this.current = 0;
+      this.state();
+      this.modal2 = false;
+    },
     state() {
       if (this.current == 0) {
         (this.stepone = true), (this.steptwo = false), (this.stepthree = false);
@@ -1350,14 +1349,14 @@ export default {
     handleSubmit(name) {
       this.$refs[name].validate(valid => {
         if (valid) {
-          this.$Message.success("配置成功");
-             this.tablesValidate.name = this.tablesValidate.name;
-         
+          const tempdata = Object.assign({}, this.tablesValidate);
+          this.historyData.splice(tempdata._index,1,tempdata)
+          console.log(tempdata._index)
           this.modal2 = false;
-           this.tablesValidate = row;
           this.current = 0;
           this.state();
           this.dispatchValidate.time = "";
+          this.$Message.success("配置成功");
         } else {
           this.$Message.error();
         }
@@ -1371,12 +1370,14 @@ export default {
         } else {
           this.$Message.error();
         }
+        console.log();
       });
     },
     last() {
       this.current = this.current - 1;
       this.state();
     },
+
     CurentTime() {
       var date = new Date();
       var month = date.getMonth() + 1;

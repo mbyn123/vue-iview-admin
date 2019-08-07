@@ -54,7 +54,7 @@
 export default {};
 </script>
 
-<style>
+<style scoped>
 .cardtop {
   background: #fff;
   margin: -17px -20px;

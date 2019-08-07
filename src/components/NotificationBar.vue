@@ -301,7 +301,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .prompt-boxs .Columns {
   border-bottom: 1px solid #ccc;
   padding: 10px 20px;

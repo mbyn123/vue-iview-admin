@@ -1,22 +1,14 @@
 <template>
   <div id="app">
-   <home/>
-   <landingpage/>
+    <router-view />
   </div>
 </template>
 
 <script>
-import landingpage from "./components/LandingPage"
-import home from "./components/Home"
 export default {
-  name: 'app',
-  components: {
-    home,
-    landingpage
-  }
-}
+  name: "app"
+};
 </script>
 
 <style>
-
 </style>

@@ -51,7 +51,7 @@ export default {
         return{
            projectarr:[
                {
-                   img:"http://pt1mv9q6v.bkt.clouddn.com/zfb.png",
+                   img:"",
                    user:"Alipay",
                    content:"那是一种内在的东西，他们到达不了，也无法触及的",
                    team:"科学搬家组",
@@ -102,7 +102,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 
 .project {
  padding: 40px 12px 12px 3px;
@@ -124,6 +124,8 @@ export default {
   font-size: 16px;
   color: #333;
 }
+
+
 
 .project .in .main .content .inner .ine{
     height:44px;

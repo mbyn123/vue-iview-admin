@@ -284,7 +284,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .banner {
   padding: 0 12px;
 }
