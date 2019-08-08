@@ -1,12 +1,11 @@
 <template>
-  <Row>
-    <col span="24" />
+  
     <div class="fbfrom">
       <div class="in">
-        <Row>
-          <Col span="16" offset="6">
-            <div>
-              <div class="step">
+        <Row type="flex" justify="center">
+          <Col :xs="24" :sm="24" :md="24" :lg="16" :xl="16" :xxl="16" >
+            <div style=""> 
+              <div class="step" >
                 <Steps :current="current">
                   <Step title="填写转账信息"></Step>
                   <Step title="确认转账信息"></Step>
@@ -54,7 +53,7 @@
             <StepEnd v-if="fill2" :next="next" :last="last" />
           </Col>
         </Row>
-        <Row>
+        <Row >
           <Col span="24" v-show="show">
             <div style="padding-top:30px">
               <div class="explain">
@@ -75,8 +74,7 @@
         </Row>
       </div>
     </div>
-    <col />
-  </Row>
+  
 </template>
 <script>
 import StepEnd from "./StepEnd";
@@ -139,10 +137,12 @@ export default {
 
 .fbfrom .in .step {
   margin-bottom: 30px;
+  
 }
 
 .fbfrom .in .fill {
-  padding-left: 100px;
+ 
+ 
 }
 
 .fbfrom .explain {

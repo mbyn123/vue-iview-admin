@@ -1,9 +1,9 @@
 <template>
   <div>
     <Row v-if="fill2">
-      <Col span="12" offset="2">
+      <Col :xs="24" :sm="24" :md="24" :lg="16" :xl="16" :xxl="16">
         <Form :label-width="80">
-          <div class="affirm">
+          <div class="affirm" >
             <div class="warn" v-if="fill3">
               <Icon type="ios-alert-outline" size="20" color="blue" />
               <div class="content">确认转账后，资金将直接打入对方账户，无法退回。</div>
@@ -16,7 +16,8 @@
               />
             </div>
             <div style="border-bottom:1px solid #ccc;padding:20px 0">
-              <Row v-for="(user ,index) in message" :key="index" style="margin-bottom:20px">
+              <Row v-for="(user ,index) in message" :key="index" style="margin-bottom:20px;">
+
                 <Col span="5">
                   <div class="account">
                     <label title="付款账户 :">{{user.title}}</label>
@@ -32,7 +33,7 @@
               <Row v-for="user  in money" :key="user.id">
                 <Col span="5">
                   <div class="account">
-                    <label title="付款账户 :">付款账户 :</label>
+                    <label title="转账金额 :">转账金额 :</label>
                   </div>
                 </Col>
                 <Col span="19">
@@ -103,6 +104,7 @@ export default {
   padding: 8px;
   border-radius: 5px;
   margin: 0 auto;
+ 
 }
 
 .affirm .warn .content {
@@ -112,6 +114,7 @@ export default {
   margin-right: 15px;
   margin-left: 5px;
   color: rgba(0, 0, 0, 0.65);
+ 
   font-size: 14px;
 }
 .affirm .account {

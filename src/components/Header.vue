@@ -29,7 +29,7 @@
         </div>
         <div class="user-control">
           <Dropdown>
-            <img src="../assets/10.png" alt style="width:24px" />
+            <img src="../assets/userlogo_images/users.png" alt style="width:24px" />
             <span>Serati Ma</span>
             <DropdownMenu slot="list">
               <router-link to="/AccountCenter" class="link">

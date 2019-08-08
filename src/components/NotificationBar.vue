@@ -33,7 +33,7 @@
               </div>
               <div style="text-align: center;padding: 90px 0" v-show="achange">
                 <div style="margin-bottom: 10px">
-                  <img src="../assets/20.svg" alt />
+                  <img src="src/assets/layout_images/tz.svg"/>
                 </div>
                 <div style="font-size: 14px">你已查看所有通知</div>
               </div>
@@ -75,7 +75,7 @@
             </div>
             <div style="text-align: center;padding: 90px 0" v-show="bchange">
               <div style="margin-bottom: 10px">
-                <img src="../assets/20.svg" alt />
+                  <img src="src/assets/layout_images/tz.svg"/>
               </div>
               <div style="font-size: 14px">您已读完所有消息</div>
             </div>
@@ -111,7 +111,7 @@
             </div>
             <div style="text-align: center;padding: 90px 0" v-show="cchange">
               <div style="margin-bottom: 10px">
-                <img src="../assets/20.svg" alt />
+                 <img src="src/assets/layout_images/tz.svg"/>
               </div>
               <div style="font-size: 14px">你已完成所有待办</div>
             </div>
@@ -145,47 +145,47 @@ export default {
       cchange: false,
       informs: [
         {
-          img: require("../assets/15.png"),
+          img: require("../assets/functional_image/sc.png"),
           title: "你收到了 14 份新周报",
           time: "2 年前"
         },
         {
-          img: require("../assets/13.png"),
+           img: require("../assets/functional_image/tj.png"),
           title: "你推荐的 曲妮妮 已通过第三轮面试",
           time: "2 年前"
         },
 
         {
-          img: require("../assets/14.png"),
+           img: require("../assets/functional_image/tx.png"),
           title: "这种模板可以区分多种通知类型",
           time: "2 年前"
         },
         {
-          img: require("../assets/12.png"),
+           img: require("../assets/functional_image/tz.png"),
           title: "左侧图标用于区分不同的类型",
           time: "2 年前"
         },
         {
-          img: require("../assets/16.png"),
+           img: require("../assets/functional_image/xx.png"),
           title: "内容不要超过两行字，超出时自动截断nnnn",
           time: "2 年前"
         }
       ],
       informations: [
         {
-          img: require("../assets/11.jpeg"),
+          img: require("../assets/functional_image/hint.jpeg"),
           title: "曲丽丽 评论了你",
           content: "描述信息描述信息描述信息",
           time: "2年前"
         },
         {
-          img: require("../assets/11.jpeg"),
+         img: require("../assets/functional_image/hint.jpeg"),
           title: "朱偏右 回复了你",
           content: "这种模板用于提醒谁与你发生了互动，左侧放『谁』的头像",
           time: "2年前"
         },
         {
-          img: require("../assets/11.jpeg"),
+        img: require("../assets/functional_image/hint.jpeg"),
           title: "标题",
           content: "这种模板用于提醒谁与你发生了互动，左侧放『谁』的头像",
           time: "2年前"

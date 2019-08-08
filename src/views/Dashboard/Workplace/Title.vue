@@ -15,33 +15,39 @@
               <span>工作台</span>
             </div>
             <div class="main">
-              <div class="in">
-                <div class="head-portrait">
-                  <img src="http://ptt5and7y.bkt.clouddn.com/10.png" alt />
-                </div>
-                <div class="wen">
-                  <span class="greetings">早安，Serati Ma，祝你开心每一天！</span>
-                  <span clas="introduce ">交互专家 |蚂蚁金服－某某某事业群－某某平台部－某某技术部－UED</span>
-                </div>
-              </div>
-              <div class="number-projects">
-                <div class="in">
-                  <div class="name">项目数</div>
-                  <div class="nums">56</div>
-                </div>
-                <div class="Team-ranking">
-                  <div class="name">团队内排名</div>
-                  <div style=" text-align: center">
-                    <span class="nums">8</span>
-                    <span style="margin:0 5px">/</span>
-                    <span class="en">24</span>
+              <Row>
+                <Col :xs="24" :sm="24" :md="24" :lg="14" :xl="15" :xxl="18">
+                  <div class="in">
+                    <div class="head-portrait">
+                      <img src="../../../assets/userlogo_images/users.png" alt />
+                    </div>
+                    <div class="wen">
+                      <span class="greetings">早安，Serati Ma，祝你开心每一天！</span>
+                      <span clas="introduce ">交互专家 |蚂蚁金服－某某某事业群－某某平台部－某某技术部－UED</span>
+                    </div>
                   </div>
-                </div>
-                <div class="Project-access">
-                  <div class="name">项目访问</div>
-                  <div class="nums">2,223</div>
-                </div>
-              </div>
+                </Col>
+                <Col :xs="24" :sm="24" :md="24" :lg="10" :xl="8" :xxl="6">
+                  <div class="number-projects">
+                    <div class="in">
+                      <div class="name">项目数</div>
+                      <div class="nums">56</div>
+                    </div>
+                    <div class="Team-ranking">
+                      <div class="name">团队内排名</div>
+                      <div style=" text-align: center">
+                        <span class="nums">8</span>
+                        <span style="margin:0 5px">/</span>
+                        <span class="en">24</span>
+                      </div>
+                    </div>
+                    <div class="Project-access">
+                      <div class="name">项目访问</div>
+                      <div class="nums">2,223</div>
+                    </div>
+                  </div>
+                </Col>
+              </Row>
             </div>
           </div>
         </div>
@@ -87,11 +93,6 @@ export default {};
   margin: 0 12px;
 }
 
-.cardtop .in .main {
-  display: flex;
-  justify-content: space-between;
-}
-
 .cardtop .in .main .in {
   display: flex;
   align-items: center;
@@ -123,6 +124,7 @@ export default {};
   font-size: 20px;
   display: block;
 }
+
 
 .cardtop .in .main .number-projects .in {
   display: inline-block;

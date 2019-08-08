@@ -2,13 +2,11 @@
   <div>
     <div class="cxtop">
       <div class="in">
-        <div class="nav">
-          <a href="#">首页</a>
-          <span>/</span>
-          <a href="#">列表项</a>
-          <span>/</span>
-          <a href="#">查询表格</a>
-        </div>
+        <Breadcrumb>
+          <BreadcrumbItem to="/Exception_403">首页</BreadcrumbItem>
+          <BreadcrumbItem >列表页</BreadcrumbItem>
+          <BreadcrumbItem>查询表格</BreadcrumbItem>
+        </Breadcrumb>
         <div class="cxtitle">
           <span>查询表格</span>
         </div>
@@ -19,40 +17,40 @@
         <div class="inquire">
           <Form :label-width="72">
             <Row>
-              <Col span="8">
+              <Col :xs="24" :sm="24" :md="24" :lg="12" :xl="8" :xxl="8">
                 <div class="item">
                   <FormItem label="规则名称：">
-                    <Input type="text" placeholder="请输入"></Input>
+                    <Input type="text" placeholder="请输入" />
                   </FormItem>
                 </div>
               </Col>
-              <Col span="8">
+              <Col :xs="24" :sm="24" :md="24" :lg="12" :xl="8" :xxl="8">
                 <div class="item">
                   <FormItem label="使用状态： ">
-                    <Input type="text" placeholder="请选择"></Input>
+                    <Input type="text" placeholder="请选择" />
                   </FormItem>
                 </div>
               </Col>
-              <Col span="8" >
-                <div class="item2">
+              <Col :xs="24" :sm="24" :md="24" :lg="12" :xl="8" :xxl="8">
+                <div class="item">
                   <FormItem label="调用次数：" v-show="states">
-                    <Input type="number"></Input>
+                    <Input type="number" placeholder="请输入" />
                   </FormItem>
                 </div>
               </Col>
-              <Col span="8">
+              <Col :xs="24" :sm="24" :md="24" :lg="12" :xl="8" :xxl="8">
                 <div class="item">
                   <FormItem label="更新日期：" v-show="states">
                     <DatePicker
                       type="date"
                       show-week-numbers
                       placeholder="Select date"
-                      style="width: 300px"
+                      style="width: 100%"
                     ></DatePicker>
                   </FormItem>
                 </div>
               </Col>
-              <Col span="8">
+              <Col :xs="24" :sm="24" :md="24" :lg="12" :xl="8" :xxl="8">
                 <div class="item">
                   <FormItem label="使用状态：" v-show="states">
                     <Select placeholder="请选择">
@@ -62,8 +60,8 @@
                   </FormItem>
                 </div>
               </Col>
-              <Col span="8">
-                <div class="item2">
+              <Col :xs="24" :sm="24" :md="24" :lg="12" :xl="8" :xxl="8">
+                <div class="item">
                   <FormItem label="使用状态：" v-show="states">
                     <Select placeholder="请选择">
                       <Option value="beijing">关闭</Option>
@@ -72,10 +70,10 @@
                   </FormItem>
                 </div>
               </Col>
-              <Col span="20" v-show="states">
+              <Col xs="24" :sm="24" :md="24" :lg="12" :xl="20" :xxl="20" v-show="states">
                 <div class="tm"></div>
               </Col>
-              <Col span="4">
+              <Col :sm="24" :md="24" :lg="24" :xl="6" :xxl="4">
                 <div class="but">
                   <Button type="primary">查询</Button>
                   <Button>重置</Button>
@@ -140,7 +138,6 @@ export default {
   border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-
 .cxtable .in .inquire .but button {
   margin: 0 5px;
 }
@@ -157,23 +154,11 @@ export default {
 .cxtop .in {
   padding: 20px 0;
 }
-.cxtop .in .nav {
-  margin-bottom: 10px;
-}
-.cxtop .in .nav a {
-  color: rgba(0, 0, 0, 0.45);
-  font-size: 14px;
-}
-.cxtop .in .nav a:hover {
-  color: #2b85e4;
-}
-.cxtop .in .nav span {
-  margin: 0 10px;
-  font-size: 14px;
-}
+
 .cxtop .in .cxtitle {
   font-size: 16px;
   color: #333;
   font-weight: 600;
+  padding-top: 10px;
 }
 </style>

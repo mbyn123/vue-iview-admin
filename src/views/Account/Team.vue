@@ -7,7 +7,7 @@
         </div>
         <div>
           <Row>
-            <Col span="12" v-for="value in tdarr" :key="value.id">
+            <Col :xs="24" :sm="24" :md="12" :lg="12" :xl="12" :xxl="12" v-for="value in tdarr" :key="value.id">
               <div class="innerS">
                 <a href="#">
                   <span class="imgs">
@@ -30,27 +30,27 @@ export default {
     return {
       tdarr: [
         {
-          img: "http://pt1mv9q6v.bkt.clouddn.com/fpng.png",
+          img: require('../../assets/userlogo_images/pro.png'),
           title: "科学搬砖组"
         },
         {
-          img: "http://pt1mv9q6v.bkt.clouddn.com/opng.png",
+          img: require('../../assets/userlogo_images/bro.png'),
           title: "全组都是吴彦祖"
         },
         {
-          img: "http://pt1mv9q6v.bkt.clouddn.com/p.png",
+          img: require('../../assets/userlogo_images/ant.png'),
           title: "中二少女团"
         },
         {
-          img: "http://pt1mv9q6v.bkt.clouddn.com/zfb.png",
+           img: require('../../assets/userlogo_images/n.png'),
           title: "程序员日常"
         },
         {
-          img: "http://pt1mv9q6v.bkt.clouddn.com/z.png",
+           img: require('../../assets/userlogo_images/angular.png'),
           title: "高逼格设计天团"
         },
         {
-          img: "http://pt1mv9q6v.bkt.clouddn.com/spng.png",
+           img: require('../../assets/userlogo_images/vue.png'),
           title: "骗你来学计算机"
         }
       ]

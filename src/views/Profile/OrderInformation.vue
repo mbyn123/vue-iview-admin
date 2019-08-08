@@ -7,7 +7,7 @@
           <Row>
             <Col span="24">
               <div class="bar">
-                <Steps :current="1" size="small">
+                <Steps :current="1" size="small" >
                   <Step content="创建项目"></Step>
                   <Step content="部门初审"></Step>
                   <Step content="财务复核"></Step>
@@ -44,20 +44,20 @@
             <div class="in">
               <div class="name">用户信息</div>
               <div class="message">
-                <Row v-for="value in messagess" :key="value.id">
-                  <Col span="8">
+                <Row v-for="value in messagess" :key="value.id" >
+                  <Col :xs="24" :sm="24" :md="7" :lg="8" :xl="7" :xxl="7">
                     <div class="userinfo">
                       <div class="content">{{value.content}}</div>
                       <div class="content">{{value.content2}}</div>
                     </div>
                   </Col>
-                  <Col span="8">
+                  <Col :xs="24" :sm="24" :md="9" :lg="8" :xl="9" :xxl="9">
                     <div class="customer">
                       <div class="content">{{value.content3}}</div>
                       <div class="content">{{value.content4}}</div>
                     </div>
                   </Col>
-                  <Col span="8">
+                  <Col :xs="24" :sm="24" :md="8" :lg="8" :xl="8" :xxl="8">
                     <div class="certificate">
                       <div class="content">{{value.content5}}</div>
                     </div>
@@ -67,18 +67,18 @@
               <div class="information">信息组</div>
               <div class="message">
                 <Row v-for="value in messagess2" :key="value.id">
-                  <Col span="8">
+                  <Col :xs="24" :sm="24" :md="8" :lg="8" :xl="8" :xxl="8">
                     <div class="userinfo">
                       <div>{{value.user6}}</div>
                       <div>{{value.user2}}</div>
                     </div>
                   </Col>
-                  <Col span="8">
+                  <Col :xs="24" :sm="24" :md="8" :lg="8" :xl="8" :xxl="8">
                     <div class="customer">
                       <div>{{value.user3}}</div>
                     </div>
                   </Col>
-                  <Col span="8">
+                  <Col :xs="24" :sm="24" :md="8" :lg="8" :xl="8" :xxl="8">
                     <div class="certificate">
                       <div>
                         <span>{{value.user4}}</span>
@@ -98,19 +98,19 @@
                     <div class="list-content">{{value.title6}}</div>
                     <div class="message" style="padding: 0 25px;">
                       <Row>
-                        <Col span="8">
+                        <Col :xs="24" :sm="24" :md="8" :lg="8" :xl="8" :xxl="8">
                           <div class="userinfo">
                             <div class="content">{{value.title}}</div>
                             <div class="content">{{value.title2}}</div>
                           </div>
                         </Col>
-                        <Col span="8">
+                        <Col :xs="24" :sm="24" :md="8" :lg="8" :xl="8" :xxl="8">
                           <div class="customer">
                             <div class="content">{{value.title3}}</div>
                             <div class="content">{{value.title4}}</div>
                           </div>
                         </Col>
-                        <Col span="8">
+                        <Col :xs="24" :sm="24" :md="8" :lg="8" :xl="8" :xxl="8">
                           <div class="certificate">
                             <div class="content">{{value.title5}}</div>
                           </div>
@@ -134,19 +134,19 @@
                     <div class="list-content">{{value.content6}}</div>
                     <div class="message" style="padding: 0 25px;">
                       <Row>
-                        <Col span="8">
+                        <Col :xs="24" :sm="24" :md="8" :lg="8" :xl="8" :xxl="8">
                           <div class="userinfo">
                             <div class="content">{{value.content}}</div>
                             <div class="content">{{value.content2}}</div>
                           </div>
                         </Col>
-                        <Col span="8">
+                        <Col :xs="24" :sm="24" :md="8" :lg="8" :xl="8" :xxl="8">
                           <div class="customer">
                             <div class="content">{{value.content3}}</div>
                             <div class="content">{{value.content4}}</div>
                           </div>
                         </Col>
-                        <Col span="8">
+                        <Col :xs="24" :sm="24" :md="8" :lg="8" :xl="8" :xxl="8">
                           <div class="certificate">
                             <div class="content">{{value.content5}}</div>
                           </div>
@@ -176,7 +176,7 @@ export default {
           content2: "联系方式：18112345678",
           content3: "会员卡号: 32943898021309809423",
           content4:
-            "联系地址曲丽丽: 18100000000 浙江省杭州市西湖区黄姑山路工专路交叉路口",
+            "联系地址: 曲丽丽: 18100000000 浙江省杭州市西湖区黄姑山路工专路交叉路口",
           content5: "身份证: 3321944288191034921"
         }
       ],
@@ -279,15 +279,14 @@ export default {
 }
 
 .xqy .in .userss .message {
-  padding: 20px 30px 0 30px;
+  padding: 20px 30px 10px 30px;
   font-size: 14px;
 }
 .xqy .in .userss .message .certificate .content,
 .xqy .in .userss .message .customer .content,
 .xqy .in .userss .message .userinfo .content {
-  margin-bottom: 10px;
+  padding:10px 20px;
+ 
 }
-.xqy .in .userss .message .customer {
-  padding-left: 10px;
-}
+
 </style>

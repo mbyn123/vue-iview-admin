@@ -4,13 +4,11 @@
       <Col span="24">
         <div class="title">
           <div class="top">
-            <div class="link">
-              <a href="#">首页</a>
-              <span class="i">/</span>
-              <a href="#">表单页</a>
-              <span class="i">/</span>
-              <a href="#">基础表单</a>
-            </div>
+          <Breadcrumb>
+              <BreadcrumbItem to="/Exception_403">首页</BreadcrumbItem>
+              <BreadcrumbItem >表单页</BreadcrumbItem>
+              <BreadcrumbItem>基础表单</BreadcrumbItem>
+            </Breadcrumb>
             <div class="Based-from">基础表单</div>
             <div class="content">表单页用于向用户收集或验证信息，基础表单常见于数据项较少的表单场景。</div>
           </div>

@@ -2,13 +2,11 @@
   <div>
     <div class="bztop">
       <div class="in">
-        <div class="nav">
-          <a href="#">首页</a>
-          <span class="i">/</span>
-          <a href="#">列表项</a>
-          <span class="i">/</span>
-          <a href="#">标准列表</a>
-        </div>
+      <Breadcrumb>
+          <BreadcrumbItem to="/Exception_403">首页</BreadcrumbItem>
+          <BreadcrumbItem >列表项</BreadcrumbItem>
+          <BreadcrumbItem>标准列表</BreadcrumbItem>
+        </Breadcrumb>
         <div class="bztitle">
           <span>标准列表</span>
         </div>
@@ -83,23 +81,11 @@ export default {
 .bztop .in {
   padding: 20px 0;
 }
-.bztop .in .nav {
-  margin-bottom: 10px;
-}
-.bztop .in .nav a {
-  color: rgba(0, 0, 0, 0.45);
-  font-size: 14px;
-}
-.bztop .in .nav a:hover {
-  color: #2b85e4;
-}
-.bztop .in .nav .i {
-  margin: 0 10px;
-  font-size: 14px;
-}
+
 .bztop .in .bztitle {
   font-size: 16px;
   color: #333;
   font-weight: 600;
+  padding-top:10px
 }
 </style>

@@ -2,20 +2,17 @@
   <div>
     <div class="table-wz">
       <div class="in">
-        <div class="nav">
-          <a href="#">首页</a>
-          <span class="i">/</span>
-          <a href="#">列表页</a>
-          <span class="i">/</span>
-          <a href="#">搜索列表</a>
-          <span class="i">/</span>
-          <a href="#">搜索列表({{name}})</a>
-        </div>
+        <Breadcrumb>
+          <BreadcrumbItem to="/Exception_403">首页</BreadcrumbItem>
+          <BreadcrumbItem>列表项</BreadcrumbItem>
+          <BreadcrumbItem>卡片列表</BreadcrumbItem>
+          <BreadcrumbItem>搜索列表({{name}})</BreadcrumbItem>
+        </Breadcrumb>
         <div class="tit">
           <span>搜索列表({{name}})</span>
         </div>
-        <Row>
-          <Col span="8" offset="8">
+        <Row type="flex" justify="center">
+          <Col :xs="24" :sm="24" :md="12" :lg="8" :xl="8" :xxl="8">
             <div class="search">
               <Input search enter-button="搜索" placeholder="请输入" size="large" />
             </div>
@@ -77,20 +74,7 @@ export default {
   padding: 20px;
 }
 
-.table-wz .nav a {
-  font-size: 14px;
-  color: rgba(0, 0, 0, 0.45);
-  transition: color 0.3s;
-}
 
-.table-wz .nav a:hover {
-  color: #2d8cf0;
-}
-
-.table-wz .nav .i {
-  margin: 0 10px;
-  font-size: 14px;
-}
 
 .table-wz .tit {
   font-size: 16px;

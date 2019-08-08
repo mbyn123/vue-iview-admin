@@ -239,7 +239,7 @@ import { setTimeout } from "timers";
 let testData = {
   histories: [
     {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/n.png",
+      img: require('../../../assets/userlogo_images/alipay.png'),
       name: "Ant Design Pro",
       describe: "城镇中有那么多的酒馆，她却偏偏走进了我的酒馆",
       person: "周星星",
@@ -248,7 +248,7 @@ let testData = {
       number: 91
     },
     {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/opng.png",
+      img: require('../../../assets/userlogo_images/react.png'),
       name: "Bootstrap",
       describe: "那时候我只会想自己想要什么，从不想自己拥有什么",
       person: "吴加好",
@@ -257,7 +257,7 @@ let testData = {
       number: 66
     },
     {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/p.png",
+      img: require('../../../assets/userlogo_images/vue.png'),
       name: "Angular",
       describe: "希望是一个好东西，也许是最好的，好东西是不会消亡的",
       person: "曲丽丽",
@@ -266,7 +266,7 @@ let testData = {
       number: 99
     },
     {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/z.png",
+      img:  require('../../../assets/userlogo_images/angular.png'),
       name: "Ant Design",
       describe: "生命就像一盒巧克力，结果往往出人意料",
       person: "林东东",
@@ -275,7 +275,7 @@ let testData = {
       number: 84
     },
     {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/zfb.png",
+      img:require('../../../assets/userlogo_images/bro.png'),
       name: "Alipay",
       describe: "那是一种内在的东西， 他们到达不了，也无法触及的",
       person: "付小小",
@@ -284,7 +284,7 @@ let testData = {
       number: 61
     },
     {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/p.png",
+      img:require('../../../assets/userlogo_images/pro.png'),
       name: "Angular",
       describe: "希望是一个好东西，也许是最好的，好东西是不会消亡的",
       person: "曲丽丽",
@@ -293,7 +293,7 @@ let testData = {
       number: 99
     },
     {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/n.png",
+      img: require('../../../assets/userlogo_images/n.png'),
       name: "Ant Design Pro",
       describe: "城镇中有那么多的酒馆，她却偏偏走进了我的酒馆",
       person: "周星星",
@@ -302,7 +302,7 @@ let testData = {
       number: 91
     },
     {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/opng.png",
+      img:require('../../../assets/userlogo_images/ant.png'),
       name: "Bootstrap",
       describe: "那时候我只会想自己想要什么，从不想自己拥有什么",
       person: "吴加好",
@@ -311,34 +311,52 @@ let testData = {
       number: 66
     },
     {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/p.png",
+      img: require('../../../assets/userlogo_images/alipay.png'),
+      name: "Ant Design Pro",
+      describe: "城镇中有那么多的酒馆，她却偏偏走进了我的酒馆",
+      person: "周星星",
+      time: "Tue Jul 16 2019 11:24:00 GMT+0800 (中国标准时间)",
+      state: "normal",
+      number: 91
+    },
+    {
+      img: require('../../../assets/userlogo_images/react.png'),
+      name: "Bootstrap",
+      describe: "那时候我只会想自己想要什么，从不想自己拥有什么",
+      person: "吴加好",
+      time: "Tue Jul 16 2019 11:24:00 GMT+0800 (中国标准时间)",
+      state: "wrong",
+      number: 66
+    },
+    {
+      img: require('../../../assets/userlogo_images/vue.png'),
       name: "Angular",
       describe: "希望是一个好东西，也许是最好的，好东西是不会消亡的",
       person: "曲丽丽",
-      time: "2019-07-17 15:24",
+      time: "Tue Jul 16 2019 11:24:00 GMT+0800 (中国标准时间)",
       state: "wrong",
       number: 99
     },
     {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/z.png",
+      img:  require('../../../assets/userlogo_images/angular.png'),
       name: "Ant Design",
       describe: "生命就像一盒巧克力，结果往往出人意料",
       person: "林东东",
-      time: "2019-07-16 13:24",
+      time: "Tue Jul 16 2019 11:24:00 GMT+0800 (中国标准时间)",
       state: "normal",
       number: 84
     },
     {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/zfb.png",
+      img:require('../../../assets/userlogo_images/bro.png'),
       name: "Alipay",
       describe: "那是一种内在的东西， 他们到达不了，也无法触及的",
       person: "付小小",
-      time: "2019-07-14 17:24",
+      time: "Tue Jul 16 2019 11:24:00 GMT+0800 (中国标准时间)",
       state: "normal",
       number: 61
     },
     {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/p.png",
+      img:require('../../../assets/userlogo_images/pro.png'),
       name: "Angular",
       describe: "希望是一个好东西，也许是最好的，好东西是不会消亡的",
       person: "曲丽丽",
@@ -347,16 +365,7 @@ let testData = {
       number: 99
     },
     {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/p.png",
-      name: "Angular",
-      describe: "希望是一个好东西，也许是最好的，好东西是不会消亡的",
-      person: "曲丽丽",
-      time: "2019-07-12 15:24",
-      state: "wrong",
-      number: 99
-    },
-    {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/n.png",
+      img: require('../../../assets/userlogo_images/n.png'),
       name: "Ant Design Pro",
       describe: "城镇中有那么多的酒馆，她却偏偏走进了我的酒馆",
       person: "周星星",
@@ -365,7 +374,7 @@ let testData = {
       number: 91
     },
     {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/opng.png",
+      img:require('../../../assets/userlogo_images/ant.png'),
       name: "Bootstrap",
       describe: "那时候我只会想自己想要什么，从不想自己拥有什么",
       person: "吴加好",
@@ -374,16 +383,52 @@ let testData = {
       number: 66
     },
     {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/p.png",
+      img: require('../../../assets/userlogo_images/alipay.png'),
+      name: "Ant Design Pro",
+      describe: "城镇中有那么多的酒馆，她却偏偏走进了我的酒馆",
+      person: "周星星",
+      time: "Tue Jul 16 2019 11:24:00 GMT+0800 (中国标准时间)",
+      state: "normal",
+      number: 91
+    },
+    {
+      img: require('../../../assets/userlogo_images/react.png'),
+      name: "Bootstrap",
+      describe: "那时候我只会想自己想要什么，从不想自己拥有什么",
+      person: "吴加好",
+      time: "Tue Jul 16 2019 11:24:00 GMT+0800 (中国标准时间)",
+      state: "wrong",
+      number: 66
+    },
+    {
+      img: require('../../../assets/userlogo_images/vue.png'),
       name: "Angular",
       describe: "希望是一个好东西，也许是最好的，好东西是不会消亡的",
       person: "曲丽丽",
-      time: "2019-07-17 15:24",
+      time: "Tue Jul 16 2019 11:24:00 GMT+0800 (中国标准时间)",
       state: "wrong",
       number: 99
     },
     {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/p.png",
+      img:  require('../../../assets/userlogo_images/angular.png'),
+      name: "Ant Design",
+      describe: "生命就像一盒巧克力，结果往往出人意料",
+      person: "林东东",
+      time: "Tue Jul 16 2019 11:24:00 GMT+0800 (中国标准时间)",
+      state: "normal",
+      number: 84
+    },
+    {
+      img:require('../../../assets/userlogo_images/bro.png'),
+      name: "Alipay",
+      describe: "那是一种内在的东西， 他们到达不了，也无法触及的",
+      person: "付小小",
+      time: "Tue Jul 16 2019 11:24:00 GMT+0800 (中国标准时间)",
+      state: "normal",
+      number: 61
+    },
+    {
+      img:require('../../../assets/userlogo_images/pro.png'),
       name: "Angular",
       describe: "希望是一个好东西，也许是最好的，好东西是不会消亡的",
       person: "曲丽丽",
@@ -392,7 +437,7 @@ let testData = {
       number: 99
     },
     {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/n.png",
+      img: require('../../../assets/userlogo_images/n.png'),
       name: "Ant Design Pro",
       describe: "城镇中有那么多的酒馆，她却偏偏走进了我的酒馆",
       person: "周星星",
@@ -401,7 +446,7 @@ let testData = {
       number: 91
     },
     {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/opng.png",
+      img:require('../../../assets/userlogo_images/ant.png'),
       name: "Bootstrap",
       describe: "那时候我只会想自己想要什么，从不想自己拥有什么",
       person: "吴加好",
@@ -410,16 +455,52 @@ let testData = {
       number: 66
     },
     {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/p.png",
+      img: require('../../../assets/userlogo_images/alipay.png'),
+      name: "Ant Design Pro",
+      describe: "城镇中有那么多的酒馆，她却偏偏走进了我的酒馆",
+      person: "周星星",
+      time: "Tue Jul 16 2019 11:24:00 GMT+0800 (中国标准时间)",
+      state: "normal",
+      number: 91
+    },
+    {
+      img: require('../../../assets/userlogo_images/react.png'),
+      name: "Bootstrap",
+      describe: "那时候我只会想自己想要什么，从不想自己拥有什么",
+      person: "吴加好",
+      time: "Tue Jul 16 2019 11:24:00 GMT+0800 (中国标准时间)",
+      state: "wrong",
+      number: 66
+    },
+    {
+      img: require('../../../assets/userlogo_images/vue.png'),
       name: "Angular",
       describe: "希望是一个好东西，也许是最好的，好东西是不会消亡的",
       person: "曲丽丽",
-      time: "2019-07-17 15:24",
+      time: "Tue Jul 16 2019 11:24:00 GMT+0800 (中国标准时间)",
       state: "wrong",
       number: 99
     },
     {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/p.png",
+      img:  require('../../../assets/userlogo_images/angular.png'),
+      name: "Ant Design",
+      describe: "生命就像一盒巧克力，结果往往出人意料",
+      person: "林东东",
+      time: "Tue Jul 16 2019 11:24:00 GMT+0800 (中国标准时间)",
+      state: "normal",
+      number: 84
+    },
+    {
+      img:require('../../../assets/userlogo_images/bro.png'),
+      name: "Alipay",
+      describe: "那是一种内在的东西， 他们到达不了，也无法触及的",
+      person: "付小小",
+      time: "Tue Jul 16 2019 11:24:00 GMT+0800 (中国标准时间)",
+      state: "normal",
+      number: 61
+    },
+    {
+      img:require('../../../assets/userlogo_images/pro.png'),
       name: "Angular",
       describe: "希望是一个好东西，也许是最好的，好东西是不会消亡的",
       person: "曲丽丽",
@@ -428,7 +509,7 @@ let testData = {
       number: 99
     },
     {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/n.png",
+      img: require('../../../assets/userlogo_images/n.png'),
       name: "Ant Design Pro",
       describe: "城镇中有那么多的酒馆，她却偏偏走进了我的酒馆",
       person: "周星星",
@@ -437,7 +518,7 @@ let testData = {
       number: 91
     },
     {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/opng.png",
+      img:require('../../../assets/userlogo_images/ant.png'),
       name: "Bootstrap",
       describe: "那时候我只会想自己想要什么，从不想自己拥有什么",
       person: "吴加好",
@@ -446,16 +527,34 @@ let testData = {
       number: 66
     },
     {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/p.png",
+      img: require('../../../assets/userlogo_images/vue.png'),
       name: "Angular",
       describe: "希望是一个好东西，也许是最好的，好东西是不会消亡的",
       person: "曲丽丽",
-      time: "2019-07-17 15:24",
+      time: "Tue Jul 16 2019 11:24:00 GMT+0800 (中国标准时间)",
       state: "wrong",
       number: 99
     },
     {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/p.png",
+      img:  require('../../../assets/userlogo_images/angular.png'),
+      name: "Ant Design",
+      describe: "生命就像一盒巧克力，结果往往出人意料",
+      person: "林东东",
+      time: "Tue Jul 16 2019 11:24:00 GMT+0800 (中国标准时间)",
+      state: "normal",
+      number: 84
+    },
+    {
+      img:require('../../../assets/userlogo_images/bro.png'),
+      name: "Alipay",
+      describe: "那是一种内在的东西， 他们到达不了，也无法触及的",
+      person: "付小小",
+      time: "Tue Jul 16 2019 11:24:00 GMT+0800 (中国标准时间)",
+      state: "normal",
+      number: 61
+    },
+    {
+      img:require('../../../assets/userlogo_images/pro.png'),
       name: "Angular",
       describe: "希望是一个好东西，也许是最好的，好东西是不会消亡的",
       person: "曲丽丽",
@@ -464,7 +563,7 @@ let testData = {
       number: 99
     },
     {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/n.png",
+      img: require('../../../assets/userlogo_images/n.png'),
       name: "Ant Design Pro",
       describe: "城镇中有那么多的酒馆，她却偏偏走进了我的酒馆",
       person: "周星星",
@@ -473,7 +572,7 @@ let testData = {
       number: 91
     },
     {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/opng.png",
+      img:require('../../../assets/userlogo_images/ant.png'),
       name: "Bootstrap",
       describe: "那时候我只会想自己想要什么，从不想自己拥有什么",
       person: "吴加好",
@@ -482,14 +581,113 @@ let testData = {
       number: 66
     },
     {
-      img: "http://pt1mv9q6v.bkt.clouddn.com/p.png",
+      img: require('../../../assets/userlogo_images/vue.png'),
       name: "Angular",
       describe: "希望是一个好东西，也许是最好的，好东西是不会消亡的",
       person: "曲丽丽",
-      time: "2019-07-17 15:24",
+      time: "Tue Jul 16 2019 11:24:00 GMT+0800 (中国标准时间)",
       state: "wrong",
       number: 99
-    }
+    },
+    {
+      img:  require('../../../assets/userlogo_images/angular.png'),
+      name: "Ant Design",
+      describe: "生命就像一盒巧克力，结果往往出人意料",
+      person: "林东东",
+      time: "Tue Jul 16 2019 11:24:00 GMT+0800 (中国标准时间)",
+      state: "normal",
+      number: 84
+    },
+    {
+      img:require('../../../assets/userlogo_images/bro.png'),
+      name: "Alipay",
+      describe: "那是一种内在的东西， 他们到达不了，也无法触及的",
+      person: "付小小",
+      time: "Tue Jul 16 2019 11:24:00 GMT+0800 (中国标准时间)",
+      state: "normal",
+      number: 61
+    },
+    {
+      img:require('../../../assets/userlogo_images/pro.png'),
+      name: "Angular",
+      describe: "希望是一个好东西，也许是最好的，好东西是不会消亡的",
+      person: "曲丽丽",
+      time: "2019-07-12 15:24",
+      state: "wrong",
+      number: 99
+    },
+    {
+      img: require('../../../assets/userlogo_images/n.png'),
+      name: "Ant Design Pro",
+      describe: "城镇中有那么多的酒馆，她却偏偏走进了我的酒馆",
+      person: "周星星",
+      time: "2019-07-14 11:24",
+      state: "normal",
+      number: 91
+    },
+    {
+      img:require('../../../assets/userlogo_images/ant.png'),
+      name: "Bootstrap",
+      describe: "那时候我只会想自己想要什么，从不想自己拥有什么",
+      person: "吴加好",
+      time: "2019-07-19 09:24",
+      state: "wrong",
+      number: 66
+    },
+    {
+      img: require('../../../assets/userlogo_images/n.png'),
+      name: "Ant Design Pro",
+      describe: "城镇中有那么多的酒馆，她却偏偏走进了我的酒馆",
+      person: "周星星",
+      time: "2019-07-14 11:24",
+      state: "normal",
+      number: 91
+    },
+    {
+      img:require('../../../assets/userlogo_images/ant.png'),
+      name: "Bootstrap",
+      describe: "那时候我只会想自己想要什么，从不想自己拥有什么",
+      person: "吴加好",
+      time: "2019-07-19 09:24",
+      state: "wrong",
+      number: 66
+    },
+    {
+      img: require('../../../assets/userlogo_images/vue.png'),
+      name: "Angular",
+      describe: "希望是一个好东西，也许是最好的，好东西是不会消亡的",
+      person: "曲丽丽",
+      time: "Tue Jul 16 2019 11:24:00 GMT+0800 (中国标准时间)",
+      state: "wrong",
+      number: 99
+    },
+    {
+      img:  require('../../../assets/userlogo_images/angular.png'),
+      name: "Ant Design",
+      describe: "生命就像一盒巧克力，结果往往出人意料",
+      person: "林东东",
+      time: "Tue Jul 16 2019 11:24:00 GMT+0800 (中国标准时间)",
+      state: "normal",
+      number: 84
+    },
+    {
+      img:require('../../../assets/userlogo_images/bro.png'),
+      name: "Alipay",
+      describe: "那是一种内在的东西， 他们到达不了，也无法触及的",
+      person: "付小小",
+      time: "Tue Jul 16 2019 11:24:00 GMT+0800 (中国标准时间)",
+      state: "normal",
+      number: 61
+    },
+    {
+      img:require('../../../assets/userlogo_images/pro.png'),
+      name: "Angular",
+      describe: "希望是一个好东西，也许是最好的，好东西是不会消亡的",
+      person: "曲丽丽",
+      time: "2019-07-12 15:24",
+      state: "wrong",
+      number: 99
+    },
   ]
 };
 export default {
@@ -604,12 +802,12 @@ export default {
           }
         ],
         time: [
-          {
-            required: true,
-            type: "date",
-            message: "请选择开始日期",
-            trigger: "change"
-          }
+          // {
+          //   required: true,
+          //   // type: "date",
+          //   message: "请选择开始日期",
+          //   trigger: "change"
+          // }
         ],
         person: [
           {
@@ -643,10 +841,12 @@ export default {
     redacthandleSubmit(name) {
       const tempdata = Object.assign({}, this.redactValidate);
       tempdata.person = this.redactpersonmodel;
-      tempdata.time = this.dateFormat(tempdata.time);
+       tempdata.time = this.dateFormat(tempdata.time);
+       
       this.$refs[name].validate(valid => {
         if (valid) {
           this.historyData.splice(this.index, 1, tempdata);
+        
           this.redactmodal = false;
           this.$Spin.show();
           setTimeout(() => {
@@ -730,7 +930,7 @@ export default {
     },
     addlist() {
       let add = {
-        img: require("../../../assets/user.jpg"),
+        img: require("../../../assets/functional_image/defaults.jpg"),
         name: "",
         describe: "",
         person: "",

@@ -5,12 +5,12 @@
         <div>
           <div class="depot">
             <div class="in">
-              <div class="manage">
-                <span>任务管理</span>
+              <div class="member">
+                <span>成员管理</span>
               </div>
             </div>
           </div>
-          <div style="padding:23px;background: #fff;">
+          <div class="depot-table">
             <Table :columns="columns" :data="data">
               <template slot-scope="{ row, index }" slot="name">
                 <Input
@@ -46,13 +46,7 @@
                 </div>
                 <div v-else>
                   <a href="javascript:;" @click="handleEdit(row, index)">编辑</a>
-                  <Poptip
-                    confirm
-                    title="是否要删除此行？"
-                    @on-ok="ok(index)"
-                  
-                    placement="right"
-                  >
+                  <Poptip confirm title="是否要删除此行？" @on-ok="ok(index)" placement="right">
                     <a href="javascript:;" style="margin-left:5px">删除</a>
                   </Poptip>
                 </div>
@@ -122,8 +116,7 @@ export default {
       editIndex: -1, // 当前聚焦的输入框的行数
       editName: "", // 第一列输入框，当然聚焦的输入框的输入内容，与 data 分离避免重构的闪烁
       editAge: "", // 第二列输入框
-      editAddress: "", // 第三列输入框
-    
+      editAddress: "" // 第三列输入框
     };
   },
   methods: {
@@ -137,11 +130,11 @@ export default {
       this.data[index].name = this.editName;
       this.data[index].age = this.editAge;
       this.data[index].address = this.editAddress;
-       if (this.editName ==  null || this.editName == '' ) {
+      if (this.editName == null || this.editName == "") {
         this.$Message.error("请填写完整成员信息");
-      } else if (this.editAge ==  null || this.editAge ==  '') {
+      } else if (this.editAge == null || this.editAge == "") {
         this.$Message.error("请填写完整成员信息");
-      } else if (this.editAddress ==  null || this.editAddress ==  '') {
+      } else if (this.editAddress == null || this.editAddress == "") {
         this.$Message.error("请填写完整成员信息");
       } else {
         this.editIndex = -1;
@@ -152,22 +145,32 @@ export default {
     },
 
     additem() {
-      let obj={
+      let obj = {
         name: null,
         age: null,
         address: null
-      }
-     
-      this.editName =obj.name;
+      };
+
+      this.editName = obj.name;
       this.editAge = obj.age;
       this.editAddress = obj.address;
-       this.data.push(obj);
+      this.data.push(obj);
       this.editIndex = this.data.length - 1;
-   
     }
   }
 };
 </script>
 
 <style scoped>
+.depot .member {
+  font-size: 16px;
+  background: #fff;
+  padding: 20px 0 20px 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.depot-table {
+  padding: 23px;
+  background: #fff;
+}
 </style>

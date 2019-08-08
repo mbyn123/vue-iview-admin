@@ -1,7 +1,7 @@
 <template>
   <Row :gutter="16">
-    <Col span="6">
-      <div style="background: #fff;padding:20px;">
+    <Col :xs="24" :sm="24" :md="12" :lg="6" :xl="6" :xxl="6">
+      <div style="background: #fff;padding:20px;margin-bottom:20px">
         <div style="font-size:14px;color:rgba(0,0,0,.45);  position: relative;">
           <div>
             <span>总销售额</span>
@@ -33,8 +33,8 @@
         </div>
       </div>
     </Col>
-    <Col span="6">
-      <div style="background:#fff ;padding:20px; ">
+    <Col :xs="24" :sm="24" :md="12" :lg="6" :xl="6" :xxl="6">
+      <div style="background:#fff ;padding:20px;border:1px solid transparent;margin-bottom:20px">
         <div style="font-size:14px;color:rgba(0,0,0,.45);  position: relative;">
           <div>
             <span>访问量</span>
@@ -60,8 +60,8 @@
         </div>
       </div>
     </Col>
-    <Col span="6">
-      <div style="background: #fff;padding:20px;">
+    <Col :xs="24" :sm="24" :md="12" :lg="6" :xl="6" :xxl="6">
+      <div style="background: #fff;padding:20px;margin-bottom:20px">
         <div style="font-size:14px;color:rgba(0,0,0,.45);  position: relative;">
           <div>
             <span>支付笔数</span>
@@ -88,37 +88,37 @@
         </div>
       </div>
     </Col>
-    <Col span="6">
-      <Card shadow>
-        <div style="font-size:14px;color:rgba(0,0,0,.45);  position: relative;">
-          <div>
-            <span>访问量</span>
-          </div>
-          <div>
-            <span style="font-size:30px;color:#333">78%</span>
-            <span style="position: absolute;right:4px;top:0px;">
-              <Tooltip content="指示说明" placement="top" offset>
-                <Icon type="ios-alert-outline" size="16" color="#333" class="ico" />
-              </Tooltip>
-            </span>
-          </div>
+    <Col :xs="24" :sm="24" :md="12" :lg="6" :xl="6" :xxl="6">
+    <div style="background:#fff;padding:20px">
+      <div style="font-size:14px;color:rgba(0,0,0,.45);  position: relative;">
+        <div>
+          <span>访问量</span>
         </div>
-        <div style="height:46px;">
-          <Progress :percent="78" :stroke-width="7" stroke-color="#19be6b" />
-        </div>
-        <div style="border-top:1px solid #ccc;padding-top:10px;">
-          <span>周同比</span>
-          <span style="color:#333;margin-right:20px">
-            12%
-            <Icon type="md-arrow-dropup" color="#ed4014" />
-          </span>
-          <span>日同比</span>
-          <span style="color:#333">
-            11%
-            <Icon type="md-arrow-dropdown" color="rgb(25, 190, 107)" />
+        <div>
+          <span style="font-size:30px;color:#333">78%</span>
+          <span style="position: absolute;right:4px;top:0px;">
+            <Tooltip content="指示说明" placement="top" offset>
+              <Icon type="ios-alert-outline" size="16" color="#333" class="ico" />
+            </Tooltip>
           </span>
         </div>
-      </Card>
+      </div>
+      <div style="height:46px;">
+        <Progress :percent="78" :stroke-width="7" stroke-color="#19be6b" />
+      </div>
+      <div style="border-top:1px solid #ccc;padding-top:10px;">
+        <span>周同比</span>
+        <span style="color:#333;margin-right:20px">
+          12%
+          <Icon type="md-arrow-dropup" color="#ed4014" />
+        </span>
+        <span>日同比</span>
+        <span style="color:#333">
+          11%
+          <Icon type="md-arrow-dropdown" color="rgb(25, 190, 107)" />
+        </span>
+      </div>
+      </div>
     </Col>
   </Row>
 </template>
@@ -133,7 +133,9 @@ export default {
   methods: {
     drawChart() {
       // 基于准备好的dom，初始化echarts实例
-      let FrequencyPaymentChart = this.$echarts.init(document.getElementById("FrequencyPayment"));
+      let FrequencyPaymentChart = this.$echarts.init(
+        document.getElementById("FrequencyPayment")
+      );
       let VisitsmyChart = this.$echarts.init(document.getElementById("Visits"));
       // 指定图表的配置项和数据
       let optionFrequencyPayment = {
@@ -292,8 +294,8 @@ export default {
             //symbol: "circle",//实心圆
             areaStyle: {},
             smooth: true, //圆滑曲线true
-         //  symbol:'circle',
-        //   showSymbol:false,
+            //  symbol:'circle',
+            //   showSymbol:false,
             itemStyle: {
               normal: {
                 color: "rgb(105, 12, 232)",
@@ -306,7 +308,7 @@ export default {
         ]
       };
       // 使用刚指定的配置项和数据显示图表。
-     VisitsmyChart.setOption(optionVisits);
+      VisitsmyChart.setOption(optionVisits);
       window.addEventListener("resize", () => {
         VisitsmyChart.resize();
       });
@@ -321,5 +323,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>

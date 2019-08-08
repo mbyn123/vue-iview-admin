@@ -7,10 +7,10 @@
             <div class="login-title">
               <div class="logo">
                 <a href="#">
-                  <img src="../../assets/5.svg" alt />
-                  <span class="title">Ant Design</span>
+                 
+                  <span class="title">vue-iview-admin</span>
                 </a>
-                <div class="subheading">Ant Design 是西湖区最具影响力的 Web 设计规范</div>
+                <div class="subheading">vue-iview-admin Web 设计规范</div>
               </div>
             </div>
 
@@ -271,11 +271,7 @@ export default {
 
 <style >
 .login-all {
-  background-image: url(../../assets/login.svg);
-  background-position: center 110px;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-color: #f0f2f5;
+ 
 }
 .login-all .inner .promptbox {
   border: 1px solid red;

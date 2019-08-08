@@ -4,13 +4,11 @@
       <Col span="24">
         <div class="title">
           <div class="top">
-            <div class="link">
-              <a href="#">首页</a>
-              <span class="i">/</span>
-              <a href="#">表单页</a>
-              <span class="i">/</span>
-              <a href="#">高级表单</a>
-            </div>
+            <Breadcrumb>
+              <BreadcrumbItem to="/Exception_403">首页</BreadcrumbItem>
+              <BreadcrumbItem >表单页</BreadcrumbItem>
+              <BreadcrumbItem>高级表单</BreadcrumbItem>
+            </Breadcrumb>
             <div class="Advancedform">高级表单</div>
             <div class="content">高级表单常见于一次性输入和提交大批量数据的场景。</div>
           </div>
@@ -26,16 +24,16 @@
                 <span>仓库管理</span>
               </div>
               <div style="padding: 20px">
-                <Row>
-                  <Col span="6">
+                <Row :gutter="20">
+                  <Col :xs="24" :sm="24" :md="12" :lg="8" :xl="8" :xxl="8">
                     <div>
                       <FormItem label="仓库名" prop="Warehouse">
                         <Input placeholder="请输入仓库名称" v-model="formValidate.Warehouse"></Input>
                       </FormItem>
                     </div>
                   </Col>
-                  <Col span="8" offset="1">
-                    <div style="padding:0 50px">
+                  <Col :xs="24" :sm="24" :md="12" :lg="8" :xl="8" :xxl="8">
+                    <div style="padding:0 ">
                       <FormItem label="仓库域名" prop="domain">
                         <br />
                         <Input placeholder="请输入" v-model="formValidate.domain">
@@ -45,7 +43,7 @@
                       </FormItem>
                     </div>
                   </Col>
-                  <Col span="8" offset="1">
+                  <Col :xs="24" :sm="24" :md="24" :lg="8" :xl="8" :xxl="8">
                     <div>
                       <FormItem label="仓库管理员" prop="Controller">
                         <Select placeholder="请选择管理员" v-model="formValidate.Controller">
@@ -59,7 +57,7 @@
                     </div>
                   </Col>
 
-                  <Col span="6">
+                  <Col :xs="24" :sm="24" :md="12" :lg="8" :xl="8" :xxl="8">
                     <div>
                       <FormItem label="审批人" prop="Approver">
                         <Select placeholder="请选择审批员" v-model="formValidate.Approver">
@@ -72,20 +70,20 @@
                       </FormItem>
                     </div>
                   </Col>
-                  <Col span="8" offset="1">
-                    <div style="padding:0 0 0 50px;">
+                  <Col :xs="24" :sm="24" :md="12" :lg="8" :xl="8" :xxl="8">
+                    <div style>
                       <FormItem label="生效日期" prop="date">
                         <br />
                         <DatePicker
                           type="date"
                           placeholder="     开始日期     ~        结束日期"
-                          style="width:300px"
+                          style="width:100%"
                           v-model="formValidate.date"
                         ></DatePicker>
                       </FormItem>
                     </div>
                   </Col>
-                  <Col span="8" offset="1">
+                  <Col :xs="24" :sm="24" :md="24" :lg="8" :xl="8" :xxl="8">
                     <div>
                       <FormItem label="仓库类型" prop="mold">
                         <Select placeholder="请选择仓库类型" v-model="formValidate.mold">
@@ -112,22 +110,22 @@
                 <span>任务管理</span>
               </div>
               <div style="padding: 20px">
-                <Row>
-                  <Col span="6">
+                <Row :gutter="20">
+                  <Col :xs="24" :sm="24" :md="12" :lg="8" :xl="8" :xxl="8">
                     <div>
                       <FormItem label="任务名" prop="t1">
                         <Input placeholder="请输入" v-model="formValidate.t1" />
                       </FormItem>
                     </div>
                   </Col>
-                  <Col span="8" offset="1">
-                    <div style="padding:0 50px">
+                  <Col :xs="24" :sm="24" :md="12" :lg="8" :xl="8" :xxl="8">
+                    <div>
                       <FormItem label="任务描述" prop="t2">
                         <Input placeholder="请输入" v-model="formValidate.t2" />
                       </FormItem>
                     </div>
                   </Col>
-                  <Col span="8" offset="1">
+                  <Col :xs="24" :sm="24" :md="24" :lg="8" :xl="8" :xxl="8">
                     <div>
                       <FormItem label="执行人" prop="t4">
                         <Select placeholder="请选择管理员" v-model="formValidate.t4">
@@ -141,7 +139,7 @@
                     </div>
                   </Col>
 
-                  <Col span="6">
+                  <Col :xs="24" :sm="24" :md="12" :lg="8" :xl="8" :xxl="8">
                     <div>
                       <FormItem label="责任人" prop="t5">
                         <Select placeholder="请选择审批员" v-model="formValidate.t5">
@@ -154,20 +152,20 @@
                       </FormItem>
                     </div>
                   </Col>
-                  <Col span="8" offset="1">
-                    <div style="padding-left:50px;">
+                  <Col :xs="24" :sm="24" :md="12" :lg="8" :xl="8" :xxl="8">
+                    <div>
                       <FormItem label="生效日期" prop="t3">
                         <br />
                         <TimePicker
                           type="time"
                           placeholder="提醒时间"
-                          style="width: 300px"
+                          style="width: 100%"
                           v-model="formValidate.t3"
                         ></TimePicker>
                       </FormItem>
                     </div>
                   </Col>
-                  <Col span="8" offset="1">
+                  <Col :xs="24" :sm="24" :md="24" :lg="8" :xl="8" :xxl="8">
                     <div>
                       <FormItem label="任务类型" prop="t6">
                         <Select placeholder="请选择仓库类型" v-model="formValidate.t6">
@@ -477,7 +475,7 @@ export default {
 }
 
 .depot {
-  padding: 20px 3px 0 0;
+  margin-bottom: 25px;
 }
 
 .depot .in {
@@ -496,23 +494,9 @@ export default {
 }
 
 .title {
-  margin: -20px;
+  margin: -20px -20px 25px -20px;
 }
 
-.top .link a {
-  color: rgba(0, 0, 0, 0.45);
-  font-size: 14px;
-}
-
-.top .link a:hover {
-  color: #2d8cf0;
-}
-
-.top .link .i {
-  font-size: 14px;
-  margin: 0 10px;
-  color: rgba(0, 0, 0, 0.45);
-}
 
 .top .Advancedform {
   font-size: 16px;

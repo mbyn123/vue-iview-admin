@@ -6,86 +6,14 @@
           <div class="basic">
             <div class="in">
               <div class="names">基本设置</div>
-              <div>
-                <Row>
-                  <Col span="8">
-                    <div style="padding-right:40px;font-size: 14px;color:#333 ">
-                      <Form :rules="ruleValidate" :model="formValidate" ref="formValidate">
-                        <div>邮箱</div>
-                        <FormItem prop="email">
-                          <Input type="email" v-model="formValidate.email" />
-                        </FormItem>
-                        <div>昵称</div>
-                        <FormItem prop="name">
-                          <Input type="text" v-model="formValidate.name" />
-                        </FormItem>
-                        <div>个人简介</div>
-                        <FormItem prop="intro">
-                          <Input
-                            type="textarea"
-                            :rows="4"
-                            v-model="formValidate.intro"
-                            placeholder="个人简介"
-                          />
-                        </FormItem>
-
-                        <div>国家/地区</div>
-                        <Select v-model="formValidate.model1">
-                          <Option
-                            v-for="item in cityList"
-                            :value="item.value"
-                            :key="item.value"
-                          >{{ item.label }}</Option>
-                        </Select>
-
-                        <div style="padding-top: 20px">所在省市</div>
-                        <Select v-model="formValidate.model2" style="width:150px">
-                          <Option
-                            v-for="item in cityList2"
-                            :value="item.value"
-                            :key="item.value"
-                          >{{ item.label }}</Option>
-                        </Select>
-                        <Select v-model="formValidate.model3" style="width:150px">
-                          <Option
-                            v-for="item in cityList3"
-                            :value="item.value"
-                            :key="item.value"
-                          >{{ item.label }}</Option>
-                        </Select>
-
-                        <div style="padding-top: 20px;  ">街道地址</div>
-                        <FormItem prop="site">
-                          <Input type="text" v-model="formValidate.site" placeholder />
-                        </FormItem>
-
-                        <div>联系电话</div>
-                        <FormItem prop="phone1">
-                          <Input
-                            type="text"
-                            v-model="formValidate.phone1"
-                            placeholder
-                            style="width:100px"
-                          />
-                          <Input
-                            type="text"
-                            v-model="formValidate.phone2"
-                            placeholder
-                            style="width:200px;"
-                          />
-                        </FormItem>
-
-                        <FormItem>
-                          <Button type="primary" @click="handleSubmit('formValidate')">更新基本信息</Button>
-                        </FormItem>
-                      </Form>
-                    </div>
-                  </Col>
-                  <Col span="13" offset="1">
-                    <div style>
+              <Row></Row>
+              <Row>
+                <Col :xs="24" :sm="24" :md="12" :lg="24" :xl="10" :xxl="10">
+                  <div style="padding-right:40px;font-size: 14px;color:#333 ">
+                    <div>
                       <div style="font-size: 14px">头像</div>
                       <div>
-                        <img src="http://ptt5and7y.bkt.clouddn.com/10.png" alt style="width:144px" />
+                        <img src="../../assets/userlogo_images/users.png" alt style="width:144px" />
                       </div>
                       <div style="padding: 10px 0 0 20px">
                         <Upload action="//jsonplaceholder.typicode.com/posts/">
@@ -93,9 +21,79 @@
                         </Upload>
                       </div>
                     </div>
-                  </Col>
-                </Row>
-              </div>
+                    <Form :rules="ruleValidate" :model="formValidate" ref="formValidate">
+                      <div>邮箱</div>
+                      <FormItem prop="email">
+                        <Input type="email" v-model="formValidate.email" />
+                      </FormItem>
+                      <div>昵称</div>
+                      <FormItem prop="name">
+                        <Input type="text" v-model="formValidate.name" />
+                      </FormItem>
+                      <div>个人简介</div>
+                      <FormItem prop="intro">
+                        <Input
+                          type="textarea"
+                          :rows="4"
+                          v-model="formValidate.intro"
+                          placeholder="个人简介"
+                        />
+                      </FormItem>
+
+                      <div>国家/地区</div>
+                      <Select v-model="formValidate.model1">
+                        <Option
+                          v-for="item in cityList"
+                          :value="item.value"
+                          :key="item.value"
+                        >{{ item.label }}</Option>
+                      </Select>
+
+                      <div style="padding-top: 20px">所在省市</div>
+                      <Select v-model="formValidate.model2" style="width:150px">
+                        <Option
+                          v-for="item in cityList2"
+                          :value="item.value"
+                          :key="item.value"
+                        >{{ item.label }}</Option>
+                      </Select>
+                      <Select v-model="formValidate.model3" style="width:150px">
+                        <Option
+                          v-for="item in cityList3"
+                          :value="item.value"
+                          :key="item.value"
+                        >{{ item.label }}</Option>
+                      </Select>
+
+                      <div style="padding-top: 20px;  ">街道地址</div>
+                      <FormItem prop="site">
+                        <Input type="text" v-model="formValidate.site" placeholder />
+                      </FormItem>
+
+                      <div>联系电话</div>
+                      <FormItem prop="phone1">
+                        <Input
+                          type="text"
+                          v-model="formValidate.phone1"
+                          placeholder
+                          style="width:100px"
+                        />
+                        <Input
+                          type="text"
+                          v-model="formValidate.phone2"
+                          placeholder
+                          style="width:200px;"
+                        />
+                      </FormItem>
+
+                      <FormItem>
+                        <Button type="primary" @click="handleSubmit('formValidate')">更新基本信息</Button>
+                      </FormItem>
+                    </Form>
+                  </div>
+                </Col>
+                <Col :xs="24" :sm="24" :md="12" :lg="24" :xl="14" :xxl="14"></Col>
+              </Row>
             </div>
           </div>
         </el-tab-pane>

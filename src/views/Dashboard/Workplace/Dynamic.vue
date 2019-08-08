@@ -38,7 +38,7 @@ export default {
         return{
             dtarr:[
                 {
-                    img:"http://ptt5and7y.bkt.clouddn.com/10.png",
+                     img: require('../../../assets/userlogo_images/alipay.png'),
                     content1:"曲丽丽 在",
                     content2:"新建项目",
                     src1:"高逼格设计天团",
@@ -46,7 +46,7 @@ export default {
                     time:"3 小时前"
                 },
                 {
-                    img:"http://ptt5and7y.bkt.clouddn.com/WhxKE.png",
+                    img: require('../../../assets/userlogo_images/react.png'),
                     content1:"付小小 在",
                     content2:"新建项目",
                     src1:"高逼格设计天团",
@@ -54,7 +54,7 @@ export default {
                     time:"3 小时前"
                 },
                 {
-                    img:"http://ptt5and7y.bkt.clouddn.com/gaO.png",
+                    img:require('../../../assets/userlogo_images/vue.png'),
                     content1:"林东东 在",
                     content2:"新建项目",
                     src1:"中二少女团",
@@ -62,7 +62,7 @@ export default {
                     time:"3 小时前"
                 },
                 {
-                    img:"http://ptt5and7y.bkt.clouddn.com/jZUIxm.png",
+                    img:require('../../../assets/userlogo_images/angular.png'),
                     content1:"周星星 将",
                     content2:"更新至已发布状态",
                     src1:"5 月日常迭代",
@@ -70,7 +70,7 @@ export default {
                     time:"3 小时前"
                 },
                 {
-                    img:"http://ptt5and7y.bkt.clouddn.com/zz.png",
+                    img:require('../../../assets/userlogo_images/bro.png'),
                     content1:"朱偏右 在",
                     content2:"发布了",
                     src1:"工程效能",
@@ -78,7 +78,7 @@ export default {
                     time:"3 小时前"
                 },
                  {
-                    img:"http://ptt5and7y.bkt.clouddn.com/ubnK.png",
+                    img:require('../../../assets/userlogo_images/pro.png'),
                     content1:"乐哥 在",
                     content2:"新建项目",
                     src1:"程序员日常",

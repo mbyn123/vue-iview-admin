@@ -8,11 +8,11 @@
               <Row>
                 <Col span="20">
                   <div class="nav_bar">
-                    <a href="#">首页</a>
-                    <span class="i">/</span>
-                    <a href="#">列表项</a>
-                    <span class="i">/</span>
-                    <a href="#">卡片列表</a>
+                    <Breadcrumb>
+                      <BreadcrumbItem to="/Exception_403">首页</BreadcrumbItem>
+                      <BreadcrumbItem >列表项</BreadcrumbItem>
+                      <BreadcrumbItem>卡片列表</BreadcrumbItem>
+                    </Breadcrumb>
                     <h3>卡片列表</h3>
                   </div>
                   <div class="p">
@@ -68,15 +68,8 @@ export default {
 .title_bar .content .nav_bar {
   font-size: 14px;
 }
-.title_bar .content .nav_bar a {
-  color: rgba(0, 0, 0, 0.45);
-}
-.title_bar .content .nav_bar a:hover {
-  color: #2b85e4;
-}
-.title_bar .content .nav_bar .i {
-  margin: 0 10px;
-}
+
+
 .title_bar .content .nav_bar h3 {
   margin: 10px 0 10px 0;
   color: #333;

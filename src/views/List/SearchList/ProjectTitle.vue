@@ -2,14 +2,14 @@
   <div>
     <div class="application">
       <div class="inner">
-        <div style="border-bottom:1px dashed #ccc;padding-bottom:20px">
+        <div style="border-bottom:1px dashed #ccc;padding-bottom:20px;">
           <Row>
-            <Col span="2">
+            <Col :xs="6" :sm="4" :md="4" :lg="4" :xl="2" :xxl="2">
               <div class="category-name">所属类目:</div>
             </Col>
-            <Col span="18">
+            <Col :xs="14" :sm="16" :md="16" :lg="16" :xl="20" :xxl="20">
               <div class="option">
-                <div class="option-inner">
+                <div  :style="{'height':height}">
                   <span
                     :class="isCheckAll?'check-alls':'check-all'"
                     @click="letsGetThisFuckingCheck()"
@@ -23,7 +23,7 @@
                 </div>
               </div>
             </Col>
-            <Col span="2">
+            <Col :xs="4" :sm="4" :md="4" :lg="4" :xl="2" :xxl="2">
               <div class="option-operation">
                 <div class="unfold" v-show="unfoldShow" @click="unfoldShows">
                   <span class="unfold-inner">
@@ -44,12 +44,12 @@
       </div>
     </div>
     <div class="option-group">
-      <div class="inner">
+      <div class="inner" >
         <Row>
-          <Col span="2">
+          <Col :xs="24" :sm="12" :md="12" :lg="2" :xl="2" :xxl="2">
             <div class="option-group-name">其他选项:</div>
           </Col>
-          <Col span="8">
+          <Col :xs="24" :sm="24" :md="12" :lg="8" :xl="8" :xxl="8">
             <div class="writer">
               <span>作者:</span>
               <Select v-model="model" style="width:200px;margin-left:10px">
@@ -61,7 +61,7 @@
               </Select>
             </div>
           </Col>
-          <Col span="8">
+          <Col :xs="24" :sm="24" :md="12" :lg="8" :xl="8" :xxl="8">
             <div class="active-user">
               <span>活跃用户:</span>
               <Select v-model="usermodel" style="width:200px;margin-left:10px">
@@ -87,6 +87,7 @@ import ProjectContent from "./ProjectContent";
 export default {
   data() {
     return {
+       height:'22px',
       unfoldShow: true,
       packupShow: false,
       checkbox: [],
@@ -184,10 +185,12 @@ export default {
     unfoldShows() {
       this.unfoldShow = false;
       this.packupShow = true;
+       this.height='auto'
     },
     packupShows() {
       this.unfoldShow = true;
       this.packupShow = false;
+      this.height='22px'
     }
   },
  components:{
@@ -208,7 +211,7 @@ export default {
 }
 .option-group .inner .option-group-name {
   font-size: 14px;
-  text-align: center;
+ 
   padding-top: 3px;
 }
 .option-group .inner .writer {
@@ -228,35 +231,36 @@ export default {
 }
 .application .inner .category-name {
   font-size: 14px;
-  text-align: center;
+  
 }
 .application .inner .option {
   font-size: 14px;
+    overflow: hidden;
 }
-.application .inner .option .option-inner {
-  display: flex;
-  justify-content: space-between;
-}
+
 .application .inner .option .check-alls {
   cursor: pointer;
   border-radius: 5px;
-  padding: 0 7px;
+  padding: 2px 7px;
   background: #2d8cf0;
-  color: white;
+  color: #fff;
+  margin-right: 5px
 }
 .application .inner .option .check-all {
-  cursor: pointer;
+   cursor: pointer;
   border-radius: 5px;
-  padding: 0 7px;
+  padding: 2px 7px;
+  margin-right: 5px
 }
 .application .inner .option .check-all:hover {
   color: #2d8cf0;
 }
 .application .inner .option .subitem {
   border-radius: 5px;
-  padding: 0 7px;
+  padding: 1px 7px;
   cursor: pointer;
   transition: all 0.3s;
+ margin-right:30px
 }
 .application .inner .option .subitem:hover {
   color: #2d8cf0;
@@ -265,9 +269,10 @@ export default {
   transition: all 0.3s;
   cursor: pointer;
   border-radius: 5px;
-  padding: 0 7px;
+  padding: 1px 7px;
   background: #2d8cf0;
   color: white;
+  margin-right:30px
 }
 .application .inner .option-operation {
   text-align: center;

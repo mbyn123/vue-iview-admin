@@ -2,13 +2,11 @@
   <div>
     <div class="top-nav">
       <div class="in">
-        <div class="links">
-          <span class="bar">首页</span>
-          <span class="i">/</span>
-          <span class="bar">详情页</span>
-          <span class="i">/</span>
-          <span class="bar">基础详情页</span>
-        </div>
+        <Breadcrumb>
+          <BreadcrumbItem to="/Exception_403">首页</BreadcrumbItem>
+          <BreadcrumbItem to="/components/breadcrumb">详情页</BreadcrumbItem>
+          <BreadcrumbItem>基础详情页</BreadcrumbItem>
+        </Breadcrumb>
         <div class="titles">
           <span>基础详情页</span>
         </div>
@@ -41,22 +39,11 @@ export default {
   padding: 15px 20px;
 }
 
-.top-nav .in .links {
-  font-size: 14px;
-  color: rgba(0, 0, 0, 0.45);
-  margin-bottom: 10px;
-}
-.top-nav .in .links .i {
-  margin: 0 10px;
-}
-.top-nav .in .links .bar:hover {
-  color: #2b85e4;
-  cursor: pointer;
-}
 .top-nav .in .titles {
   font-size: 16px;
   color: #333;
-  font-weight: 900;
+  font-weight:bold;
+  padding-top:10px
 }
 .jc-main {
   background: #fff;

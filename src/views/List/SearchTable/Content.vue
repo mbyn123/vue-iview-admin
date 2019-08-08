@@ -24,7 +24,112 @@
               <Button type="primary" @click="ok('formValidate')">确认</Button>
             </div>
           </Modal>
-
+          <Modal v-model="modal2" title="规则配置" width="640">
+            <div>
+              <Steps :current="current">
+                <Step title="基本信息"></Step>
+                <Step title="配置规则属性"></Step>
+                <Step title="设定调度周期"></Step>
+              </Steps>
+              <div style="padding:60px 0 60px 90px" v-show="stepone">
+                <Form
+                  :label-width="90"
+                  :model="tablesValidate"
+                  :rules="tablerulesValidate"
+                  ref="tablesValidate"
+                >
+                  <FormItem label="规则名称：" label-for="name" prop="name">
+                    <Input
+                      type="text"
+                      placeholder="请输入"
+                      element-id="name"
+                      v-model="tablesValidate.name"
+                      style="width:300px;"
+                    ></Input>
+                  </FormItem>
+                  <FormItem label="描述：" label-for="describe" prop="describe">
+                    <Input
+                      type="textarea"
+                      :cl:rows="4"
+                      placeholder="请输入"
+                      element-id="describe"
+                      v-model="tablesValidate.describe"
+                      style="width:300px;"
+                    ></Input>
+                  </FormItem>
+                </Form>
+              </div>
+            </div>
+            <div style="padding:60px 0 60px 90px" v-show="steptwo">
+              <Form :label-width="90">
+                <FormItem label="监控对象：">
+                  <Select style="width:300px" v-model="MonitoringObjectModel">
+                    <Option
+                      v-for="item in MonitoringObject"
+                      :value="item.value"
+                      :key="item.value"
+                    >{{ item.label }}</Option>
+                  </Select>
+                </FormItem>
+                <FormItem label="规则模板：">
+                  <Select style="width:300px" v-model="ruletemplatemodel">
+                    <Option
+                      v-for="item in ruletemplate"
+                      :value="item.value"
+                      :key="item.value"
+                    >{{ item.label }}</Option>
+                  </Select>
+                </FormItem>
+                <FormItem label="规则类型：">
+                  <RadioGroup v-model="weak">
+                    <Radio label="强"></Radio>
+                    <Radio label="弱"></Radio>
+                  </RadioGroup>
+                </FormItem>
+              </Form>
+            </div>
+            <div style="padding:60px 0 60px 90px" v-show="stepthree">
+              <Form
+                :label-width="100"
+                :model="dispatchValidate"
+                :rules="dispatchruleValidate"
+                ref="dispatchValidate"
+              >
+                <FormItem label="开始时间：" label-for="time" prop="time">
+                  <DatePicker
+                    type="datetime"
+                    placeholder="选择开始时间"
+                    style="width:300px"
+                    v-model="dispatchValidate.time"
+                    element-id="time"
+                  ></DatePicker>
+                </FormItem>
+                <FormItem label="设定调度日期：">
+                  <Select v-model="Datedispatchmodel" style="width:300px">
+                    <Option
+                      v-for="item in Datedispatch"
+                      :value="item.value"
+                      :key="item.value"
+                    >{{ item.label }}</Option>
+                  </Select>
+                </FormItem>
+              </Form>
+            </div>
+            <div slot="footer" class="step-button">
+              <span>
+                <Button v-show="LastStep" @click="last">上一步</Button>
+              </span>
+              <span>
+                <Button @click="fff()">取消</Button>
+                <Button type="primary" @click="next('tablesValidate')" v-show="nexts">下一步</Button>
+                <Button
+                  type="primary"
+                  v-show="accomplish"
+                  @click="handleSubmit('dispatchValidate')"
+                >完成</Button>
+              </span>
+            </div>
+          </Modal>
           <Button style="margin-right: 10px" v-show="state3">批量操作</Button>
           <Dropdown>
             <Button v-show="state3">
@@ -106,108 +211,6 @@
         </div>
       </div>
     </div>
-    <Modal v-model="modal2" title="规则配置" width="640">
-      <div>
-        <Steps :current="current">
-          <Step title="基本信息"></Step>
-          <Step title="配置规则属性"></Step>
-          <Step title="设定调度周期"></Step>
-        </Steps>
-        <div style="padding:60px 0 60px 90px" v-show="stepone">
-          <Form
-            :label-width="90"
-            :model="tablesValidate"
-            :rules="tablerulesValidate"
-            ref="tablesValidate"
-          >
-            <FormItem label="规则名称：" label-for="name" prop="name">
-              <Input
-                type="text"
-                placeholder="请输入"
-                element-id="name"
-                v-model="tablesValidate.name"
-                style="width:300px;"
-              ></Input>
-            </FormItem>
-            <FormItem label="描述：" label-for="describe" prop="describe">
-              <Input
-                type="textarea"
-                :cl:rows="4"
-                placeholder="请输入"
-                element-id="describe"
-                v-model="tablesValidate.describe"
-                style="width:300px;"
-              ></Input>
-            </FormItem>
-          </Form>
-        </div>
-      </div>
-      <div style="padding:60px 0 60px 90px" v-show="steptwo">
-        <Form :label-width="90">
-          <FormItem label="监控对象：">
-            <Select style="width:300px" v-model="MonitoringObjectModel">
-              <Option
-                v-for="item in MonitoringObject"
-                :value="item.value"
-                :key="item.value"
-              >{{ item.label }}</Option>
-            </Select>
-          </FormItem>
-          <FormItem label="规则模板：">
-            <Select style="width:300px" v-model="ruletemplatemodel">
-              <Option
-                v-for="item in ruletemplate"
-                :value="item.value"
-                :key="item.value"
-              >{{ item.label }}</Option>
-            </Select>
-          </FormItem>
-          <FormItem label="规则类型：">
-            <RadioGroup v-model="weak">
-              <Radio label="强"></Radio>
-              <Radio label="弱"></Radio>
-            </RadioGroup>
-          </FormItem>
-        </Form>
-      </div>
-      <div style="padding:60px 0 60px 90px" v-show="stepthree">
-        <Form
-          :label-width="100"
-          :model="dispatchValidate"
-          :rules="dispatchruleValidate"
-          ref="dispatchValidate"
-        >
-          <FormItem label="开始时间：" label-for="time" prop="time">
-            <DatePicker
-              type="datetime"
-              placeholder="选择开始时间"
-              style="width:300px"
-              v-model="dispatchValidate.time"
-              element-id="time"
-            ></DatePicker>
-          </FormItem>
-          <FormItem label="设定调度日期：">
-            <Select v-model="Datedispatchmodel" style="width:300px">
-              <Option
-                v-for="item in Datedispatch"
-                :value="item.value"
-                :key="item.value"
-              >{{ item.label }}</Option>
-            </Select>
-          </FormItem>
-        </Form>
-      </div>
-      <div slot="footer" class="step-button">
-        <span>
-          <Button v-show="LastStep" @click="last">上一步</Button>
-        </span>
-        <span>
-          <Button @click="fff()">取消</Button>
-          <Button type="primary" @click="next('tablesValidate')" v-show="nexts">下一步</Button>
-          <Button type="primary" v-show="accomplish" @click="handleSubmit('dispatchValidate')">完成</Button>
-        </span>
-      </div>
-    </Modal>
   </div>
 </template>
 
@@ -1144,7 +1147,7 @@ export default {
       historyColumns: [
         {
           type: "selection",
-          width: 60,
+          width: 50,
           align: "center"
         },
         {
@@ -1154,14 +1157,14 @@ export default {
         {
           title: "描述",
           slot: "describe",
-          width: 230
+         
         },
         {
           title: "服务调用次数",
           slot: "numbers",
           key: "numbers",
           sortable: true,
-          align: "right"
+          align: "center"
         },
         {
           title: "状态",
@@ -1318,7 +1321,7 @@ export default {
   methods: {
     allocation(row) {
       this.tablesValidate = Object.assign({}, row);
-       console.log(row);
+      console.log(row);
       this.current = 0;
       this.state();
       this.modal2 = true;
@@ -1350,8 +1353,8 @@ export default {
       this.$refs[name].validate(valid => {
         if (valid) {
           const tempdata = Object.assign({}, this.tablesValidate);
-          this.historyData.splice(tempdata._index,1,tempdata)
-          console.log(tempdata._index)
+          this.historyData.splice(tempdata._index, 1, tempdata);
+          console.log(tempdata._index);
           this.modal2 = false;
           this.current = 0;
           this.state();

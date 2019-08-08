@@ -3,7 +3,7 @@
     <div class="project">
       <div class="inside">
         <Row>
-          <Col span="12" v-for="value in messages" :key="value.id">
+          <Col  :xs="24" :sm="24" :md="12" :lg="12" :xl="12" :xxl="8" v-for="value in messages" :key="value.id">
             <div class="card">
               <div class="content">
                 <Row>
@@ -42,176 +42,69 @@ export default {
     return {
       messages: [
         {
-          img1: "http://pt1mv9q6v.bkt.clouddn.com/12.png",
+          img1: require('../../assets/projiect_images/paojecta.png'),
           user: "Alipay",
           time: "几秒前",
           p: "那是一种内在的东西， 他们到达不了，也无法触及的"
         },
         {
-          img1: "http://pt1mv9q6v.bkt.clouddn.com/13.png",
+           img1: require('../../assets/projiect_images/paojectb.png'),
           user: "Angular",
           time: "2小时前",
           p: "希望是一个好东西，也许是最好的，好东西是不会消亡的"
         },
         {
-          img1: "http://pt1mv9q6v.bkt.clouddn.com/14.png",
+         img1: require('../../assets/projiect_images/paojectc.png'),
           user: "Ant Design",
           time: "4小时前",
           p: "生命就像一盒巧克力，结果往往出人意料"
         },
         {
-          img1: "http://pt1mv9q6v.bkt.clouddn.com/15.png",
+          img1: require('../../assets/projiect_images/paojectd.png'),
           user: "Ant Design Pro",
           time: "6小时前",
           p: "城镇中有那么多的酒馆，她却偏偏走进了我的酒馆"
         },
         {
-          img1: "http://pt1mv9q6v.bkt.clouddn.com/13.png",
-          user: "Angular",
-          time: "8小时前",
-          p: "希望是一个好东西，也许是最好的，好东西是不会消亡的"
-        },
-        {
-          img1: "http://pt1mv9q6v.bkt.clouddn.com/15.png",
-          user: "Ant Design Pro",
-          time: "10小时前",
-          p: "城镇中有那么多的酒馆，她却偏偏走进了我的酒馆"
-        },
-        {
-          img1: "http://pt1mv9q6v.bkt.clouddn.com/14.png",
-          user: "Ant Design",
-          time: "12小时前",
-          p: "生命就像一盒巧克力，结果往往出人意料"
-        },
-        {
-          img1: "http://pt1mv9q6v.bkt.clouddn.com/12.png",
-          user: "Alipay",
-          time: "14小时前",
-          p: "那是一种内在的东西， 他们到达不了，也无法触及的"
-        },
-        {
-          img1: "http://pt1mv9q6v.bkt.clouddn.com/12.png",
+          img1: require('../../assets/projiect_images/paojecta.png'),
           user: "Alipay",
           time: "几秒前",
           p: "那是一种内在的东西， 他们到达不了，也无法触及的"
         },
         {
-          img1: "http://pt1mv9q6v.bkt.clouddn.com/13.png",
+           img1: require('../../assets/projiect_images/paojectb.png'),
           user: "Angular",
           time: "2小时前",
           p: "希望是一个好东西，也许是最好的，好东西是不会消亡的"
         },
         {
-          img1: "http://pt1mv9q6v.bkt.clouddn.com/14.png",
+         img1: require('../../assets/projiect_images/paojectc.png'),
           user: "Ant Design",
           time: "4小时前",
           p: "生命就像一盒巧克力，结果往往出人意料"
         },
         {
-          img1: "http://pt1mv9q6v.bkt.clouddn.com/15.png",
+          img1: require('../../assets/projiect_images/paojectd.png'),
           user: "Ant Design Pro",
           time: "6小时前",
           p: "城镇中有那么多的酒馆，她却偏偏走进了我的酒馆"
         },
+       
+      ],
+      comment:[
         {
-          img1: "http://pt1mv9q6v.bkt.clouddn.com/13.png",
-          user: "Angular",
-          time: "8小时前",
-          p: "希望是一个好东西，也许是最好的，好东西是不会消亡的"
+          user:'曲丽丽',
+          img: require('../../assets/userlogo_images/usera.png')
         },
         {
-          img1: "http://pt1mv9q6v.bkt.clouddn.com/15.png",
-          user: "Ant Design Pro",
-          time: "10小时前",
-          p: "城镇中有那么多的酒馆，她却偏偏走进了我的酒馆"
+          user:'王昭君',
+          img: require('../../assets/userlogo_images/userb.png')
         },
         {
-          img1: "http://pt1mv9q6v.bkt.clouddn.com/14.png",
-          user: "Ant Design",
-          time: "12小时前",
-          p: "生命就像一盒巧克力，结果往往出人意料"
-        },
-        {
-          img1: "http://pt1mv9q6v.bkt.clouddn.com/12.png",
-          user: "Alipay",
-          time: "14小时前",
-          p: "那是一种内在的东西， 他们到达不了，也无法触及的"
+          user:'董拉拉',
+          img: require('../../assets/userlogo_images/userc.png')
         },
 
-        {
-          img1: "http://pt1mv9q6v.bkt.clouddn.com/12.png",
-          user: "Alipay",
-          time: "几秒前",
-          p: "那是一种内在的东西， 他们到达不了，也无法触及的"
-        },
-        {
-          img1: "http://pt1mv9q6v.bkt.clouddn.com/13.png",
-          user: "Angular",
-          time: "2小时前",
-          p: "希望是一个好东西，也许是最好的，好东西是不会消亡的"
-        },
-        {
-          img1: "http://pt1mv9q6v.bkt.clouddn.com/14.png",
-          user: "Ant Design",
-          time: "4小时前",
-          p: "生命就像一盒巧克力，结果往往出人意料"
-        },
-        {
-          img1: "http://pt1mv9q6v.bkt.clouddn.com/15.png",
-          user: "Ant Design Pro",
-          time: "6小时前",
-          p: "城镇中有那么多的酒馆，她却偏偏走进了我的酒馆"
-        },
-        {
-          img1: "http://pt1mv9q6v.bkt.clouddn.com/13.png",
-          user: "Angular",
-          time: "8小时前",
-          p: "希望是一个好东西，也许是最好的，好东西是不会消亡的"
-        },
-        {
-          img1: "http://pt1mv9q6v.bkt.clouddn.com/15.png",
-          user: "Ant Design Pro",
-          time: "10小时前",
-          p: "城镇中有那么多的酒馆，她却偏偏走进了我的酒馆"
-        },
-        {
-          img1: "http://pt1mv9q6v.bkt.clouddn.com/14.png",
-          user: "Ant Design",
-          time: "12小时前",
-          p: "生命就像一盒巧克力，结果往往出人意料"
-        },
-        {
-          img1: "http://pt1mv9q6v.bkt.clouddn.com/12.png",
-          user: "Alipay",
-          time: "14小时前",
-          p: "那是一种内在的东西， 他们到达不了，也无法触及的"
-        },
-        {
-          img1: "http://pt1mv9q6v.bkt.clouddn.com/15.png",
-          user: "Ant Design Pro",
-          time: "10小时前",
-          p: "城镇中有那么多的酒馆，她却偏偏走进了我的酒馆"
-        },
-        {
-          img1: "http://pt1mv9q6v.bkt.clouddn.com/14.png",
-          user: "Ant Design",
-          time: "12小时前",
-          p: "生命就像一盒巧克力，结果往往出人意料"
-        }
-      ],
-      comment: [
-        {
-          user: "曲丽丽",
-          img: "http://pt1mv9q6v.bkt.clouddn.com/16.png"
-        },
-        {
-          user: "王昭君",
-          img: "http://pt1mv9q6v.bkt.clouddn.com/17.png"
-        },
-        {
-          user: "董娜娜",
-          img: "http://pt1mv9q6v.bkt.clouddn.com/18.png"
-        }
       ]
     };
   }

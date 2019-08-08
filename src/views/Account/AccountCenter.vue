@@ -3,12 +3,12 @@
     <div class="main-part">
       <div class="in">
         <Row>
-          <Col span="7">
+          <Col :xs="24" :sm="24" :md="24" lg="7" :xl="7" :xxl="7" >
             <div class="sider">
               <div class="content">
                 <div class="personal">
                   <div class="imgs">
-                    <img src="http://ptt5and7y.bkt.clouddn.com/10.png" alt />
+                    <img src="../../assets/userlogo_images/users.png" alt />
                   </div>
                   <div class="userss">
                     <div class="name">
@@ -58,7 +58,7 @@
               </div>
             </div>
           </Col>
-          <Col span="17">
+          <Col :xs="24" :sm="24" :md="24" lg="17" :xl="17" :xxl="17">
             <div class="tabs">
               <div class="content">
                 <div class="tabs">

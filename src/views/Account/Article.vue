@@ -62,7 +62,7 @@ export default {
             "段落示意：蚂蚁金服设计平台 ant.design，用最小的工作量，无缝接入蚂蚁金服生态，" +
             "提供跨越设计与开发的体验解决方案。蚂蚁金服设计平台 ant.design，用最小的工作量，" +
             "无缝接入蚂蚁金服生态，提供跨越设计与开发的体验解决方案。",
-          img: "http://pt1mv9q6v.bkt.clouddn.com/zfb.png",
+          img: require('../../assets/userlogo_images/alipay.png'),
           a1: "付小小",
           a2: "https://ant.design",
           time: "2019-07-06 05:06",
@@ -79,7 +79,7 @@ export default {
             "段落示意：蚂蚁金服设计平台 ant.design，用最小的工作量，无缝接入蚂蚁金服生态，" +
             "提供跨越设计与开发的体验解决方案。蚂蚁金服设计平台 ant.design，用最小的工作量，" +
             "无缝接入蚂蚁金服生态，提供跨越设计与开发的体验解决方案。",
-          img: "http://pt1mv9q6v.bkt.clouddn.com/opng.png",
+          img: require('../../assets/userlogo_images/react.png'),
           a1: "曲丽丽",
           a2: "https://ant.design",
           time: "2019-07-06 03:06",
@@ -96,7 +96,7 @@ export default {
             "段落示意：蚂蚁金服设计平台 ant.design，用最小的工作量，无缝接入蚂蚁金服生态，" +
             "提供跨越设计与开发的体验解决方案。蚂蚁金服设计平台 ant.design，用最小的工作量，" +
             "无缝接入蚂蚁金服生态，提供跨越设计与开发的体验解决方案。",
-          img: "http://pt1mv9q6v.bkt.clouddn.com/p.png",
+          img: require('../../assets/userlogo_images/vue.png'),
           a1: "林东东",
           a2: "https://ant.design",
           time: "2019-07-06 01:26",
@@ -113,7 +113,7 @@ export default {
             "段落示意：蚂蚁金服设计平台 ant.design，用最小的工作量，无缝接入蚂蚁金服生态，" +
             "提供跨越设计与开发的体验解决方案。蚂蚁金服设计平台 ant.design，用最小的工作量，" +
             "无缝接入蚂蚁金服生态，提供跨越设计与开发的体验解决方案。",
-          img: "http://pt1mv9q6v.bkt.clouddn.com/spng.png",
+          img:require('../../assets/userlogo_images/bro.png'),
           a1: "周星星",
           a2: "https://ant.design",
           time: "2019-07-05 23:26",
@@ -130,7 +130,7 @@ export default {
             "段落示意：蚂蚁金服设计平台 ant.design，用最小的工作量，无缝接入蚂蚁金服生态，" +
             "提供跨越设计与开发的体验解决方案。蚂蚁金服设计平台 ant.design，用最小的工作量，" +
             "无缝接入蚂蚁金服生态，提供跨越设计与开发的体验解决方案。",
-          img: "http://pt1mv9q6v.bkt.clouddn.com/z.png",
+          img:  require('../../assets/userlogo_images/pro.png'),
           a1: "吴加好",
           a2: "https://ant.design",
           time: "2019-07-05 21:26",
@@ -147,7 +147,7 @@ export default {
             "段落示意：蚂蚁金服设计平台 ant.design，用最小的工作量，无缝接入蚂蚁金服生态，" +
             "提供跨越设计与开发的体验解决方案。蚂蚁金服设计平台 ant.design，用最小的工作量，" +
             "无缝接入蚂蚁金服生态，提供跨越设计与开发的体验解决方案。",
-          img: "http://pt1mv9q6v.bkt.clouddn.com/p.png",
+          img:  require('../../assets/userlogo_images/ant.png'),
           a1: "林东东",
           a2: "https://ant.design",
           time: "2019-07-06 01:26",
@@ -164,7 +164,7 @@ export default {
             "段落示意：蚂蚁金服设计平台 ant.design，用最小的工作量，无缝接入蚂蚁金服生态，" +
             "提供跨越设计与开发的体验解决方案。蚂蚁金服设计平台 ant.design，用最小的工作量，" +
             "无缝接入蚂蚁金服生态，提供跨越设计与开发的体验解决方案。",
-          img: "http://pt1mv9q6v.bkt.clouddn.com/spng.png",
+          img: require('../../assets/userlogo_images/angular.png'),
           a1: "周星星",
           a2: "https://ant.design",
           time: "2019-07-05 23:26",
@@ -172,75 +172,7 @@ export default {
           num2: "150",
           num3: "16"
         },
-        {
-          user: "Alipay",
-          tag1: "Ant Design",
-          tag2: "设计语言",
-          tag3: "蚂蚁金服",
-          p:
-            "段落示意：蚂蚁金服设计平台 ant.design，用最小的工作量，无缝接入蚂蚁金服生态，" +
-            "提供跨越设计与开发的体验解决方案。蚂蚁金服设计平台 ant.design，用最小的工作量，" +
-            "无缝接入蚂蚁金服生态，提供跨越设计与开发的体验解决方案。",
-          img: "http://pt1mv9q6v.bkt.clouddn.com/zfb.png",
-          a1: "付小小",
-          a2: "https://ant.design",
-          time: "2019-07-06 05:06",
-          num1: "165",
-          num2: "118",
-          num3: "15"
-        },
-        {
-          user: "Angular",
-          tag1: "Ant Design",
-          tag2: "设计语言",
-          tag3: "蚂蚁金服",
-          p:
-            "段落示意：蚂蚁金服设计平台 ant.design，用最小的工作量，无缝接入蚂蚁金服生态，" +
-            "提供跨越设计与开发的体验解决方案。蚂蚁金服设计平台 ant.design，用最小的工作量，" +
-            "无缝接入蚂蚁金服生态，提供跨越设计与开发的体验解决方案。",
-          img: "http://pt1mv9q6v.bkt.clouddn.com/opng.png",
-          a1: "曲丽丽",
-          a2: "https://ant.design",
-          time: "2019-07-06 03:06",
-          num1: "114",
-          num2: "139",
-          num3: "14"
-        },
-        {
-          user: "Ant Design",
-          tag1: "Ant Design",
-          tag2: "设计语言",
-          tag3: "蚂蚁金服",
-          p:
-            "段落示意：蚂蚁金服设计平台 ant.design，用最小的工作量，无缝接入蚂蚁金服生态，" +
-            "提供跨越设计与开发的体验解决方案。蚂蚁金服设计平台 ant.design，用最小的工作量，" +
-            "无缝接入蚂蚁金服生态，提供跨越设计与开发的体验解决方案。",
-          img: "http://pt1mv9q6v.bkt.clouddn.com/p.png",
-          a1: "林东东",
-          a2: "https://ant.design",
-          time: "2019-07-06 01:26",
-          num1: "115",
-          num2: "189",
-          num3: "12"
-        },
-        {
-          user: "Ant Design Pro",
-          tag1: "Ant Design",
-          tag2: "设计语言",
-          tag3: "蚂蚁金服",
-          p:
-            "段落示意：蚂蚁金服设计平台 ant.design，用最小的工作量，无缝接入蚂蚁金服生态，" +
-            "提供跨越设计与开发的体验解决方案。蚂蚁金服设计平台 ant.design，用最小的工作量，" +
-            "无缝接入蚂蚁金服生态，提供跨越设计与开发的体验解决方案。",
-          img: "http://pt1mv9q6v.bkt.clouddn.com/spng.png",
-          a1: "周星星",
-          a2: "https://ant.design",
-          time: "2019-07-05 23:26",
-          num1: "191",
-          num2: "150",
-          num3: "16"
-        },
-        {
+         {
           user: "Bootstrap",
           tag1: "Ant Design",
           tag2: "设计语言",
@@ -249,7 +181,7 @@ export default {
             "段落示意：蚂蚁金服设计平台 ant.design，用最小的工作量，无缝接入蚂蚁金服生态，" +
             "提供跨越设计与开发的体验解决方案。蚂蚁金服设计平台 ant.design，用最小的工作量，" +
             "无缝接入蚂蚁金服生态，提供跨越设计与开发的体验解决方案。",
-          img: "http://pt1mv9q6v.bkt.clouddn.com/z.png",
+          img:  require('../../assets/userlogo_images/pro.png'),
           a1: "吴加好",
           a2: "https://ant.design",
           time: "2019-07-05 21:26",
@@ -257,108 +189,6 @@ export default {
           num2: "135",
           num3: "13"
         },
-        {
-          user: "Ant Design",
-          tag1: "Ant Design",
-          tag2: "设计语言",
-          tag3: "蚂蚁金服",
-          p:
-            "段落示意：蚂蚁金服设计平台 ant.design，用最小的工作量，无缝接入蚂蚁金服生态，" +
-            "提供跨越设计与开发的体验解决方案。蚂蚁金服设计平台 ant.design，用最小的工作量，" +
-            "无缝接入蚂蚁金服生态，提供跨越设计与开发的体验解决方案。",
-          img: "http://pt1mv9q6v.bkt.clouddn.com/p.png",
-          a1: "林东东",
-          a2: "https://ant.design",
-          time: "2019-07-06 01:26",
-          num1: "115",
-          num2: "189",
-          num3: "12"
-        },
-        {
-          user: "Ant Design Pro",
-          tag1: "Ant Design",
-          tag2: "设计语言",
-          tag3: "蚂蚁金服",
-          p:
-            "段落示意：蚂蚁金服设计平台 ant.design，用最小的工作量，无缝接入蚂蚁金服生态，" +
-            "提供跨越设计与开发的体验解决方案。蚂蚁金服设计平台 ant.design，用最小的工作量，" +
-            "无缝接入蚂蚁金服生态，提供跨越设计与开发的体验解决方案。",
-          img: "http://pt1mv9q6v.bkt.clouddn.com/spng.png",
-          a1: "周星星",
-          a2: "https://ant.design",
-          time: "2019-07-05 23:26",
-          num1: "191",
-          num2: "150",
-          num3: "16"
-        },
-        {
-          user: "Ant Design Pro",
-          tag1: "Ant Design",
-          tag2: "设计语言",
-          tag3: "蚂蚁金服",
-          p:
-            "段落示意：蚂蚁金服设计平台 ant.design，用最小的工作量，无缝接入蚂蚁金服生态，" +
-            "提供跨越设计与开发的体验解决方案。蚂蚁金服设计平台 ant.design，用最小的工作量，" +
-            "无缝接入蚂蚁金服生态，提供跨越设计与开发的体验解决方案。",
-          img: "http://pt1mv9q6v.bkt.clouddn.com/spng.png",
-          a1: "周星星",
-          a2: "https://ant.design",
-          time: "2019-07-05 23:26",
-          num1: "191",
-          num2: "150",
-          num3: "16"
-        },
-        {
-          user: "Bootstrap",
-          tag1: "Ant Design",
-          tag2: "设计语言",
-          tag3: "蚂蚁金服",
-          p:
-            "段落示意：蚂蚁金服设计平台 ant.design，用最小的工作量，无缝接入蚂蚁金服生态，" +
-            "提供跨越设计与开发的体验解决方案。蚂蚁金服设计平台 ant.design，用最小的工作量，" +
-            "无缝接入蚂蚁金服生态，提供跨越设计与开发的体验解决方案。",
-          img: "http://pt1mv9q6v.bkt.clouddn.com/z.png",
-          a1: "吴加好",
-          a2: "https://ant.design",
-          time: "2019-07-05 21:26",
-          num1: "111",
-          num2: "135",
-          num3: "13"
-        },
-        {
-          user: "Ant Design",
-          tag1: "Ant Design",
-          tag2: "设计语言",
-          tag3: "蚂蚁金服",
-          p:
-            "段落示意：蚂蚁金服设计平台 ant.design，用最小的工作量，无缝接入蚂蚁金服生态，" +
-            "提供跨越设计与开发的体验解决方案。蚂蚁金服设计平台 ant.design，用最小的工作量，" +
-            "无缝接入蚂蚁金服生态，提供跨越设计与开发的体验解决方案。",
-          img: "http://pt1mv9q6v.bkt.clouddn.com/p.png",
-          a1: "林东东",
-          a2: "https://ant.design",
-          time: "2019-07-06 01:26",
-          num1: "115",
-          num2: "189",
-          num3: "12"
-        },
-        {
-          user: "Ant Design Pro",
-          tag1: "Ant Design",
-          tag2: "设计语言",
-          tag3: "蚂蚁金服",
-          p:
-            "段落示意：蚂蚁金服设计平台 ant.design，用最小的工作量，无缝接入蚂蚁金服生态，" +
-            "提供跨越设计与开发的体验解决方案。蚂蚁金服设计平台 ant.design，用最小的工作量，" +
-            "无缝接入蚂蚁金服生态，提供跨越设计与开发的体验解决方案。",
-          img: "http://pt1mv9q6v.bkt.clouddn.com/spng.png",
-          a1: "周星星",
-          a2: "https://ant.design",
-          time: "2019-07-05 23:26",
-          num1: "191",
-          num2: "150",
-          num3: "16"
-        }
       ]
     };
   }

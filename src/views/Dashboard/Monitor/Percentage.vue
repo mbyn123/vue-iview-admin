@@ -1,7 +1,7 @@
 <template>
   <div>
     <Row>
-      <Col span="12">
+      <Col :xs="24" :sm="24" :md="24" :lg="24" :xl="12" :xxl="12">
         <div class="category">
           <div class="in">
             <div class="top">
@@ -28,7 +28,7 @@
           </div>
         </div>
       </Col>
-      <Col span="6">
+      <Col :xs="24" :sm="24" :md="24" :lg="12" :xl="6" :xxl="6">
         <div class="hot-search">
           <div class="in">
             <div class="top">
@@ -38,13 +38,17 @@
           </div>
         </div>
       </Col>
-      <Col span="6">
+      <Col :xs="24" :sm="24" :md="24" :lg="12" :xl="6" :xxl="6">
         <div class="resource">
           <div class="in">
             <div class="top">
               <span>资源剩余</span>
             </div>
-            <div id="liquidFill" style="width:100% ;height:210px;"></div>
+            <Row>
+              <Col span="24">
+                <div id="liquidFill" style="width:100% ;height:210px;"></div>
+              </Col>
+            </Row>
           </div>
         </div>
       </Col>
@@ -79,7 +83,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.liquidFillChart();
-      this.cloudchart()
+      this.cloudchart();
     });
   },
   methods: {
@@ -93,12 +97,13 @@ export default {
             type: "liquidFill",
             data: [0.34],
             radius: "80%",
+            //  center: ['60%', '50%'],
             outline: {
               //    show: true , //是否显示轮廓 布尔值
               borderDistance: 0, //外部轮廓与图表的距离 数字
               itemStyle: {
                 borderColor: "rgb(65, 164, 255)", //边框的颜色
-                borderWidth: 4 //边框的宽度
+                borderWidth: 6 //边框的宽度
                 //   shadowBlur: 5 , //外部轮廓的阴影范围 一旦设置了内外都有阴影
                 //  shadowColor: '#000' //外部轮廓的阴影颜色
               }
@@ -107,7 +112,7 @@ export default {
               color: "#fff" //图表的背景颜色
             },
             color: ["rgb(65, 164, 255)"],
-            waveLength: "90%",
+            waveLength: "100%",
             amplitude: 9, //振幅
             label: {
               normal: {
@@ -122,6 +127,9 @@ export default {
       };
 
       liquidFillChart.setOption(optionliquidFill);
+       window.addEventListener("resize", () => {
+        liquidFillChart.resize();
+      });
     },
     cloudchart() {
       let myChart7 = this.$echarts.init(document.getElementById("main7"));
@@ -134,8 +142,8 @@ export default {
         series: [
           {
             type: "wordCloud",
-            gridSize:10,
-            sizeRange: [10,16],
+            gridSize: 10,
+            sizeRange: [10, 16],
             rotationRange: [0, 0],
             shape: "circle",
             textStyle: {
@@ -309,11 +317,10 @@ export default {
         ]
       };
       myChart7.setOption(option7);
-       window.addEventListener("resize", () => {
+      window.addEventListener("resize", () => {
         myChart7.resize();
       });
-    },
-    
+    }
   }
 };
 </script>

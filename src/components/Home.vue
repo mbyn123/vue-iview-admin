@@ -1,15 +1,75 @@
+<style scoped>
+.layout {
+  border: 1px solid #d7dde4;
+  background: #f5f7f9;
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.layout-header-bar {
+  background: #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+.menu-item span {
+  display: inline-block;
+  overflow: hidden;
+  width: 69px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: bottom;
+  transition: width 0.2s ease 0.2s;
+}
+.menu-item i {
+  transform: translateX(0px);
+  transition: font-size 0.2s ease, transform 0.2s ease;
+  vertical-align: middle;
+  font-size: 16px;
+}
+.collapsed-menu span {
+  width: 0px;
+  transition: width 0.2s ease;
+}
+.collapsed-menu i {
+  transform: translateX(5px);
+  transition: font-size 0.2s ease 0.2s, transform 0.2s ease 0.2s;
+  vertical-align: middle;
+  font-size: 22px;
+}
 
+.logo {
+  height: 64px;
+  line-height: 64px;
+  margin-left: 20px;
+}
+.logo img {
+  height: 32px;
+  display: inline-block;
+  vertical-align: middle;
+
+  margin-right: 10px;
+}
+
+.logo span {
+   font-size: 16px;
+  vertical-align: middle;
+
+  color: #fff;
+}
+.link {
+  color: #333;
+}
+</style>
 <template>
   <div class="layout">
     <Layout>
-      <Sider ref="side1" hide-trigger collapsible width="260" v-model="isCollapsed">
+      <Sider breakpoint="md" collapsible :collapsed-width="78" v-model="isCollapsed">
         <div class="logo">
           <a href="#">
-            <img src="./../assets/5.svg" alt />
-            <span>Ant Design Pro</span>
+            <img src="../assets/layout_images/logo.svg" alt />
+            <span>vue-iview-admin</span>
           </a>
         </div>
-        <Menu active-name="1-2" theme="dark" width="auto" :class="menuitemClasses" accordion>
+        <Menu active-name="1-2"  width="auto" :class="menuitemClasses">
           <Submenu name="1">
             <template slot="title">
               <Icon type="ios-navigate"></Icon>
@@ -27,7 +87,7 @@
           </Submenu>
           <Submenu name="2">
             <template slot="title">
-             <Icon type="ios-create" />
+              <Icon type="ios-create" />
               <span>表单页</span>
             </template>
             <router-link to="/BasicForm" class="link">
@@ -42,7 +102,7 @@
           </Submenu>
           <Submenu name="3">
             <template slot="title">
-             <Icon type="ios-list-box-outline" />
+              <Icon type="ios-list-box-outline" />
               <span>列表页</span>
             </template>
             <Submenu name="4">
@@ -76,7 +136,7 @@
           </Submenu>
           <Submenu name="6">
             <template slot="title">
-             <Icon type="ios-checkmark-circle-outline" />
+              <Icon type="ios-checkmark-circle-outline" />
               <span>结果页</span>
             </template>
             <router-link to="/Success" class="link">
@@ -88,7 +148,7 @@
           </Submenu>
           <Submenu name="7">
             <template slot="title">
-           <Icon type="md-nuclear" />
+              <Icon type="md-nuclear" />
               <span>异常页</span>
             </template>
             <router-link to="/Exception_403" class="link">
@@ -118,7 +178,7 @@
               <Icon type="md-moon" />
               <span>图形编辑器</span>
             </template>
-            <router-link to="/ProcessEditor" class="link">
+            <!-- <router-link to="/ProcessEditor" class="link">
               <MenuItem name="9-1">流程编辑器</MenuItem>
             </router-link>
             <router-link to="/BrainMapEditor" class="link">
@@ -126,15 +186,23 @@
             </router-link>
             <router-link to="/TopologyEditor" class="link">
               <MenuItem name="9-3">拓扑编辑器</MenuItem>
-            </router-link>
+            </router-link> -->
           </Submenu>
         </Menu>
       </Sider>
       <Layout>
-        <Header />
+        <Header :style="{padding: 0}" class="layout-header-bar">
+          <Icon
+            @click.native="collapsedSider"
+            :class="rotateIcon"
+            :style="{margin: '0 20px'}"
+            type="md-menu"
+            size="24"
+          ></Icon>
+        </Header>
         <Content :style="{margin: '20px', background: 'rgb(245,247,249)', minHeight: '260px'}">
-               <router-view />
-          </Content>
+          <router-view />
+        </Content>
         <Footer />
       </Layout>
     </Layout>
@@ -142,82 +210,25 @@
 </template>
 <script>
 import Footer from "../components/Footer";
-import Header from "../components/Header";
+// import Header from "../components/Header";
 export default {
   data() {
     return {
       isCollapsed: false
     };
   },
-  computed: {
-    rotateIcon() {
-      return ["menu-icon", this.isCollapsed ? "rotate-icon" : ""];
-    },
-    menuitemClasses() {
-      return ["menu-item", this.isCollapsed ? "collapsed-menu" : ""];
-    }
-  },
+ computed: {
+            menuitemClasses: function () {
+                return [
+                    'menu-item',
+                    this.isCollapsed ? 'collapsed-menu' : ''
+                ]
+            }
+        },
 
   components: {
-    Footer,
-    Header
+    Footer
+    // Header
   }
 };
 </script>
-<style scoped>
-.layout {
-  border: 1px solid #d7dde4;
-  background: #f5f7f9;
-  position: relative;
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-.menu-item span {
-  display: inline-block;
-  overflow: hidden;
-  width: 69px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  vertical-align: bottom;
-  transition: width 0.2s ease 0.2s;
-}
-.menu-item i {
-  transform: translateX(0px);
-  transition: font-size 0.2s ease, transform 0.2s ease;
-  vertical-align: middle;
-  font-size: 16px;
-}
-.collapsed-menu span {
-  width: 0px;
-  transition: width 0.2s ease;
-}
-.collapsed-menu i {
-  transform: translateX(5px);
-  transition: font-size 0.2s ease 0.2s, transform 0.2s ease 0.2s;
-  vertical-align: middle;
-  font-size: 22px;
-}
-.logo {
-  height: 64px;
-  line-height: 64px;
-  margin-left: 20px;
-}
-.logo img {
-  height: 32px;
-  display: inline-block;
-  vertical-align: middle;
-
-  margin-right: 10px;
-}
-
-.logo span {
-  font-size: 20px;
-  vertical-align: middle;
-
-  color: #fff;
-}
-.link {
-  color: #fff;
-}
-</style>

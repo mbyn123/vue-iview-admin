@@ -1,25 +1,25 @@
 <template>
     <div>
-        <div class="tk_main" v-for="value in orders" :key="value.id">
+        <div class="refund-main" v-for="value in orders" :key="value.id">
             <div class="in">
                 <div class="name"><span>{{value.name}}</span></div>
-                <Row>
-                    <Col span="8">
-                        <div><span class="item">{{value.title1}}</span><span class="items">{{value.title2}}</span></div>
+                <Row >
+                    <Col :xs="24" :sm="24" :md="8" :lg="8" :xl="8" :xxl="8">
+                        <div class="refund-main-messages" ><span class="item">{{value.title1}}</span><span class="items">{{value.title2}}</span></div>
                     </Col>
-                    <Col span="8">
-                        <div><span class="item">{{value.title3}}</span><span class="items">{{value.title4}}</span></div>
+                    <Col :xs="24" :sm="24" :md="8" :lg="8" :xl="8" :xxl="8">
+                        <div class="refund-main-messages"><span class="item">{{value.title3}}</span><span class="items">{{value.title4}}</span></div>
                     </Col>
-                    <Col span="8">
-                        <div><span class="item">{{value.title5}}</span><span class="items">{{value.title6}}</span></div>
+                    <Col :xs="24" :sm="24" :md="8" :lg="8" :xl="8" :xxl="8">
+                        <div class="refund-main-messages"><span class="item">{{value.title5}}</span><span class="items">{{value.title6}}</span></div>
                     </Col>
                 </Row>
                 <Row>
-                    <Col span="8">
-                        <div><span class="item">{{value.title7}}</span><span class="items">{{value.title8}}</span></div>
+                    <Col :xs="24" :sm="24" :md="8" :lg="8" :xl="8" :xxl="8">
+                        <div  class="refund-main-messages"><span class="item">{{value.title7}}</span><span class="items">{{value.title8}}</span></div>
                     </Col>
-                    <Col span="8">
-                        <div class="order"><span class="item">{{value.title9}}</span><span class="items">{{value.title10}}</span></div>
+                    <Col :xs="24" :sm="24" :md="8" :lg="8" :xl="8" :xxl="8">
+                        <div class="refund-main-messages"><span class="item">{{value.title9}}</span><span class="items">{{value.title10}}</span></div>
                     </Col>
                 </Row>
             </div>
@@ -64,28 +64,32 @@
 </script>
 
 <style scoped>
-.tk_main{
+.refund-main{
     padding:0 25px
 }
-.tk_main .in{
+.refund-main .in{
     border-bottom:1px solid #ccc;
     padding:25px 0 35px 0
 }
-.tk_main .in .name{
+.refund-main .in .name{
     font-size: 16px;
     color:#333;
     font-weight: 700;
     margin-bottom:20px;
 }
-.tk_main .in .item{
-    font-size: 14px;
+
+.refund-main-messages{
+    padding:10px
 }
-.tk_main .in .items{
+
+.refund-main .in .item{
+    font-size: 14px;
+    font-weight:bold
+}
+.refund-main .in .items{
     font-size: 14px;
     margin-left: 10px;
 }
-.tk_main .in .order{
-    margin:13px 0 10px 0
-}
+
 
 </style>

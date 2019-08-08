@@ -1,7 +1,7 @@
 <template>
   <div>
     <Row>
-      <Col span="18">
+      <Col :xs="24" :sm="24" :md="24" :lg="24" :xl="18" :xxl="18">
         <div class="banner">
           <div class="in">
             <div class="top">
@@ -10,7 +10,16 @@
             <div>
               <div class="deal">
                 <Row>
-                  <Col span="6" v-for="deal in dealarr" :key="deal.id">
+                  <Col
+                    :xs="24"
+                    :sm="24"
+                    :md="12"
+                    :lg="6"
+                    :xl="6"
+                    :xxl="6"
+                    v-for="deal in dealarr"
+                    :key="deal.id"
+                  >
                     <div class="wen">
                       <div class="wen-title">{{deal.title}}</div>
                       <div class="wen-num">{{deal.num}}</div>
@@ -20,13 +29,13 @@
               </div>
 
               <div class="cardimg">
-                <img src="http://ptt5and7y.bkt.clouddn.com/HBWnDEUXCnGnGrRfrpKa.png" alt />
+                <img src="../../../assets/deal_images/deal.png" alt />
               </div>
             </div>
           </div>
         </div>
       </Col>
-      <Col span="6">
+      <Col :xs="24" :sm="24" :md="24" :lg="24" :xl="6" :xxl="6">
         <div class="forecast">
           <div class="in">
             <div class="top">
@@ -52,7 +61,7 @@
         </div>
       </Col>
       <Row>
-        <Col span="6">
+        <Col :xs="24" :sm="24" :md="24" :lg="24" :xl="6" :xxl="6">
           <div class="efficiency">
             <div class="in">
               <div class="top">
@@ -272,7 +281,7 @@ export default {
 
       trendCharthd.setOption(optiontrend);
       myCharthdBoard.setOption(optionhdBoard);
-      
+
       window.addEventListener("resize", () => {
         trendCharthd.resize();
       });
@@ -321,9 +330,9 @@ export default {
 }
 
 .banner .cardimg {
-  height: 452px;
-  padding-top: 10px;
+  padding-bottom: 10px;
   text-align: center;
+   margin-bottom: 20px
 }
 
 .banner .cardimg img {

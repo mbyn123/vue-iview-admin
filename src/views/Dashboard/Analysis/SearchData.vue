@@ -2,7 +2,7 @@
   <div>
     <div style="margin: 25px -12px">
       <Row>
-        <Col span="12" class="card" style="padding:0 12px;">
+        <Col :xs="24" :sm="24" :md="24" :lg="24" :xl="12" :xxl="12"  style="padding:0 12px;">
           <div style="background: #fff">
             <div style="border-bottom:1px solid #ccc;padding:0 25px">
               <div style="padding:20px 0;display: flex;justify-content: space-between">
@@ -19,7 +19,7 @@
               </div>
             </div>
             <Row>
-              <Col span="12" style="padding:25px;">
+              <Col :xs="24" :sm="24" :md="12" :lg="12" :xl="12" :xxl="12" style="padding:25px;">
                 <div>
                   <div>
                     <span>
@@ -43,7 +43,7 @@
                   </div>
                 </div>
               </Col>
-              <Col span="12" style="padding:25px ;">
+              <Col :xs="24" :sm="24" :md="12" :lg="12" :xl="12" :xxl="12" style="padding:25px ;">
                 <div style="padding-left: 20px">
                   <div>
                     <span>
@@ -69,7 +69,7 @@
               </Col>
             </Row>
             <Row>
-              <Col span="24" style="padding: 0 25px;">
+              <Col :xs="24" :sm="24" :md="24" :lg="24" :xl="24" :xxl="24" style="padding: 0 25px;">
                 <Table :columns="historyColumns" :data="historyData"></Table>
               </Col>
             </Row>
@@ -80,7 +80,7 @@
             </Row>
           </div>
         </Col>
-        <Col span="12" style="padding:0 12px;">
+        <Col :xs="24" :sm="24" :md="24" :lg="24" :xl="12" :xxl="12" style="padding:0 12px;">
           <div style="background: #fff;" class="saleroom">
             <div style="padding: 16px 25px 0 25px">
               <div>
@@ -102,8 +102,8 @@
                   <Tabs value="name1">
                     <TabPane label="全部渠道" name="name1">
                       <Row>
-                        <Col span="18">
-                          <div style="padding-bottom: 25px">
+                        <Col :xs="16" :sm="14" :md="16" :lg="17" :xl="18" :xxl="18">
+                          <div style="padding-bottom: 25px;">
                             <div style="font-size: 14px;padding: 10px 20px;">销售额</div>
                             <div class="saleroom" style="position: relative">
                               <div id="AllChannels" style="width:100%;height:400px;"></div>
@@ -114,15 +114,15 @@
                             </div>
                           </div>
                         </Col>
-                        <Col span="6">
-                          <div style="padding:150px 20px  0 0 ;">
+                        <Col :xs="8" :sm="10" :md="8" :lg="7" :xl="6" :xxl="6">
+                          <div style="padding:150px 0px  0 0 ;">
                             <div class="turnover">
                               <div class="in" v-for="list in AllChannels" :key="list.id">
-                                <div class="li">
+                                <div class="li" >
                                   <div
-                                    style="font-size: 14px;color:#333;display: flex;justify-content: space-between"
+                                    style="font-size: 14px;color:#333;display: flex;"
                                   >
-                                    <div>
+                                    <div style="margin-right:10px">
                                       <span class="i">|</span>
                                       <span>{{list.num1}}</span>
                                     </div>
@@ -139,7 +139,7 @@
                     </TabPane>
                     <TabPane label="线上" name="name2">
                       <Row>
-                        <Col span="18">
+                        <Col :xs="16" :sm="14" :md="16" :lg="17" :xl="18" :xxl="18">
                           <div style="padding-bottom: 25px">
                             <div style="font-size: 14px;padding: 10px 20px;">销售额</div>
                             <div class="saleroom" style="position: relative">
@@ -151,15 +151,15 @@
                             </div>
                           </div>
                         </Col>
-                        <Col span="6">
-                          <div style="padding:150px 20px  0 0 ;">
+                        <Col :xs="8" :sm="10" :md="8" :lg="7" :xl="6" :xxl="6">
+                          <div style="padding-top:150px;">
                             <div class="turnover">
                               <div class="in" v-for="list in Online" :key="list.id">
                                 <div class="li">
                                   <div
-                                    style="font-size: 14px;color:#333;display: flex;justify-content: space-between"
+                                    style="font-size: 14px;color:#333;display: flex;"
                                   >
-                                    <div>
+                                    <div style="margin-right:10px">
                                       <span class="i">|</span>
                                       <span>{{list.num1}}</span>
                                     </div>
@@ -176,7 +176,7 @@
                     </TabPane>
                     <TabPane label="门店" name="name3">
                       <Row>
-                        <Col span="18">
+                        <Col :xs="16" :sm="14" :md="16" :lg="17" :xl="18" :xxl="18">
                           <div style="padding-bottom: 25px">
                             <div style="font-size: 14px;padding: 10px 20px;">销售额</div>
                             <div class="saleroom" style="position: relative">
@@ -188,15 +188,15 @@
                             </div>
                           </div>
                         </Col>
-                        <Col span="6">
-                          <div style="padding:150px 20px  0 0 ;">
+                        <Col :xs="8" :sm="10" :md="8" :lg="7" :xl="6" :xxl="6">
+                          <div style="padding-top:150px;">
                             <div class="turnover">
                               <div class="in" v-for="list in shop" :key="list.id">
                                 <div class="li">
                                   <div
-                                    style="font-size: 14px;color:#333;display: flex;justify-content: space-between"
+                                    style="font-size: 14px;color:#333;display: flex;"
                                   >
-                                    <div>
+                                    <div style="margin-right:10px">
                                       <span class="i">|</span>
                                       <span>{{list.num1}}</span>
                                     </div>

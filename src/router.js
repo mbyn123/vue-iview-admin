@@ -32,9 +32,9 @@ import Exception_500 from "./views/Exception/Exception_500"
 import AccountCenter from "./views/Account/AccountCenter"
 import AccountSettings from "./views/Account/AccountSettings"
 
-import ProcessEditor from "./views/GraphEditor/ProcessEditor"
-import BrainMapEditor from "./views/GraphEditor/BrainMapEditor"
-import TopologyEditor from "./views/GraphEditor/TopologyEditor"
+// import ProcessEditor from "./views/GraphEditor/ProcessEditor"
+// import BrainMapEditor from "./views/GraphEditor/BrainMapEditor"
+// import TopologyEditor from "./views/GraphEditor/TopologyEditor"
 
 Vue.use(Router)
 
@@ -132,18 +132,18 @@ export default new Router({
           path: "/AccountSettings",
           component: AccountSettings
         },
-        {
-          path: "/ProcessEditor",
-          component: ProcessEditor
-        },
-        {
-          path: "/BrainMapEditor",
-          component: BrainMapEditor
-        },
-        {
-          path: "/TopologyEditor",
-          component: TopologyEditor
-        },
+        // {
+        //   path: "/ProcessEditor",
+        //   component: ProcessEditor
+        // },
+        // {
+        //   path: "/BrainMapEditor",
+        //   component: BrainMapEditor
+        // },
+        // {
+        //   path: "/TopologyEditor",
+        //   component: TopologyEditor
+        // },
         {
           path: "",//默认显示
           redirect: '/Analysis'

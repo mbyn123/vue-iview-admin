@@ -1,48 +1,28 @@
 <template>
   <div>
-    <div class="gj-top">
+    <div class="senior-details">
       <div class="in">
-        <div class="links">
-          <div style="padding-top:0px">
-            <span class="link">首页</span>
-            <span class="one">/</span>
-            <span class="link">详情页</span>
-            <span class="one">/</span>
-            <span class="link">高级详情页</span>
-          </div>
-          <div>
-            <RadioGroup type="button">
-              <Radio label="large">操作</Radio>
-              <Radio label="default">操作</Radio>
-              <Dropdown>
-                <Radio label="small">
-                  <Icon type="ios-more" />
-                </Radio>
-                <DropdownMenu slot="list">
-                  <DropdownItem>选项一</DropdownItem>
-                  <DropdownItem>选项二</DropdownItem>
-                  <DropdownItem>选项三</DropdownItem>
-                </DropdownMenu>
-              </Dropdown>
-            </RadioGroup>
-            <Button type="primary">主操作</Button>
-          </div>
+        <div style="padding:10px 0">
+          <Breadcrumb>
+            <BreadcrumbItem to="/Exception_403">首页</BreadcrumbItem>
+            <BreadcrumbItem to="/components/breadcrumb">详情页</BreadcrumbItem>
+            <BreadcrumbItem>高级详情页</BreadcrumbItem>
+          </Breadcrumb>
         </div>
-
         <Row v-for="value in details" :key="value.id">
           <Col span="24">
             <div class="name">
               <span>{{value.content}}</span>
             </div>
           </Col>
-          <Col span="8">
+          <Col :xs="24" :sm="24" :md="8" :lg="10" :xl="10" :xxl="10">
             <div class="user">
               <div>{{value.content2}}</div>
               <div>{{value.content5}}</div>
               <div>{{value.content8}}</div>
             </div>
           </Col>
-          <Col span="8">
+          <Col :xs="24" :sm="24" :md="8" :lg="10" :xl="10" :xxl="10">
             <div class="correlation">
               <div>{{value.content3}}</div>
               <div>
@@ -52,7 +32,7 @@
               <div>{{value.content9}}</div>
             </div>
           </Col>
-          <Col span="8">
+          <Col :xs="24" :sm="24" :md="8" :lg="4" :xl="4" :xxl="4">
             <div class="states">
               <div class="state">{{value.content4}}</div>
               <div class="content">{{value.content10}}</div>
@@ -63,7 +43,7 @@
       </div>
     </div>
     <div class="atabs">
-      <Tabs>
+      <Tabs style="margin:-30px 0 0 0">
         <TabPane label="详情"></TabPane>
         <TabPane label="规则" disabled></TabPane>
       </Tabs>
@@ -102,63 +82,43 @@ export default {
 <style scoped>
 .atabs {
   margin: -35px -20px;
-  padding: 0 20px;
+  padding: 30px 20px;
+ 
 }
-.gj-top {
+.senior-details {
   margin: -18px -20px;
-  padding: 0 25px;
-  background: #ffffff;
+  padding: 20px 20px 25px 20px;
+  background: #fff;
+ 
 }
 
-.gj-top .in .links {
-  font-size: 14px;
-  color: rgba(0, 0, 0, 0.45);
-  display: flex;
-  justify-content: space-between;
-  padding-top: 15px;
-}
-.gj-top .in .links .link:hover {
-  color: #2b85e4;
-  cursor: pointer;
-}
-.gj-top .in .links .one {
-  margin: 10px;
-}
-.gj-top .in .name {
+.senior-details .in .name {
   font-size: 16px;
   color: #333;
   font-weight: 600;
   margin-bottom: 13px;
 }
 
-.gj-top .in .user {
-  margin-bottom: 70px;
-}
-.gj-top .in .user div {
+.senior-details .in .user div {
   margin-bottom: 15px;
   font-size: 14px;
 }
-.gj-top .in .correlation {
-  padding-left: 80px;
+.senior-details .in .correlation {
   font-size: 14px;
 }
 
-.gj-top .in .correlation div {
+.senior-details .in .correlation div {
   margin-bottom: 15px;
 }
 
-.gj-top .in .states {
-  text-align: right;
-  padding-right: 40px;
-}
-.gj-top .in .states div {
+.senior-details .in .states div {
   margin-bottom: 15px;
 }
-.gj-top .in .states .state {
+.senior-details .in .states .state {
   font-size: 14px;
   color: rgba(0, 0, 0, 0.45);
 }
-.gj-top .in .states .content {
+.senior-details .in .states .content {
   color: rgba(0, 0, 0, 0.85);
   font-size: 24px;
 }

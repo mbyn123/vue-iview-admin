@@ -12,7 +12,6 @@
         </div>
       </div>
     </div>
-    <Button type="primary" @click="modal1 = true">Display dialog box</Button>
     <Modal
         v-model="modal1"
         title="Common Modal dialog box title"

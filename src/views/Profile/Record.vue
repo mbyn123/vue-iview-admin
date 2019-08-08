@@ -13,8 +13,8 @@
     </div>
     <div class="log">
       <div style="padding-left:10px;">
-        <Tabs value="5">
-          <TabPane label="操作日志一" name="5">
+        <Tabs value="操作日志一" :animated="false">
+          <TabPane label="操作日志一" name="操作日志一" >
             <div>
               <Row>
                 <Col span="24">
@@ -46,7 +46,7 @@
               </Row>
             </div>
           </TabPane>
-          <TabPane label="操作日志二" name="6">
+          <TabPane label="操作日志二" name="操作日志二">
             <Row>
               <Col span="24">
                 <Table :columns="columns2" class :data="data3" footer>
@@ -76,7 +76,7 @@
               </Col>
             </Row>
           </TabPane>
-          <TabPane label="操作日志三" name="7">
+          <TabPane label="操作日志三" name="操作日志三">
             <Row>
               <Col span="24">
                 <Table :columns="columns2" class :data="data4" footer>

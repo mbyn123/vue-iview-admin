@@ -3,7 +3,7 @@
     <div class="list">
       <div class="list_in">
         <Row>
-          <Col span="8">
+          <Col :xs="24" :sm="24" :md="12" :lg="8" :xl="8" :xxl="8">
             <div class="but">
               <button class="in">
                 <Icon type="md-add" size="20" style="display: inline-block;vertical-align: top" />
@@ -11,7 +11,7 @@
               </button>
             </div>
           </Col>
-          <Col span="8" v-for="value in uasers" :key="value.id">
+          <Col :xs="24" :sm='24' :md="12" :lg="8" :xl="8" :xxl="8" v-for="value in uasers" :key="value.id">
             <div class="but">
               <Row>
                 <Col span="24">
@@ -46,49 +46,49 @@ export default {
     return {
       uasers: [
         {
-          img: "http://pt1mv9q6v.bkt.clouddn.com/zfb.png",
+          img: require('../../../assets/userlogo_images/alipay.png'),
           name: "Alipay",
           p:
             "在中台产品的研发过程中，会出现不同的设计规范和实现方式，但其中往往存在很多类似的页面和组件，这些类似的组件会被抽离成一套标准规范。"
         },
         {
-          img: "http://pt1mv9q6v.bkt.clouddn.com/n.png",
+          img: require('../../../assets/userlogo_images/react.png'),
           name: "Angular",
           p:
             "在中台产品的研发过程中，会出现不同的设计规范和实现方式，但其中往往存在很多类似的页面和组件，这些类似的组件会被抽离成一套标准规范。"
         },
         {
-          img: "http://pt1mv9q6v.bkt.clouddn.com/C.png",
+          img:require('../../../assets/userlogo_images/vue.png'),
           name: "Ant Design",
           p:
             "在中台产品的研发过程中，会出现不同的设计规范和实现方式，但其中往往存在很多类似的页面和组件，这些类似的组件会被抽离成一套标准规范。"
         },
         {
-          img: "http://pt1mv9q6v.bkt.clouddn.com/fpng.png",
+          img:require('../../../assets/userlogo_images/bro.png'),
           name: "Ant Design Pro",
           p:
             "在中台产品的研发过程中，会出现不同的设计规范和实现方式，但其中往往存在很多类似的页面和组件，这些类似的组件会被抽离成一套标准规范。"
         },
         {
-          img: "http://pt1mv9q6v.bkt.clouddn.com/opng.png",
+          img: require('../../../assets/userlogo_images/angular.png'),
           name: "Bootstrap",
           p:
             "在中台产品的研发过程中，会出现不同的设计规范和实现方式，但其中往往存在很多类似的页面和组件，这些类似的组件会被抽离成一套标准规范。"
         },
         {
-          img: "http://pt1mv9q6v.bkt.clouddn.com/p.png",
+          img: require('../../../assets/userlogo_images/pro.png'),
           name: "React",
           p:
             "在中台产品的研发过程中，会出现不同的设计规范和实现方式，但其中往往存在很多类似的页面和组件，这些类似的组件会被抽离成一套标准规范。"
         },
         {
-          img: "http://pt1mv9q6v.bkt.clouddn.com/spng.png",
+          img:require('../../../assets/userlogo_images/n.png'),
           name: "Vue",
           p:
             "在中台产品的研发过程中，会出现不同的设计规范和实现方式，但其中往往存在很多类似的页面和组件，这些类似的组件会被抽离成一套标准规范。"
         },
         {
-          img: "http://pt1mv9q6v.bkt.clouddn.com/z.png",
+          img: require('../../../assets/userlogo_images/ant.png'),
           name: "Webpack",
           p:
             "在中台产品的研发过程中，会出现不同的设计规范和实现方式，但其中往往存在很多类似的页面和组件，这些类似的组件会被抽离成一套标准规范。"

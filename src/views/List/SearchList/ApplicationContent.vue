@@ -3,7 +3,7 @@
     <div class="project">
       <div class="inside">
         <Row>
-          <Col span="6" v-for="value in mssg" :key="value.id">
+          <Col :xs="24" :sm="12" :md="8" :lg="8" :xl="6" :xxl="6" v-for="value in mssg" :key="value.id">
             <div style="padding-top:10px">
               <div class="card" style="padding: 10px 12px ; ">
                 <div class="content">
@@ -76,49 +76,48 @@ export default {
       mssg: [
         {
           user: "Alipay",
-          img: "http://pt1mv9q6v.bkt.clouddn.com/zfb.png",
+          img: require('../../../assets/userlogo_images/pro.png'),
           num1: "16",
           num2: "1,026"
         },
         {
           user: "Angular",
-          img: "http://pt1mv9q6v.bkt.clouddn.com/opng.png",
+          img: require('../../../assets/userlogo_images/bro.png'),
           num1: "16",
           num2: "1,026"
         },
         {
           user: "Ant Design",
-          img: "http://pt1mv9q6v.bkt.clouddn.com/p.png",
+          img:require('../../../assets/userlogo_images/ant.png'),
           num1: "16",
           num2: "1,026"
         },
         {
           user: "Ant Design Pro",
-          img: "http://pt1mv9q6v.bkt.clouddn.com/spng.png",
+          img: require('../../../assets/userlogo_images/n.png'),
           num1: "16",
           num2: "1,026"
         },
         {
           user: "Bootstrap",
-          img: "http://pt1mv9q6v.bkt.clouddn.com/fpng.png",
+          img: require('../../../assets/userlogo_images/angular.png'),
           num1: "16",
           num2: "1,026"
         },
         {
           user: "React",
-          img: "http://pt1mv9q6v.bkt.clouddn.com/20.png",
-          num1: "16",
+          img:require('../../../assets/userlogo_images/vue.png'),
           num2: "1,026"
         },
         {
           user: "Vue",
-          img: "http://pt1mv9q6v.bkt.clouddn.com/C.png",
+         img:require('../../../assets/userlogo_images/alipay.png'),
           num1: "16",
           num2: "1,026"
         },
         {
           user: "Webpack",
-          img: "http://pt1mv9q6v.bkt.clouddn.com/z.png",
+          img:require('../../../assets/userlogo_images/vue.png'),
           num1: "16",
           num2: "1,026"
         }

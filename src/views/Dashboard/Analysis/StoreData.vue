@@ -1,14 +1,14 @@
 <template>
-  <Row style="padding-top:20px; ">
+  <Row >
     <div style="background: #fff;">
-      <Tabs value="name1">
-        <TabPane label="销售额" name="name1">
+      <Tabs value="销售额">
+        <TabPane label="销售额" name="销售额">
           <div class="main">
             <Row>
-              <Col span="16" style="padding:5px 20px 30px 20px;">
+              <Col :xs="24" :sm="24" :md="12" :lg='16' :xl="16" :xxl="16" style="padding:5px 20px 30px 20px;">
                 <div id="salestrend" style="width: 100%;height:254px;"></div>
               </Col>
-              <Col span="8">
+              <Col :xs="24" :sm="24" :md="12" :lg='8' :xl="8" :xxl="8">
                 <div class="Turnover" style="padding:10px 20px 20px 70px">
                   <div style="font-size: 14px;color:#333;margin-bottom: 20px">门店销售额排名</div>
                   <div>
@@ -29,12 +29,12 @@
             </Row>
           </div>
         </TabPane>
-        <TabPane label="访问量" name="name2">
+        <TabPane label="访问量" name="访问量">
           <Row>
-            <Col span="16" style="padding:5px 20px 30px 20px;">
+            <Col :xs="24" :sm="24" :md="12" :lg='16' :xl="16" :xxl="16" style="padding:5px 20px 30px 20px;">
               <div id="Traffictrend" style="width: 100%;height:254px;"></div>
             </Col>
-            <Col span="8">
+            <Col :xs="24" :sm="24" :md="12" :lg='8' :xl="8" :xxl="8">
               <div class="Turnover" style="padding:10px 20px 20px 70px">
                 <div style="font-size: 14px;color:#333;margin-bottom: 20px">门店销售额排名</div>
                 <ul>

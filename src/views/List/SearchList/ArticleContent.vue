@@ -67,7 +67,7 @@ export default {
             "段落示意：蚂蚁金服设计平台 ant.design，用最小的工作量，无缝接入蚂蚁金服生态，" +
             "提供跨越设计与开发的体验解决方案。蚂蚁金服设计平台 ant.design，用最小的工作量，" +
             "无缝接入蚂蚁金服生态，提供跨越设计与开发的体验解决方案。",
-          img: "http://pt1mv9q6v.bkt.clouddn.com/zfb.png",
+          img: require('../../../assets/userlogo_images/alipay.png'),
           a1: "付小小",
           a2: "https://ant.design",
           time: "2019-07-06 05:06",
@@ -84,7 +84,7 @@ export default {
             "段落示意：蚂蚁金服设计平台 ant.design，用最小的工作量，无缝接入蚂蚁金服生态，" +
             "提供跨越设计与开发的体验解决方案。蚂蚁金服设计平台 ant.design，用最小的工作量，" +
             "无缝接入蚂蚁金服生态，提供跨越设计与开发的体验解决方案。",
-          img: "http://pt1mv9q6v.bkt.clouddn.com/opng.png",
+          img: require('../../../assets/userlogo_images/react.png'),
           a1: "曲丽丽",
           a2: "https://ant.design",
           time: "2019-07-06 03:06",
@@ -101,7 +101,7 @@ export default {
             "段落示意：蚂蚁金服设计平台 ant.design，用最小的工作量，无缝接入蚂蚁金服生态，" +
             "提供跨越设计与开发的体验解决方案。蚂蚁金服设计平台 ant.design，用最小的工作量，" +
             "无缝接入蚂蚁金服生态，提供跨越设计与开发的体验解决方案。",
-          img: "http://pt1mv9q6v.bkt.clouddn.com/p.png",
+          img: require('../../../assets/userlogo_images/vue.png'),
           a1: "林东东",
           a2: "https://ant.design",
           time: "2019-07-06 01:26",
@@ -118,7 +118,7 @@ export default {
             "段落示意：蚂蚁金服设计平台 ant.design，用最小的工作量，无缝接入蚂蚁金服生态，" +
             "提供跨越设计与开发的体验解决方案。蚂蚁金服设计平台 ant.design，用最小的工作量，" +
             "无缝接入蚂蚁金服生态，提供跨越设计与开发的体验解决方案。",
-          img: "http://pt1mv9q6v.bkt.clouddn.com/spng.png",
+          img: require('../../../assets/userlogo_images/ant.png'),
           a1: "周星星",
           a2: "https://ant.design",
           time: "2019-07-05 23:26",
@@ -135,7 +135,7 @@ export default {
             "段落示意：蚂蚁金服设计平台 ant.design，用最小的工作量，无缝接入蚂蚁金服生态，" +
             "提供跨越设计与开发的体验解决方案。蚂蚁金服设计平台 ant.design，用最小的工作量，" +
             "无缝接入蚂蚁金服生态，提供跨越设计与开发的体验解决方案。",
-          img: "http://pt1mv9q6v.bkt.clouddn.com/z.png",
+          img:require('../../../assets/userlogo_images/bro.png'),
           a1: "吴加好",
           a2: "https://ant.design",
           time: "2019-07-05 21:26",
