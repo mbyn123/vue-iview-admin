@@ -1,6 +1,6 @@
 # About
 
-此项目vue-iview-admin 是基于vue+iview 构建的后台管理系统,具有登录,注册,数据管理等功能
+此项目vue-iview-admin 是基于vue+iview 构建的后台管理系统,具有登录,注册,数据可视化管理等功能
 
 ## 技术栈
 
@@ -36,3 +36,9 @@ vue2 + vue-router + vue-cli3 + es6 + iview
 ![](http://pvyuh1z0q.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190809191038.png)
 
 ![](http://pvyuh1z0q.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190809191416.png)
+
+![](http://pvyuh1z0q.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190809191451.png)
+
+![](http://pvyuh1z0q.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190809192019.png)
+
+![](http://pvyuh1z0q.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190809191957.png)
