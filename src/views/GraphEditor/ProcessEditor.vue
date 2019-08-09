@@ -1,6 +1,12 @@
 <template>
   <div>
-    <vue-wangeditor id="editor" width="100%"></vue-wangeditor>
+    <Row>
+      <Col span="24">
+        <div style="height:100vh">
+          <vue-wangeditor id="editor" width="100%"></vue-wangeditor>
+        </div>
+      </Col>
+    </Row>
   </div>
 </template>
 

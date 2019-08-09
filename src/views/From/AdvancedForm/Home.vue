@@ -494,7 +494,7 @@ export default {
 }
 
 .title {
-  margin: -20px -20px 25px -20px;
+  margin: -19px -20px 25px -20px;
 }
 
 

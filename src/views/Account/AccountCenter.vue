@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="main-part">
-      <div class="in">
+      <div class="main-part-inner">
         <Row>
-          <Col :xs="24" :sm="24" :md="24" lg="7" :xl="7" :xxl="7" >
+          <Col :xs="24" :sm="24" :md="24" :lg="7" :xl="7" :xxl="7" >
             <div class="sider">
               <div class="content">
                 <div class="personal">
@@ -19,29 +19,17 @@
                     </div>
                   </div>
                   <div class="message">
-                    <div class="line">
-                      <Icon type="ios-archive-outline" size="18" />
-                      <span class="job-information">交互专家</span>
+                    <div class="line" v-for="item in messages" :key="item.id">
+                      <Icon :type=item.icon size="18" />
+                      <span class="job-information">{{item.title}}</span>
                     </div>
-                    <div class="line">
-                      <Icon type="ios-git-network" size="18" />
-                      <span class="job-information">蚂蚁金服－某某某事业群－某某平台部－某某技术部－UED</span>
-                    </div>
-                    <div class="line">
-                      <Icon type="ios-pin-outline" size="18" />
-                      <span class="job-information">浙江省杭州市</span>
-                    </div>
+                 
                   </div>
                 </div>
                 <div class="label">
                   <div class="ain">
                     <div style="margin-bottom:10px;font-size: 14px">标签</div>
-                    <Tag>很有想法的</Tag>
-                    <Tag>专注设计</Tag>
-                    <Tag>辣~</Tag>
-                    <Tag>大长腿</Tag>
-                    <Tag>川妹子</Tag>
-                    <Tag>海纳百川</Tag>
+                    <Tag v-for="item in tags" :key="item.id">{{item.title}}</Tag>
                     <Tag
                       v-for="item in count"
                       :key="item"
@@ -58,7 +46,7 @@
               </div>
             </div>
           </Col>
-          <Col :xs="24" :sm="24" :md="24" lg="17" :xl="17" :xxl="17">
+          <Col :xs="24" :sm="24" :md="24" :lg="17" :xl="17" :xxl="17">
             <div class="tabs">
               <div class="content">
                 <div class="tabs">
@@ -93,7 +81,41 @@ import Team from "./Team";
 export default {
   data() {
     return {
-      count: [0, 1, 2]
+      count: [0, 1, 2],
+      tags:[
+        {
+         title:'很有想法的'
+        },
+         {
+         title:'专注设计'
+        },
+         {
+         title:'辣~'
+        },
+         {
+         title:'川妹子'
+        },
+        {
+         title:'海纳百川'
+        },
+        {
+         title:'大长腿'
+        },
+      ],
+      messages:[
+        {
+          icon:'ios-archive-outline',
+          title:'交互专家'
+        },
+         {
+          icon:'ios-git-network',
+          title:'蚂蚁金服－某某某事业群－某某平台部－某某技术部－UED'
+        },
+         {
+          icon:'ios-pin-outline',
+          title:'浙江省杭州市'
+        },
+      ]
     };
   },
   methods: {
@@ -123,65 +145,65 @@ export default {
   margin: 0 -20px;
 }
 
-.main-part .in {
+.main-part .main-part-inner {
   padding: 5px 13px;
 }
 
-.main-part .in .sider {
+.main-part .main-part-inner .sider {
   padding: 0 12px;
 }
 
-.main-part .in .sider .content {
+.main-part .main-part-inner .sider .content {
   background: #fff;
 }
 
-.main-part .in .sider .content .label {
+.main-part .main-part-inner .sider .content .label {
   padding: 0 25px;
 }
 
-.main-part .in .sider .content .label .ain {
+.main-part .main-part-inner .sider .content .label .ain {
   border-top: 1px dashed #ccc;
   border-bottom: 1px dashed #ccc;
   padding: 25px 0 30px 0;
 }
 
-.main-part .in .tabs {
+.main-part .main-part-inner .tabs {
   padding: 0 12px;
 }
 
-.main-part .in .tabs .content {
+.main-part .main-part-inner .tabs .content {
   background: #fff;
 }
 
-.main-part .in .content .imgs {
+.main-part .main-part-inner .content .imgs {
   text-align: center;
   padding: 23px 0 3px 0;
 }
-.main-part .in .content .imgs img {
+.main-part .main-part-inner .content .imgs img {
   width: 104px;
   height: 104px;
 }
 
-.main-part .in .content .personal .userss {
+.main-part .main-part-inner .content .personal .userss {
   text-align: center;
   padding: 12px 0;
 }
-.main-part .in .content .personal .userss .name {
+.main-part .main-part-inner .content .personal .userss .name {
   font-size: 20px;
   color: #333;
 }
-.main-part .in .content .personal .userss .motto {
+.main-part .main-part-inner .content .personal .userss .motto {
   font-size: 14px;
   color: rgba(0, 0, 0, 0.65);
 }
-.main-part .in .content .personal .message {
+.main-part .main-part-inner .content .personal .message {
   font-size: 14px;
   padding: 10px 10px 10px 25px;
 }
-.main-part .in .content .personal .message .line {
+.main-part .main-part-inner .content .personal .message .line {
   margin-bottom: 10px;
 }
-.main-part .in .content .personal .message .job-information {
+.main-part .main-part-inner .content .personal .message .job-information {
   padding-left: 8px;
 }
 </style>

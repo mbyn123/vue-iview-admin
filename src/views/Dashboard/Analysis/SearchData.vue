@@ -493,7 +493,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.drawChartT();
-    });
+    },10);
   },
   methods: {
     drawChartT() {
@@ -847,7 +847,7 @@ export default {
           OnlineChart.resize();
           shopChart.resize();
         };
-      }, 100);
+      },100);
     },
     // 获取历史记录信息
     handleListApproveHistory() {

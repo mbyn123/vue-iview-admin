@@ -60,6 +60,7 @@
         </div>
       </div>
     </Col>
+    
     <Col :xs="24" :sm="24" :md="12" :lg="6" :xl="6" :xxl="6">
       <div style="background: #fff;padding:20px;margin-bottom:20px">
         <div style="font-size:14px;color:rgba(0,0,0,.45);  position: relative;">
@@ -128,7 +129,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.drawChart();
-    });
+    },);
   },
   methods: {
     drawChart() {

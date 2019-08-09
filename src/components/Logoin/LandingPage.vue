@@ -2,15 +2,14 @@
   <div>
     <div class="login-all">
       <Row type="flex" justify="center">
-        <Col span="5">
+        <Col :xs="24" :sm="12" :md="10" :lg="8" :xl="6" :xxl="5">
           <div class="inner">
             <div class="login-title">
               <div class="logo">
                 <a href="#">
-                 
+                  <img src="../../assets/layout_images/logo.svg" alt />
                   <span class="title">vue-iview-admin</span>
                 </a>
-                <div class="subheading">vue-iview-admin Web 设计规范</div>
               </div>
             </div>
 
@@ -201,7 +200,6 @@ export default {
     };
   },
   methods: {
-    
     tabsname(s) {
       this.tabname = s;
     },
@@ -224,12 +222,12 @@ export default {
         }, 1000);
       }
       this.$Notice.error({
-        title: "请求错误 404: https://ant-design-pro.netlify.com/api/login/captcha?mobile=15537095641",
+        title:
+          "请求错误 404: https://ant-design-pro.netlify.com/api/login/captcha?mobile=15537095641",
         desc: nodesc
-        
           ? ""
           : "发出的请求针对的是不存在的记录，服务器没有进行操作。 ",
-           duration: 3
+        duration: 3
       });
     },
     handeSubmit(name) {
@@ -258,7 +256,6 @@ export default {
             _this.$nextTick(() => {
               _this.loading = false;
               _this.verificationCodeerror = true;
-             
             });
           }, 2000);
         } else {
@@ -271,11 +268,10 @@ export default {
 
 <style >
 .login-all {
- 
+  background-size: 100%;
+  background-image: url(../../assets/layout_images/loginbanner.svg);
 }
 .login-all .inner .promptbox {
-  border: 1px solid red;
-  background: rgb(255, 241, 240);
   border-radius: 5px;
   font-size: 14px;
   padding: 7px;

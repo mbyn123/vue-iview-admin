@@ -33,7 +33,7 @@
               </div>
               <div style="text-align: center;padding: 90px 0" v-show="achange">
                 <div style="margin-bottom: 10px">
-                  <img src="src/assets/layout_images/tz.svg"/>
+                  <img src="../../assets/layout_images/tz.svg" style="width:80px" />
                 </div>
                 <div style="font-size: 14px">你已查看所有通知</div>
               </div>
@@ -50,12 +50,12 @@
                 @click.once="informationstate(index)"
               >
                 <div class="user-img">
-                  <img :src="item.img"  />
+                  <img :src="item.img" />
                 </div>
                 <div>
                   <h4 style="margin-bottom: 10px">{{item.title}}</h4>
                   <div style="font-size: 12px;color:rgba(0,0,0,.45)">
-                    <div style="margin-bottom: 5px">{{item.content}}</div>
+                    <div  style="margin-bottom: 5px; white-space: normal">{{item.content}}</div>
                     <div>{{item.time}}</div>
                   </div>
                 </div>
@@ -75,7 +75,7 @@
             </div>
             <div style="text-align: center;padding: 90px 0" v-show="bchange">
               <div style="margin-bottom: 10px">
-                  <img src="src/assets/layout_images/tz.svg"/>
+                <img src="../../assets/layout_images/tz.svg" style="width:80px" />
               </div>
               <div style="font-size: 14px">您已读完所有消息</div>
             </div>
@@ -111,7 +111,7 @@
             </div>
             <div style="text-align: center;padding: 90px 0" v-show="cchange">
               <div style="margin-bottom: 10px">
-                 <img src="src/assets/layout_images/tz.svg"/>
+                <img src="../../assets/layout_images/tz.svg" style="width:80px" />
               </div>
               <div style="font-size: 14px">你已完成所有待办</div>
             </div>
@@ -145,47 +145,47 @@ export default {
       cchange: false,
       informs: [
         {
-          img: require("../assets/functional_image/sc.png"),
+          img: require("../../assets/functional_image/sc.png"),
           title: "你收到了 14 份新周报",
           time: "2 年前"
         },
         {
-           img: require("../assets/functional_image/tj.png"),
+          img: require("../../assets/functional_image/tj.png"),
           title: "你推荐的 曲妮妮 已通过第三轮面试",
           time: "2 年前"
         },
 
         {
-           img: require("../assets/functional_image/tx.png"),
+          img: require("../../assets/functional_image/tx.png"),
           title: "这种模板可以区分多种通知类型",
           time: "2 年前"
         },
         {
-           img: require("../assets/functional_image/tz.png"),
+          img: require("../../assets/functional_image/tz.png"),
           title: "左侧图标用于区分不同的类型",
           time: "2 年前"
         },
         {
-           img: require("../assets/functional_image/xx.png"),
+          img: require("../../assets/functional_image/xx.png"),
           title: "内容不要超过两行字，超出时自动截断nnnn",
           time: "2 年前"
         }
       ],
       informations: [
         {
-          img: require("../assets/functional_image/hint.jpeg"),
+          img: require("../../assets/functional_image/hint.jpeg"),
           title: "曲丽丽 评论了你",
           content: "描述信息描述信息描述信息",
           time: "2年前"
         },
         {
-         img: require("../assets/functional_image/hint.jpeg"),
+          img: require("../../assets/functional_image/hint.jpeg"),
           title: "朱偏右 回复了你",
           content: "这种模板用于提醒谁与你发生了互动，左侧放『谁』的头像",
           time: "2年前"
         },
         {
-        img: require("../assets/functional_image/hint.jpeg"),
+          img: require("../../assets/functional_image/hint.jpeg"),
           title: "标题",
           content: "这种模板用于提醒谁与你发生了互动，左侧放『谁』的头像",
           time: "2年前"
@@ -230,7 +230,6 @@ export default {
       this.sum =
         this.informnumber + this.informationnumber + this.commissionnumber;
       this.$emit("sum", this.sum);
-  
     },
     informstate(i) {
       this.informnumber = this.informnumber - 1;
@@ -301,7 +300,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style >
 .prompt-boxs .Columns {
   border-bottom: 1px solid #ccc;
   padding: 10px 20px;
@@ -312,6 +311,12 @@ export default {
 .prompt-boxs .Column {
   border-bottom: 1px solid #ccc;
   padding: 10px 20px;
+}
+
+.prompt-boxs .ivu-tabs-nav {
+  display: table;
+  margin: 0 auto;
+  float: none;
 }
 
 .prompt-boxs .Column:hover {
@@ -337,20 +342,10 @@ export default {
 .prompt-boxs .Column .time {
   font-size: 12px;
   color: rgba(0, 0, 0, 0.45);
-}
 
-.prompt-boxs .ivu-tabs-nav-wrap {
-  text-align: center;
-  padding: 0 20px;
-}
-
-.prompt-boxs .ivu-tabs-nav-scroll {
-  display: inline-block;
-  vertical-align: bottom;
-}
-
-.prompt-boxs .ivu-tabs-bar {
-  margin-bottom: 0;
+  overflow: hidden;
+  white-space: nowrap; 
+  text-overflow: ellipsis
 }
 
 .prompt-boxs .operation {
@@ -363,9 +358,6 @@ export default {
 }
 
 .prompt-boxs {
-  position: absolute;
-  right: 0;
-  top: 50px;
   background: #fff;
   z-index: 9;
   width: 340px;

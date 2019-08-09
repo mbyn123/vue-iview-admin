@@ -65,13 +65,13 @@
                         >{{ item.label }}</Option>
                       </Select>
 
-                      <div style="padding-top: 20px;  ">街道地址</div>
+                      <div style="padding-top: 20px;">街道地址</div>
                       <FormItem prop="site">
                         <Input type="text" v-model="formValidate.site" placeholder />
                       </FormItem>
 
                       <div>联系电话</div>
-                      <FormItem prop="phone1">
+                      <FormItem prop="phone1" label="">
                         <Input
                           type="text"
                           v-model="formValidate.phone1"

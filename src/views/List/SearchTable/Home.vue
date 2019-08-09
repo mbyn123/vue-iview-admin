@@ -70,7 +70,7 @@
                   </FormItem>
                 </div>
               </Col>
-              <Col xs="24" :sm="24" :md="24" :lg="12" :xl="20" :xxl="20" v-show="states">
+              <Col :xs="24" :sm="24" :md="24" :lg="12" :xl="20" :xxl="20" v-show="states">
                 <div class="tm"></div>
               </Col>
               <Col :sm="24" :md="24" :lg="24" :xl="6" :xxl="4">

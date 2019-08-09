@@ -4,7 +4,7 @@
       <div class="inner">
         <div style="border-bottom:1px dashed #ccc;padding-bottom:20px">
           <Row>
-            <Col xs="6" :sm="4" :md="4" :lg="4" :xl="2" :xxl="2">
+            <Col :xs="6" :sm="4" :md="4" :lg="4" :xl="2" :xxl="2">
               <div class="category-name">所属类目:</div>
             </Col>
             <Col :xs="14" :sm="16" :md="16" :lg="16" :xl="20" :xxl="20">

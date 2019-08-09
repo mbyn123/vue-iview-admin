@@ -6,7 +6,7 @@
           <div class="top">
             <Breadcrumb>
               <BreadcrumbItem to="/Exception_403">首页</BreadcrumbItem>
-              <BreadcrumbItem >表单页</BreadcrumbItem>
+              <BreadcrumbItem>表单页</BreadcrumbItem>
               <BreadcrumbItem>分步表单</BreadcrumbItem>
             </Breadcrumb>
             <div class="Distribution-from">分布表单</div>
@@ -31,14 +31,15 @@ export default {
 <style scoped>
 .top {
   background: #fff;
-
   padding: 20px 20px 30px 20px;
+ 
+
 }
 
 .title {
-  margin: -20px;
+  margin: -19px -20px 0 -20px;
+  
 }
-
 
 .top .Distribution-from {
   font-size: 16px;

@@ -6,11 +6,10 @@
           <div class="inner">
             <div class="login-title">
               <div class="logo">
+                <img src="../../assets/layout_images/logo.svg" alt />
                 <a href="#">
-                   
                   <span class="title">vue-iview-admin</span>
                 </a>
-                <div class="subheading">vue-iview-admin Web 设计规范</div>
               </div>
             </div>
 
@@ -109,17 +108,6 @@
                 </Router-link>
               </div>
             </div>
-
-            <!-- <div class="footer">
-              <div>
-                <a href="#" title="Ant Design Pro">Ant Design Pro</a>
-                <a href="#" title="github" style="margin:0 30px">
-                  <Icon type="logo-github" />
-                </a>
-                <a href="#" title="Ant Design">Ant Design</a>
-              </div>
-              <div style="padding:10px 0">Copyrigh &copy; 2019 蚂蚁金服体验技术部出品</div>
-            </div> -->
           </div>
         </Col>
       </Row>
@@ -241,7 +229,6 @@ export default {
           }
         }, 1000);
       }
-     
     },
     handeSubmit(name) {
       this.$refs[name].validate(valid => {
@@ -258,7 +245,7 @@ export default {
               _this.registerstate = false;
               _this.$Message.success("注册成功");
             });
-          },2000);
+          }, 2000);
         } else {
         }
       });
@@ -269,17 +256,17 @@ export default {
 
 <style >
 .login-all {
-  
   background-position: center 110px;
   background-size: 100%;
   background-repeat: no-repeat;
   background-color: #f0f2f5;
+  background-image: url(../../assets/layout_images/loginbanner.svg);
 }
 
 .login-all .inner .logoin-register {
   padding: 25px 10px;
-  width:360px;
-  margin: 0 auto
+  width: 360px;
+  margin: 0 auto;
 }
 
 .login-all .inner {

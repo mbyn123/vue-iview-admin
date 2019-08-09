@@ -120,7 +120,7 @@
                 <Button v-show="LastStep" @click="last">上一步</Button>
               </span>
               <span>
-                <Button @click="fff()">取消</Button>
+                <Button @click="clear()">取消</Button>
                 <Button type="primary" @click="next('tablesValidate')" v-show="nexts">下一步</Button>
                 <Button
                   type="primary"
@@ -1326,7 +1326,7 @@ export default {
       this.state();
       this.modal2 = true;
     },
-    fff() {
+    clear() {
       this.current = 0;
       this.state();
       this.modal2 = false;

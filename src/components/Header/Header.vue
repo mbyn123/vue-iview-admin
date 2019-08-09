@@ -1,15 +1,6 @@
 <template>
   <div>
-    <div class="layout-header-bar">
-      <div>
-        <Icon
-          @click.native="collapsedSider"
-          :class="rotateIcon"
-          :style="{margin: '0 20px'}"
-          type="md-menu"
-          size="30"
-        ></Icon>
-      </div>
+    <div class="header-bar">
       <div class="Control-Strip">
         <div>
           <Icon type="md-search" size="26" />
@@ -20,16 +11,21 @@
           </Tooltip>
         </div>
         <div class="remind">
-          <div style="position: relative;" @click="sss=!sss">
-            <Badge :count="m">
-              <Icon type="md-notifications-outline" size="20" />
-            </Badge>
-            <NotificationBar @sum="num" v-show="sss" />
-          </div>
+          <Poptip placement="bottom-end" width="auto">
+            <div>
+              <span>
+                <Icon type="md-notifications-outline" size="20" style />
+                <Badge :count="count"></Badge>
+              </span>
+            </div>
+            <div class="api" slot="content">
+               <NotificationBar @sum="num" />
+            </div>
+          </Poptip>
         </div>
         <div class="user-control">
           <Dropdown>
-            <img src="../assets/userlogo_images/users.png" alt style="width:24px" />
+            <img src="../../assets/userlogo_images/users.png" alt style="width:24px" />
             <span>Serati Ma</span>
             <DropdownMenu slot="list">
               <router-link to="/AccountCenter" class="link">
@@ -83,8 +79,8 @@ import NotificationBar from "./NotificationBar";
 export default {
   data() {
     return {
-      sss: false,
-      m: 0
+      state: false,
+      count: 0
     };
   },
   computed: {
@@ -93,11 +89,8 @@ export default {
     }
   },
   methods: {
-    collapsedSider() {
-      this.$refs.side1.toggleCollapse();
-    },
     num(i) {
-      this.m = i;
+      this.count = i;
     }
   },
   components: {
@@ -107,13 +100,10 @@ export default {
 </script>
 
 <style scoped>
-.layout-header-bar {
-  height: 60px;
+.header-bar {
   background: #fff;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  height:64px;
+  overflow: hidden;
 }
 
 .remind {

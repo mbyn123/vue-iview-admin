@@ -35,7 +35,7 @@ export default {
 }
 
 .title {
-  margin: -20px;
+  margin:-19px -20px;
 }
 
 .top .link a {

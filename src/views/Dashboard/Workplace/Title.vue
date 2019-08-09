@@ -4,13 +4,11 @@
       <Col span="24">
         <div class="cardtop">
           <div class="in">
-            <div class="content">
-              <a href="#">首页</a>
-              <span class="i">/</span>
-              <a href="#">Dashboard</a>
-              <span class="i">/</span>
-              <a href="#">工作台</a>
-            </div>
+            <Breadcrumb>
+              <BreadcrumbItem to="/Exception_403">首页</BreadcrumbItem>
+              <BreadcrumbItem >Dashboard</BreadcrumbItem>
+              <BreadcrumbItem>工作台</BreadcrumbItem>
+            </Breadcrumb>
             <div class="li">
               <span>工作台</span>
             </div>
@@ -124,7 +122,6 @@ export default {};
   font-size: 20px;
   display: block;
 }
-
 
 .cardtop .in .main .number-projects .in {
   display: inline-block;
