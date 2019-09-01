@@ -2,17 +2,6 @@
 
 此项目vue-iview-admin 是基于vue.js,使用 vue-cli3 脚手架，引用 iview UI 组件库 构建的后台管理系统,具有快速构建页面,数据可视化管理,响应式页面设计等功能
 
-## 部分截图
-
-![](http://px52nbdim.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190809191038.png)
-
-![](http://px52nbdim.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190809191957.png)
-
-![](http://px52nbdim.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190809191451.png)
-
-![](http://px52nbdim.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190809191416.png)
-
-![](http://px52nbdim.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190809192019.png)
 
 
 
@@ -65,6 +54,20 @@ Vue-cli3+Vue-router+Vuex+ivew/Element+Echarts
       - 登录
       - 注册
       - 注册成功
+      
+      
+## 部分截图
+
+![](http://px52nbdim.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190809191038.png)
+
+![](http://px52nbdim.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190809191957.png)
+
+![](http://px52nbdim.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190809191451.png)
+
+![](http://px52nbdim.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190809191416.png)
+
+![](http://px52nbdim.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190809192019.png)
+
 ## 项目运行
 
     git clone git@github.com:mbyn123/vue-iview-admin.git
