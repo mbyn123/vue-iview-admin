@@ -58,7 +58,7 @@ Vue-cli3+Vue-router+Vuex+ivew/Element+Echarts
       
 ## 部分截图
 
-![](http://px52nbdim.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190809191038.png)
+![](https://graph.baidu.com/resource/11113b6d807964dedf0fc01567323494.jpg)
 
 ![](http://px52nbdim.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190809191957.png)
 
@@ -68,7 +68,7 @@ Vue-cli3+Vue-router+Vuex+ivew/Element+Echarts
 
 ![](http://px52nbdim.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190809192019.png)
 
-![](https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3449383689,1986072712&fm=26&gp=0.jpg)
+
 
 ## 项目运行
 
