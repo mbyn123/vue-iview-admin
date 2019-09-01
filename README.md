@@ -68,6 +68,8 @@ Vue-cli3+Vue-router+Vuex+ivew/Element+Echarts
 
 ![](http://px52nbdim.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190809192019.png)
 
+![](https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3449383689,1986072712&fm=26&gp=0.jpg)
+
 ## 项目运行
 
     git clone git@github.com:mbyn123/vue-iview-admin.git
