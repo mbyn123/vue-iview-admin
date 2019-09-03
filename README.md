@@ -20,9 +20,7 @@
 
 Vue-cli3+Vue-router+Vuex+ivew/Element+Echarts
 
-
-
-    
+  
 ## 功能列表
 
 
@@ -61,10 +59,9 @@ Vue-cli3+Vue-router+Vuex+ivew/Element+Echarts
       - 403 无权限
       - 404 找不到
       - 500 服务器出错
-    - 帐户
-      - 登录
-      - 注册
-      - 注册成功
+    - 文本编辑器
+      - 富文本编辑器
+    
       
       
 
@@ -76,8 +73,10 @@ Vue-cli3+Vue-router+Vuex+ivew/Element+Echarts
     
     cd vue-iview-admin
     
-    npm install
+    npm install / cnpm install
     
-    npm serve
+    cnpm echarts-wordcloud
+    
+    npm serve 
     
     访问: Local:   http://localhost:8080/
